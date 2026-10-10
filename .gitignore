@@ -8,3 +8,4 @@ results/*_log.txt
 results/*_err.txt
 __pycache__/
 *.pyc
+results/step06_internal_validation/bootstrap_chunks/
