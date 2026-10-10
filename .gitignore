@@ -1,0 +1,10 @@
+﻿# UK Biobank individual-level data must never be committed (UKB data access agreement)
+processed/
+*.pkl
+*.rdata
+*.Rdata
+**/*_survival_best_quartiles.csv
+results/*_log.txt
+results/*_err.txt
+__pycache__/
+*.pyc
