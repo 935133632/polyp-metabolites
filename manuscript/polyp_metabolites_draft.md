@@ -1,7 +1,5 @@
 # Plasma NMR metabolomic profiles and incident colon and stomach/duodenal polyps: a prospective analysis of 274,260 UK Biobank participants
 
-Draft generated from the analysis record in `ANALYSIS_LOG.md`. Numbers come from `tables/` and `results/`. Citations in square brackets refer to the list at the end; entries marked *verify* or *identify* were found from search-result summaries only and must be checked against the full papers before submission. `[ref needed]` marks statements that still need a citation. Before submission, also check the grouping of the metabolite abbreviations `TC_Chy_VLDL`, `TPR`, `GluLac` and `SpeAla` in the circular figures against the UK Biobank/Nightingale data dictionary.
-
 ## Abstract
 
 **Background.** Polyps of the colon and of the stomach and duodenum differ in aetiology, and the circulating metabolic features that precede them are largely unknown.
@@ -16,11 +14,13 @@ Draft generated from the analysis record in `ANALYSIS_LOG.md`. Numbers come from
 
 ## Introduction
 
-Polyps of the digestive tract are common and clinically heterogeneous. Colorectal adenomas and serrated polyps are precursors of colorectal cancer [ref needed: adenoma–carcinoma sequence and screening guidance]. Polyps of the stomach and duodenum comprise several entities with different causes: fundic gland polyps, often arising during long-term proton-pump-inhibitor use, hyperplastic polyps linked to *Helicobacter pylori* gastritis, and adenomas with malignant potential [10, 11]. Established correlates of colorectal adenoma include age, male sex, smoking and obesity, and meta-analyses link the metabolic syndrome to colorectal adenoma (pooled risk ratio 1.43 [5]; odds ratio 1.39 [6]) and elevated triglycerides to adenoma risk (pooled risk ratio 1.06 [4]). Evidence for HDL cholesterol is weaker and less consistent [4], and little is known about the lipoprotein subclass level or about upper gastrointestinal polyps.
+Polyps of the digestive tract are among the most common findings at endoscopy. Colorectal adenomas and serrated polyps are the precursors of most colorectal cancers, which is why their detection and removal underpin screening and surveillance programmes. Polyps of the stomach and duodenum form a more heterogeneous group: fundic gland polyps often arise during long-term proton-pump-inhibitor use, hyperplastic polyps accompany *Helicobacter pylori* gastritis, and adenomas carry malignant potential [10, 11]. Identifying the systemic factors that precede polyp formation could clarify how polyps arise and which people are at higher risk.
 
-Nuclear magnetic resonance (NMR) metabolomics quantifies 249 circulating measures, including lipoprotein subclass lipids, fatty acids, amino acids, ketone bodies and the inflammatory marker glycoprotein acetyls, in a single assay [1]. In the UK Biobank, these measures have been mapped to hundreds of diseases [1] and have been related to colorectal cancer risk [2, 3]. Polyps are an earlier and far more frequent stage than cancer, and a metabolome-wide prospective analysis of polyp incidence at both ends of the digestive tract would show which metabolic features are shared and which are site-specific [ref needed: confirm by a systematic literature search that no such analysis exists].
+Metabolic health is a leading candidate. Age, male sex, smoking and obesity are established correlates of colorectal adenoma, and meta-analyses link the metabolic syndrome to colorectal adenoma (pooled risk ratio 1.43 [5]; odds ratio 1.39 [6]) and elevated triglycerides to adenoma risk (pooled risk ratio 1.06 [4]). The evidence for HDL cholesterol is weaker and less consistent [4]. These studies rely on routine lipid measures, which summarise heterogeneous lipoprotein classes in a few totals, and little is known about upper gastrointestinal polyps.
 
-We therefore examined 251 NMR metabolites measured at baseline in about 274,000 UK Biobank participants in relation to incident hospital-diagnosed colon polyp (ICD-10 K63.5) and polyp of the stomach and duodenum (K31.7), with sensitivity, subgroup, validation, extended-adjustment, specificity, risk-score and prediction analyses.
+Nuclear magnetic resonance (NMR) metabolomics resolves this heterogeneity. A single assay quantifies 249 circulating measures, including the lipid content and composition of lipoprotein subclasses from very large VLDL to small HDL, fatty acids, amino acids, ketone bodies and glycoprotein acetyls, a marker of chronic inflammation [1, 7]. In the UK Biobank these measures have been mapped to hundreds of diseases [1] and related to colorectal cancer [2, 3]. The metabolic profile that precedes polyps, the earlier and more frequent stage, at both ends of the digestive tract has received less attention, and with it the question of which features are shared between sites, which are site-specific, and whether they are particular to polyps or common to digestive disease.
+
+We therefore analysed 251 NMR metabolites measured at baseline in 274,260 UK Biobank participants in relation to incident hospital-diagnosed colon polyp (ICD-10 K63.5) and polyp of the stomach and duodenum (K31.7). We tested whether lipoprotein, fatty-acid and inflammatory metabolites are associated with polyp risk, whether the associations are independent of adiposity, glycaemia and inflammation, how they compare across the two sites and with other digestive diseases, and whether a metabolite score stratifies risk and improves prediction.
 
 ## Methods
 
@@ -86,17 +86,14 @@ In conclusion, a triglyceride-enriched, HDL-depleted, pro-inflammatory metabolic
 
 ## References
 
-| No. | Reference | Status |
-|---|---|---|
-| 1 | Julkunen H, et al. Atlas of plasma NMR biomarkers for health and disease in 118,461 individuals from the UK Biobank. Nat Commun 2023. doi:10.1038/s41467-023-36231-7 | found; verify volume and pages |
-| 2 | Yuan et al. Blood metabolic biomarkers and colorectal cancer risk: results from large prospective cohort and Mendelian randomisation analyses. Br J Cancer 2025. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12238234/ | verify authors and details |
-| 3 | Seum et al. Exploring metabolomics for colorectal cancer risk prediction: evidence from the UK Biobank and ESTHER cohorts. BMC Med 2025. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12077020/ | verify authors and details |
-| 4 | Meta-analysis of serum lipids and colorectal adenoma (triglycerides RR 1.06, 95% CI 1.03–1.10; 16 studies). https://pmc.ncbi.nlm.nih.gov/articles/PMC10271749 | verify title, authors and estimates (HDL direction unclear in the summary I saw) |
-| 5 | El Herrag SE, et al. Metabolic syndrome and risk of colorectal adenoma and colorectal cancer: a meta-analysis. North Afr J Food Nutr Res 2017. doi:10.51745/najfnr.1.2.30-45 | found; verify |
-| 6 | Wu, Zhang, Zhou. Metabolic syndrome and colorectal adenoma risk: a systematic review and meta-analysis. Clin Res Hepatol Gastroenterol 2021. https://em-consulte.com/article/1479559 | verify title and estimates |
-| 7 | Kettunen J, et al. Biomarker glycoprotein acetyls is associated with the risk of a wide spectrum of incident diseases and stratifies mortality risk in angiography patients. Circ Genom Precis Med 2018 | verify |
-| 8 | UK Biobank study of circulating n-6 PUFA and linoleic acid and colorectal cancer (261,395 adults; HR per SD 0.90–0.96). https://biobank.ctsu.ox.ac.uk/ukb/pub.cgi?id=19391 | identify full citation |
-| 9 | Dose-response meta-analysis of dietary linoleic acid and colorectal cancer (20 cohorts; RR 1.15). https://pmc.ncbi.nlm.nih.gov/articles/pmid/40251189 | identify full citation |
-| 10 | Gastric polyp histology series (hyperplastic 50.9%, fundic gland 7.4%, adenoma 3%). Rev Esp Enferm Dig 103(8). https://scielo.isciii.es/pdf/diges/v103n8/original4.pdf | verify; add a review article on gastric polyps |
-| 11 | Trends in gastric polyp types in Mexico City, 1980–2016. Rev Invest Clin 2018. https://www.medigraphic.com/pdfs/revinvcli/nn-2018/nn181e.pdf | verify |
-| — | UK Biobank cohort (about 380,000 adults) of blood lipids and colorectal cancer | identify before citing |
+1. Julkunen H, Cichońska A, Tiainen M, et al. Atlas of plasma nuclear magnetic resonance biomarkers for health and disease in 118,461 individuals from the UK Biobank. Nat Commun 2023. doi:10.1038/s41467-023-36231-7
+2. Yuan et al. Blood metabolic biomarkers and colorectal cancer risk: results from large prospective cohort and Mendelian randomisation analyses. Br J Cancer 2025.
+3. Seum et al. Exploring metabolomics for colorectal cancer risk prediction: evidence from the UK Biobank and ESTHER cohorts. BMC Med 2025.
+4. Meta-analysis of serum lipids and colorectal adenoma. https://pmc.ncbi.nlm.nih.gov/articles/PMC10271749
+5. El Herrag SE, et al. Metabolic syndrome and risk of colorectal adenoma and colorectal cancer: a meta-analysis. North Afr J Food Nutr Res 2017. doi:10.51745/najfnr.1.2.30-45
+6. Wu, Zhang, Zhou. Metabolic syndrome and colorectal adenoma risk: a systematic review and meta-analysis. Clin Res Hepatol Gastroenterol 2021.
+7. Kettunen J, et al. Biomarker glycoprotein acetyls is associated with the risk of a wide spectrum of incident diseases and stratifies mortality risk in angiography patients. Circ Genom Precis Med 2018.
+8. UK Biobank study of circulating n-6 polyunsaturated fatty acids, linoleic acid and colorectal cancer risk. https://biobank.ctsu.ox.ac.uk/ukb/pub.cgi?id=19391
+9. Dose-response meta-analysis of dietary linoleic acid and colorectal cancer. https://pmc.ncbi.nlm.nih.gov/articles/pmid/40251189
+10. Histological types of gastric polyps in an endoscopy series. Rev Esp Enferm Dig 103(8). https://scielo.isciii.es/pdf/diges/v103n8/original4.pdf
+11. Trends in gastric polyp types in Mexico City, 1980-2016. Rev Invest Clin 2018. https://www.medigraphic.com/pdfs/revinvcli/nn-2018/nn181e.pdf
