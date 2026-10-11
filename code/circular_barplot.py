@@ -109,7 +109,7 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5, est=
     for g, d in L.groupby("group"):
         tm = (d.theta.min() + d.theta.max()) / 2; deg = np.degrees(tm) % 360
         rot = -deg if (deg < 90 or deg > 270) else -deg + 180
-        ax.text(tm, .90 if len(g) < 28 else .90, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
+        ax.text(tm, .82, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
                 fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor", zorder=6)
     ax.text(0, 0, title + "\n" + unit + "\n* P$_{Bonf}$<0.05  ** <0.01  *** <0.001\nred: higher risk, blue: lower risk\nfaded bar: not significant", fontsize=7.5, ha="center", va="center", linespacing=1.5)
     fig.savefig(f"{outfile_stem}.png", dpi=300); fig.savefig(f"{outfile_stem}.pdf"); plt.close(fig)
@@ -147,7 +147,7 @@ def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdB
             ax.text(tm, r1 + .075, fam, fontsize=5, fontweight="bold", ha="left" if right else "right", va="center", rotation=phi if right else phi + 180, rotation_mode="anchor")
     for g, d in L.groupby("group"):
         tm = (d.theta.min() + d.theta.max()) / 2; deg = np.degrees(tm) % 360; rot = -deg if (deg < 90 or deg > 270) else -deg + 180
-        ax.text(tm, min(r1 + .20, .92), g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
+        ax.text(tm, min(r1 + .15, .92), g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
                 fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor")
     ax.text(0, 0, title + (chr(10) + note if note else ""), fontsize=7.5, ha="center", va="center", linespacing=1.5)
     cax = fig.add_axes([.43, .43, .14, .012]); cb = fig.colorbar(cm.ScalarMappable(norm, cm_), cax=cax, orientation="horizontal"); cb.ax.tick_params(labelsize=6); cb.set_label(cbar_label, fontsize=6.5)
