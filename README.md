@@ -32,8 +32,8 @@ Multiple testing uses Bonferroni (P < 0.05/251) throughout.
 
 ## Outputs
 - `figures/`: Fig1 volcano; Fig2 class summary; Fig3A/B circular bar plots of all 251 metabolites; Fig4 cross-outcome and prevalent-vs-incident; Fig5A/B circular heat rings by sex/age stratum, Fig5C sensitivity scatter; Fig6A dual-site counts, Fig6B circular OR plot; Fig7 ROC curves; Fig8A/B circular heat rings after extended adjustment; Fig9 specificity against other digestive diseases; Fig10 metabolite score (cumulative incidence and quartile HRs).
-- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 age cut-off 65, S6 prevalent vs incident, S7 prediction bars, S8 dual-site timing, S9 dose-response curves.
-- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 21 tables, also as CSV).
+- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 prevalent vs incident, S6 prediction bars, S7 dual-site timing, S8 dose-response curves.
+- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 5 tables, also as CSV: S1 metabolite-level results, S2 annotation, S3 prediction, S4-S5 specificity).
 - `results/`: per-step aggregate results; `manuscript/`: Introduction, Methods, Results and Discussion draft (references to be verified).
 
 ## Model 1 covariates
@@ -42,7 +42,7 @@ Age, sex, Townsend deprivation index, BMI, systolic and diastolic blood pressure
 ## Differences from the Olink project
 - Outcomes use polyp-specific codes (K63.5, K31.7). The Olink project used the 3-character codes K63 and K31; K31 mostly captures non-polyp stomach disease. 3-character versions are run for the primary scan as `K63any` and `K31any`.
 - Follow-up is censored at death.
-- Bonferroni instead of BH-FDR; subgroup age cut-off 60 (65 supplementary) instead of 58; all analyses use all 251 metabolites rather than top-N subsets.
+- Bonferroni instead of BH-FDR; subgroup age cut-off 60 instead of 58; all analyses use all 251 metabolites rather than top-N subsets.
 - Pathway enrichment, druggability and protein-network steps are not applicable to metabolites and are not repeated.
 - scikit-survival and PyTorch were unavailable, so random survival forest and DeepSurv are replaced by a penalised Cox model and XGBoost survival.
 - The metabolome and the Olink project use different participant-ID spaces; all inputs here come from the `WH-*` files.

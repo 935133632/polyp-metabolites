@@ -11,3 +11,4 @@ __pycache__/
 results/step06_internal_validation/bootstrap_chunks/
 results/*.log
 results/*.err
+results/queue_done.txt

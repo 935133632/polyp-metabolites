@@ -1,6 +1,6 @@
 """Secondary Cox analyses on all 251 metabolites.
 usage:  python 02_secondary_cox.py main K63          -> sensitivity (exclude events <2y), subgroups, split-sample validation
-        python 02_secondary_cox.py age K63           -> age strata only (60 main, 65 supplementary)
+        python 02_secondary_cox.py age K63           -> age strata only (<60 vs >=60)
         python 02_secondary_cox.py boot K63 0 5      -> bootstrap replicates 0..4 (run several chunks in parallel)
         python 02_secondary_cox.py merge K63         -> merge bootstrap chunks into summary
 """
@@ -17,21 +17,17 @@ def seed(*a):
 
 
 def run_subgroups(c, k, ages=True, sexes=True):
-    """Sex strata and age strata at 60 (main) and 65 (supplementary), all 251 metabolites per stratum."""
+    """Sex strata and age strata (<60 vs >=60), all 251 metabolites per stratum; sex or age is removed from the covariates inside its own stratum."""
     d = RES / "step03_subgroup"; d.mkdir(exist_ok=True)
-    f_main, f_65 = d / f"{k}_subgroups.csv", d / f"{k}_subgroups_age65.csv"
+    f = d / f"{k}_subgroups.csv"
     spec = []
-    if sexes: spec += [("Female", c.Sex == 0, ("Sex",), "main"), ("Male", c.Sex == 1, ("Sex",), "main")]
-    if ages: spec += [("Age<60", c.AgeRecr < 60, ("AgeRecr",), "main"), ("Age>=60", c.AgeRecr >= 60, ("AgeRecr",), "main"),
-                      ("Age<65", c.AgeRecr < 65, ("AgeRecr",), "65"), ("Age>=65", c.AgeRecr >= 65, ("AgeRecr",), "65")]
-    old = pd.read_csv(f_main) if (f_main.exists() and not (ages and sexes)) else pd.DataFrame()
+    if sexes: spec += [("Female", c.Sex == 0, ("Sex",)), ("Male", c.Sex == 1, ("Sex",))]
+    if ages: spec += [("Age<60", c.AgeRecr < 60, ("AgeRecr",)), ("Age>=60", c.AgeRecr >= 60, ("AgeRecr",))]
+    old = pd.read_csv(f) if (f.exists() and not (ages and sexes)) else pd.DataFrame()
     if len(old): old = old[~old.subgroup.str.startswith("Age")] if ages else old[old.subgroup.str.startswith("Age")]   # keep the strata not being re-run
-    out_main, out_65 = [old] if len(old) else [], []
-    for name, mask, drop, where in spec:
-        r = cox_scan(c[mask], None, drop); r["subgroup"] = name
-        (out_main if where == "main" else out_65).append(r)
-        if out_main: pd.concat(out_main).to_csv(f_main, index=False)
-        if out_65: pd.concat(out_65).to_csv(f_65, index=False)
+    out = [old] if len(old) else []
+    for name, mask, drop in spec:
+        r = cox_scan(c[mask], None, drop); r["subgroup"] = name; out.append(r); pd.concat(out).to_csv(f, index=False)
 
 
 if mode == "main":

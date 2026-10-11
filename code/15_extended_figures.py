@@ -92,5 +92,5 @@ for k in LAB:
         a.set_title(f"{m}, P-nonlinear {nl.loc[m, 'p_nonlinear']:.2g}", fontsize=7); a.set_ylabel("HR vs median")
     for a in ax[-1]: a.set_xlabel("Metabolite (SD, normalised)")
     for a in ax.ravel()[n:]: a.axis("off")
-    fig.suptitle(LAB[k], fontsize=9); fig.tight_layout(); save(fig, str(SF / f"FigS9_dose_response_{k}"))
+    fig.suptitle(LAB[k], fontsize=9); fig.tight_layout(); save(fig, str(SF / f"FigS8_dose_response_{k}"))
     print(k, "nonlinearity:", nl.p_nonlinear.round(4).to_dict())
