@@ -127,7 +127,7 @@ def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdB
         if prev is not None and g != prev: t += gap
         th[i] = t + w / 2; t += w; prev = g
     L["theta"] = th
-    nr = len(rings); r0, r1 = .30, .30 + .045 * nr; ring_h = (r1 - r0) / nr
+    nr = len(rings); r0 = .30; r1 = r0 + min(.07 * nr, .32); ring_h = (r1 - r0) / nr          # thicker rings when there are few, so the heat ring fills the plot
     norm = colors.Normalize(-vmax, vmax); cm_ = cm.get_cmap(cmap)
     fig = plt.figure(figsize=(size, size)); ax = fig.add_axes([.02, .02, .96, .96], projection="polar")
     ax.set_theta_zero_location("N"); ax.set_theta_direction(-1); ax.set_ylim(0, 1.0); ax.axis("off")
@@ -147,7 +147,7 @@ def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdB
             ax.text(tm, r1 + .075, fam, fontsize=5, fontweight="bold", ha="left" if right else "right", va="center", rotation=phi if right else phi + 180, rotation_mode="anchor")
     for g, d in L.groupby("group"):
         tm = (d.theta.min() + d.theta.max()) / 2; deg = np.degrees(tm) % 360; rot = -deg if (deg < 90 or deg > 270) else -deg + 180
-        ax.text(tm, .90, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
+        ax.text(tm, min(r1 + .27, .92), g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
                 fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor")
     ax.text(0, 0, title + (chr(10) + note if note else ""), fontsize=7.5, ha="center", va="center", linespacing=1.5)
     cax = fig.add_axes([.43, .43, .14, .012]); cb = fig.colorbar(cm.ScalarMappable(norm, cm_), cax=cax, orientation="horizontal"); cb.ax.tick_params(labelsize=6); cb.set_label(cbar_label, fontsize=6.5)
