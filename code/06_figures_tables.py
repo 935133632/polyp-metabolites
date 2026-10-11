@@ -15,13 +15,18 @@ def load(k, kind="step01_primary/model1_{k}_cox_all_metabolites.csv"):
 def save(fig, name): fig.savefig(FIG / f"{name}.png", bbox_inches="tight"); fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight"); plt.close(fig)
 
 P = {k: load(k) for k in LAB}
-# ---- Fig 1 volcano
-fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.2))
+# ---- Fig 1 volcano (labels repelled; 5 leading metabolites per direction)
+from adjustText import adjust_text
+fig, ax = plt.subplots(1, 2, figsize=(7.4, 3.8))
 for a, k in zip(ax, LAB):
     r = P[k]; y = -np.log10(r.p.clip(lower=1e-300)); sig = r.p_bonf < .05
     col = np.where(~sig, GR, np.where(r.coef > 0, UP, DN)); a.scatter(r.coef, y, c=col, s=8, lw=0)
-    for _, t in r.nsmallest(8, "p").iterrows(): a.annotate(t.metabolite, (t.coef, -np.log10(max(t.p, 1e-300))), fontsize=6, xytext=(2, 2), textcoords="offset points")
-    a.axvline(0, c="k", lw=.5); a.set_xlabel("ln(HR) per 1 SD"); a.set_ylabel("-log10(P)"); a.set_title(f"{LAB[k]}\n{sig.sum()}/{len(r)} Bonferroni<0.05", fontsize=8)
+    lab = pd.concat([r[r.coef > 0].nsmallest(5, "p"), r[r.coef < 0].nsmallest(5, "p")])
+    texts = [a.text(t.coef, -np.log10(max(t.p, 1e-300)), t.metabolite, fontsize=5.5) for _, t in lab.iterrows()]
+    a.axhline(-np.log10(.05 / len(r)), c="k", lw=.4, ls=":"); a.axvline(0, c="k", lw=.5)
+    a.set_xlabel("ln(HR) per 1 SD"); a.set_ylabel("-log10(P)"); a.set_title(f"{LAB[k]}" + chr(10) + f"{sig.sum()}/{len(r)} Bonferroni<0.05", fontsize=8)
+    a.margins(x=.12, y=.08); fig.canvas.draw()
+    adjust_text(texts, ax=a, expand=(1.4, 1.6), arrowprops=dict(arrowstyle="-", color="k", lw=.3), time_limit=5)
 fig.tight_layout(); save(fig, "Fig1_volcano")
 # ---- Fig 2 class summary
 rows = []
@@ -36,13 +41,44 @@ for a, k in zip(ax, LAB):
     a.barh(order, d.n_sig_pos, color=UP, label="Higher risk"); a.barh(order, -d.n_sig_neg, color=DN, label="Lower risk")
     a.axvline(0, c="k", lw=.5); a.set_xlabel("No. metabolites Bonferroni<0.05"); a.set_title(LAB[k], fontsize=8)
 ax[0].legend(frameon=False, fontsize=7, loc="lower left"); fig.tight_layout(); save(fig, "Fig2_class_summary")
-# ---- Fig 3 forest, top 15 per outcome
-fig, ax = plt.subplots(1, 2, figsize=(7.1, 4))
+# ---- Fig 3 circular forest, all 251 metabolites (HR and 95% CI on a radial log scale)
+CLS_ORDER = ["Lipid content of subclass", "Lipid composition (% within subclass)", "Lipoprotein / lipid totals", "Lipoprotein particle concentration",
+             "Lipoprotein particle size", "Apolipoproteins", "Fatty acids", "Amino acids", "Glycolysis / ketone bodies", "Fluid balance", "Inflammation (GlycA)"]
+PAL = ["#0072B2", "#56B4E9", "#009E73", "#F0E442", "#CC79A7", "#999999", "#D55E00", "#E69F00", "#117733", "#882255", "#000000"]
+CC = dict(zip(CLS_ORDER, PAL))
+def circular_forest(ax, r, title, lo=-.24, hi=.24):
+    r = r.copy(); r["ci"] = pd.Categorical(r.cls, CLS_ORDER, ordered=True); r = r.sort_values(["ci", "coef"]).reset_index(drop=True)
+    n = len(r); gap = 2 * np.pi * .05; th = np.linspace(np.pi / 2 - gap / 2, np.pi / 2 - 2 * np.pi + gap / 2, n)   # clockwise from top
+    rad = lambda v: .12 + (np.clip(v, lo, hi) - lo) / (hi - lo) * .74
+    g = np.linspace(0, 2 * np.pi, 400)
+    for v in (-.2, .2): ax.plot(g, np.full_like(g, rad(v)), c="#E3E3E3", lw=.4, zorder=0)
+    ax.plot(g, np.full_like(g, rad(0)), c="k", lw=.6, ls="--", zorder=1)
+    for t_, (_, m) in zip(th, r.iterrows()):
+        c_ = CC[m.cls] if m.p_bonf < .05 else "#BBBBBB"
+        ax.plot([t_, t_], [rad(np.log(m.hr_lower95)), rad(np.log(m.hr_upper95))], c=c_, lw=.9, solid_capstyle="butt", zorder=2)
+        ax.plot(t_, rad(m.coef), "o", ms=2.2, c=c_, mew=0, zorder=3)
+    for cls_, g_ in r.groupby("ci", observed=True):   # class arc outside the data ring
+        i0, i1 = g_.index.min(), g_.index.max(); arc = np.linspace(th[i0], th[i1], 40)
+        ax.plot(arc, np.full_like(arc, .93), c=CC[cls_], lw=4, solid_capstyle="butt")
+    top = pd.concat([r[r.coef > 0].nsmallest(2, "p"), r[r.coef < 0].nsmallest(2, "p")]).sort_index()
+    for j, (i, m) in enumerate(top.iterrows()):
+        deg = np.degrees(th[i]) % 360; left = 90 < deg < 270
+        ax.text(th[i] + .04 * (-1) ** j, .99, m.metabolite, fontsize=5, rotation=deg + (180 if left else 0), ha="right" if left else "left", va="center", rotation_mode="anchor")
+    ax.set_ylim(0, 1.32); ax.set_yticks([]); ax.set_xticks([]); ax.spines["polar"].set_visible(False); ax.set_title(title, fontsize=8, pad=16)
+fig = plt.figure(figsize=(7.4, 4.9))
+for i, k in enumerate(LAB):
+    circular_forest(fig.add_subplot(1, 2, i + 1, projection="polar"), P[k], f"{LAB[k]} (n=251)")
+h = [mp.Patch(color=CC[c_], label=c_) for c_ in CLS_ORDER] + [mp.Patch(color="#CCCCCC", label="Not significant (Bonferroni)")]
+fig.legend(handles=h, loc="lower center", ncol=3, frameon=False, fontsize=5.8, bbox_to_anchor=(.5, .05))
+fig.text(.5, .21, "Dashed ring: HR = 1; light rings: HR 0.82 and 1.22 per SD. Dot = HR, line = 95% CI; grey = not significant after Bonferroni correction.", fontsize=5.3, ha="center", color="#444444")
+fig.subplots_adjust(left=.02, right=.98, top=.93, bottom=.24, wspace=.02); save(fig, "Fig3_circular_forest")
+# supplementary: linear forest of the 20 leading metabolites per outcome
+fig, ax = plt.subplots(1, 2, figsize=(7.1, 4.6))
 for a, k in zip(ax, LAB):
-    r = P[k].nsmallest(15, "p").iloc[::-1]; yy = np.arange(len(r))
+    r = P[k].nsmallest(20, "p").iloc[::-1]; yy = np.arange(len(r))
     a.errorbar(r.hr, yy, xerr=[r.hr - r.hr_lower95, r.hr_upper95 - r.hr], fmt="o", ms=3, c="k", lw=.8)
     a.axvline(1, c=GR, lw=.7); a.set_yticks(yy, r.metabolite); a.set_xlabel("HR per 1 SD (95% CI)"); a.set_title(LAB[k], fontsize=8)
-fig.tight_layout(); save(fig, "Fig3_forest_top15")
+fig.tight_layout(); save(fig, "FigS1_forest_top20")
 # ---- Fig 4 cross-outcome scatter + prevalent vs incident
 j = P["K31"].merge(P["K63"], on="metabolite", suffixes=("_k31", "_k63"))
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.3))
@@ -63,7 +99,7 @@ for k, a in zip(["K63"], [ax[0]]):
     a.set_xlabel("ln(HR) main"); a.set_ylabel("ln(HR) excl. events <2y"); a.set_title(f"{LAB[k]}\nr={s.coef.corr(s.coef_s):.3f}", fontsize=8)
 for k, a in zip(LAB, ax[1:]):
     g = pd.read_csv(RES / f"step03_subgroup/{k}_subgroups.csv"); g = g[g.status == "ok"]
-    H = g.pivot(index="metabolite", columns="subgroup", values="hr")[["Female", "Male", "Age<58", "Age>=58"]]
+    H = g.pivot(index="metabolite", columns="subgroup", values="hr")[["Female", "Male", "Age<60", "Age>=60"]]
     H = H.loc[P[k].metabolite[P[k].metabolite.isin(H.index)].head(20).tolist()]   # display only: 20 leading metabolites; all 251 were analysed
     im = a.imshow(np.log(H.values), cmap="RdBu_r", vmin=-.3, vmax=.3, aspect="auto"); a.set_xticks(range(4), H.columns, rotation=45, ha="right"); a.set_yticks(range(len(H)), H.index, fontsize=6)
     a.set_title(LAB[k].split(" (")[0] + " subgroups", fontsize=8)

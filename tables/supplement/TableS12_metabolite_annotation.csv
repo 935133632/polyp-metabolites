@@ -1,0 +1,252 @@
+metabolite,lipoprotein_family,n_nonmissing,class
+GluLac,Other,273560,Glycolysis / ketone bodies
+SpeAla,Other,274151,Lipoprotein / lipid totals
+MetaTC,Other,274258,Lipoprotein / lipid totals
+TC_HDL,HDL,274258,Lipid content of subclass
+NonHDLnonLDL,LDL,274257,Lipoprotein / lipid totals
+VLDL,VLDL,274257,Lipoprotein / lipid totals
+CLDL,LDL,274258,Lipoprotein / lipid totals
+LDLC,LDL,274257,Lipoprotein / lipid totals
+HDLC,HDL,274258,Lipoprotein / lipid totals
+MetaTG,Other,274258,Lipoprotein / lipid totals
+TG_VLDL,VLDL,274257,Lipid content of subclass
+TG_LDL,LDL,274257,Lipid content of subclass
+TG_HDL,HDL,274257,Lipid content of subclass
+PhoLipo,Other,274257,Lipoprotein / lipid totals
+PhoVLDL,VLDL,274257,Lipoprotein / lipid totals
+PhoLDL,LDL,274257,Lipoprotein / lipid totals
+PhoHDL,HDL,274257,Lipoprotein / lipid totals
+TEC,Other,274257,Lipoprotein / lipid totals
+CE_VLDL,VLDL,274257,Lipid content of subclass
+CE_LDL,LDL,274257,Lipid content of subclass
+CE_HDL,HDL,274257,Lipid content of subclass
+TFC,Other,274257,Lipoprotein / lipid totals
+FC_VLDL,VLDL,274257,Lipid content of subclass
+FC_LDL,LDL,274257,Lipid content of subclass
+FC_HDL,HDL,274257,Lipid content of subclass
+LipLIpo,Other,274257,Lipoprotein / lipid totals
+LipVLDL,VLDL,274257,Lipoprotein / lipid totals
+LipLDL,LDL,274257,Lipoprotein / lipid totals
+LipHDL,HDL,274257,Lipoprotein / lipid totals
+Concen_Lipo,Other,274257,Lipoprotein particle concentration
+Concen_VLDL,VLDL,274257,Lipoprotein particle concentration
+Concen_LDL,LDL,274257,Lipoprotein particle concentration
+Concen_HDL,HDL,274257,Lipoprotein particle concentration
+Diame_VLDL,VLDL,274257,Lipoprotein particle size
+Diame_LDL,LDL,274257,Lipoprotein particle size
+Diame_HDL,HDL,274257,Lipoprotein particle size
+Phospho,Other,274029,Lipoprotein / lipid totals
+TPR,Other,274029,Lipoprotein / lipid totals
+Cholines,Other,274029,Lipoprotein / lipid totals
+Phospha,Other,274029,Lipoprotein / lipid totals
+Sphingomyelins,Other,274022,Lipoprotein / lipid totals
+ApoB,Other,274258,Apolipoproteins
+ApoA1,Other,274258,Apolipoproteins
+ApoRatio,Other,274258,Apolipoproteins
+FattyAcids,Other,274029,Fatty acids
+Unsaturation,Other,274029,Fatty acids
+Omega3,Other,274028,Fatty acids
+Omega6,Other,274028,Fatty acids
+Polyunsaturated,Other,274028,Fatty acids
+Monounsaturated,Other,274028,Fatty acids
+Saturated,Other,274028,Fatty acids
+Linoleic,Other,274028,Fatty acids
+Docosahexaenoic,Other,274028,Fatty acids
+O3pt,Other,274028,Fatty acids
+O6pt,Other,274028,Fatty acids
+Polypt,Other,274028,Fatty acids
+Monopt,Other,274028,Fatty acids
+Satupt,Other,274028,Fatty acids
+Linopt,Other,274028,Fatty acids
+Docopt,Other,274028,Fatty acids
+PolyRatio,Other,274027,Fatty acids
+O6Ratio,Other,274008,Fatty acids
+Alanine,Other,274150,Amino acids
+Glutamine,Other,273396,Amino acids
+Glycine,Other,273865,Amino acids
+Histidine,Other,273890,Amino acids
+Concen_BCAA,Other,274024,Amino acids
+Isoleucine,Other,274217,Amino acids
+Leucine,Other,274233,Amino acids
+Valine,Other,274032,Amino acids
+Phenylalanine,Other,274130,Amino acids
+Tyrosine,Other,273933,Amino acids
+Glucose,Other,273774,Glycolysis / ketone bodies
+Lactate,Other,273744,Glycolysis / ketone bodies
+Pyruvate,Other,273386,Glycolysis / ketone bodies
+Citrate,Other,274231,Glycolysis / ketone bodies
+3Hydroxybutyrate,Other,269181,Glycolysis / ketone bodies
+Acetate,Other,274054,Glycolysis / ketone bodies
+Acetoacetate,Other,274248,Glycolysis / ketone bodies
+Acetone,Other,274256,Glycolysis / ketone bodies
+Creatinine,Other,267477,Fluid balance
+Albumin,Other,274214,Fluid balance
+GlycoAcet,Other,274259,Inflammation (GlycA)
+Chy_VLDL,VLDL,274257,Lipoprotein / lipid totals
+Lip_Chy_VLDL,VLDL,274257,Lipid content of subclass
+Pho_Chy_VLDL,VLDL,274257,Lipid content of subclass
+Cho_Chy_VLDL,VLDL,274257,Lipid content of subclass
+CE_Chy_VLDL,VLDL,274257,Lipid content of subclass
+FC_Chy_VLDL,VLDL,274257,Lipid content of subclass
+TC_Chy_VLDL,VLDL,274257,Lipid content of subclass
+Concen_VVLDL,VLDL,274257,Lipoprotein particle concentration
+Lip_VVLDL,VLDL,274257,Lipid content of subclass
+Pho_VVLDL,VLDL,274257,Lipid content of subclass
+Cho_VVLDL,VLDL,274257,Lipid content of subclass
+CE_VVLDL,VLDL,274257,Lipid content of subclass
+FC_VVLDL,VLDL,274257,Lipid content of subclass
+TG_VVLDL,VLDL,274257,Lipid content of subclass
+Concen_LVLDL,VLDL,274257,Lipoprotein particle concentration
+Lip__LVLDL,VLDL,274257,Lipid content of subclass
+Pho_LVLDL,VLDL,274257,Lipid content of subclass
+Cho_LVLDL,VLDL,274257,Lipid content of subclass
+CE_LVLDL,VLDL,274257,Lipid content of subclass
+FC_LVLDL,VLDL,274257,Lipid content of subclass
+TG_LVLDL,VLDL,274257,Lipid content of subclass
+Concen_MVLDL,VLDL,274257,Lipoprotein particle concentration
+Lip_MVLDL,VLDL,274257,Lipid content of subclass
+Pho_MVLDL,VLDL,274257,Lipid content of subclass
+Cho_MVLDL,VLDL,274257,Lipid content of subclass
+CE_MVLDL,VLDL,274257,Lipid content of subclass
+FC_MVLDL,VLDL,274257,Lipid content of subclass
+TG_MVLDL,VLDL,274257,Lipid content of subclass
+Concen_SVLDL,VLDL,274257,Lipoprotein particle concentration
+Lip_SVLDL,VLDL,274257,Lipid content of subclass
+Pho_SVLDL,VLDL,274257,Lipid content of subclass
+Cho_SVLDL,VLDL,274257,Lipid content of subclass
+CE_SVLDL,VLDL,274257,Lipid content of subclass
+FC_SVLDL,VLDL,274257,Lipid content of subclass
+TG_SVLDL,VLDL,274257,Lipid content of subclass
+Concen_VSVLDL,VLDL,274257,Lipoprotein particle concentration
+Lip_VSVLDL,VLDL,274257,Lipid content of subclass
+Pho_VSVLDL,VLDL,274257,Lipid content of subclass
+Cho_VSVLDL,VLDL,274257,Lipid content of subclass
+CE_VSVLDL,VLDL,274257,Lipid content of subclass
+FC_VSVLDL,VLDL,274257,Lipid content of subclass
+TG_VSVLDL,VLDL,274257,Lipid content of subclass
+Concen_IDL,IDL,274257,Lipoprotein particle concentration
+Lip_IDL,IDL,274257,Lipid content of subclass
+Pho_IDL,IDL,274257,Lipid content of subclass
+Cho_IDL,IDL,274257,Lipid content of subclass
+CE_IDL,IDL,274257,Lipid content of subclass
+FC_IDL,IDL,274257,Lipid content of subclass
+TG_IDL,IDL,274257,Lipid content of subclass
+Concen_LLDL,LDL,274257,Lipoprotein particle concentration
+Lip_LLDL,LDL,274257,Lipid content of subclass
+Pho_LLDL,LDL,274257,Lipid content of subclass
+Cho_LLDL,LDL,274257,Lipid content of subclass
+CE_LLDL,LDL,274257,Lipid content of subclass
+FC_LLDL,LDL,274257,Lipid content of subclass
+TG_LLDL,LDL,274257,Lipid content of subclass
+Concen_MLDL,LDL,274257,Lipoprotein particle concentration
+Lip_MLDL,LDL,274257,Lipid content of subclass
+Pho_MLDL,LDL,274257,Lipid content of subclass
+Cho_MLDL,LDL,274257,Lipid content of subclass
+CE_MLDL,LDL,274257,Lipid content of subclass
+FC_MLDL,LDL,274257,Lipid content of subclass
+TG_MLDL,LDL,274257,Lipid content of subclass
+Concen_SLDL,LDL,274257,Lipoprotein particle concentration
+Lip_SLDL,LDL,274257,Lipid content of subclass
+Pho_SLDL,LDL,274257,Lipid content of subclass
+Cho_SLDL,LDL,274257,Lipid content of subclass
+CE_SLDL,LDL,274257,Lipid content of subclass
+FC_SLDL,LDL,274257,Lipid content of subclass
+TG_SLDL,LDL,274257,Lipid content of subclass
+Concen_VLHDL,HDL,274257,Lipoprotein particle concentration
+Lip_VLHDL,HDL,274257,Lipid content of subclass
+Pho_VLHDL,HDL,274257,Lipid content of subclass
+Cho_VLHDL,HDL,274257,Lipid content of subclass
+CE_VLHDL,HDL,274257,Lipid content of subclass
+FC_VLHDL,HDL,274257,Lipid content of subclass
+TG_VLHDL,HDL,274257,Lipid content of subclass
+Concen_LHDL,HDL,274257,Lipoprotein particle concentration
+Lip_LHDL,HDL,274257,Lipid content of subclass
+Pho_LHDL,HDL,274257,Lipid content of subclass
+Cho_LHDL,HDL,274257,Lipid content of subclass
+CE_LHDL,HDL,274257,Lipid content of subclass
+FC_LHDL,HDL,274257,Lipid content of subclass
+TG_LHDL,HDL,274257,Lipid content of subclass
+Concen_MHDL,HDL,274257,Lipoprotein particle concentration
+Lip_MHDL,HDL,274257,Lipid content of subclass
+Pho_MHDL,HDL,274257,Lipid content of subclass
+Cho_MHDL,HDL,274257,Lipid content of subclass
+CE_MHDL,HDL,274257,Lipid content of subclass
+FC_MHDL,HDL,274257,Lipid content of subclass
+TG_MHDL,HDL,274257,Lipid content of subclass
+Concen_SHDL,HDL,274257,Lipoprotein particle concentration
+Lip_SHDL,HDL,274257,Lipid content of subclass
+Pho_SHDL,HDL,274257,Lipid content of subclass
+Cho_SHDL,HDL,274257,Lipid content of subclass
+CE_SHDL,HDL,274257,Lipid content of subclass
+FC_SHDL,HDL,274257,Lipid content of subclass
+TG_SHDL,HDL,274257,Lipid content of subclass
+Pho_ELVLDL_pt,VLDL,262466,Lipid composition (% within subclass)
+Cho_ELVLDL_pt,VLDL,262466,Lipid composition (% within subclass)
+CE_ELVLDL_pt,VLDL,262466,Lipid composition (% within subclass)
+FC_ELVLDL_pt,VLDL,262466,Lipid composition (% within subclass)
+TG_ELVLDL_pt,VLDL,262466,Lipid composition (% within subclass)
+Pho_VVLDL_pt,VLDL,271629,Lipid composition (% within subclass)
+Cho_VVLDL_pt,VLDL,271629,Lipid composition (% within subclass)
+CE_VVLDL_pt,VLDL,271629,Lipid composition (% within subclass)
+FC_VVLDL_pt,VLDL,271629,Lipid composition (% within subclass)
+TG_VVLDL_pt,VLDL,271629,Lipid composition (% within subclass)
+Pho_LVLDL_pt,VLDL,274224,Lipid composition (% within subclass)
+Cho_LVLDL_pt,VLDL,274224,Lipid composition (% within subclass)
+CE_LVLDL_pt,VLDL,274224,Lipid composition (% within subclass)
+FC_LVLDL_pt,VLDL,274224,Lipid composition (% within subclass)
+TG_LVLDL_pt,VLDL,274224,Lipid composition (% within subclass)
+Pho_MVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Cho_MVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+CE_MVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+FC_MVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+TG_MVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Pho_SVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Cho_SVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+CE_SVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+FC_SVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+TG_SVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Pho_VSVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Cho_VSVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+CE_VSVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+FC_VSVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+TG_VSVLDL_pt,VLDL,274257,Lipid composition (% within subclass)
+Pho_IDL_pt,IDL,274257,Lipid composition (% within subclass)
+Cho_IDL_pt,IDL,274257,Lipid composition (% within subclass)
+CE_IDL_pt,IDL,274257,Lipid composition (% within subclass)
+FC_IDL_pt,IDL,274257,Lipid composition (% within subclass)
+TG_IDL_pt,IDL,274257,Lipid composition (% within subclass)
+Pho_LLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Cho_LLDL_pt,LDL,274257,Lipid composition (% within subclass)
+CE_LLDL_pt,LDL,274257,Lipid composition (% within subclass)
+FC_LLDL_pt,LDL,274257,Lipid composition (% within subclass)
+TG_LLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Pho_MLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Cho_MLDL_pt,LDL,274257,Lipid composition (% within subclass)
+CE_MLDL_pt,LDL,274257,Lipid composition (% within subclass)
+FC_MLDL_pt,LDL,274257,Lipid composition (% within subclass)
+TG_MLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Pho_SLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Cho_SLDL_pt,LDL,274257,Lipid composition (% within subclass)
+CE_SLDL_pt,LDL,274257,Lipid composition (% within subclass)
+FC_SLDL_pt,LDL,274257,Lipid composition (% within subclass)
+TG_SLDL_pt,LDL,274257,Lipid composition (% within subclass)
+Pho_VLHDL_pt,HDL,274147,Lipid composition (% within subclass)
+Cho_VLHDL_pt,HDL,274147,Lipid composition (% within subclass)
+CE_VLHDL_pt,HDL,274147,Lipid composition (% within subclass)
+FC_VLHDL_pt,HDL,274147,Lipid composition (% within subclass)
+TG_VLHDL_pt,HDL,274147,Lipid composition (% within subclass)
+Pho_LHDL_pt,HDL,274257,Lipid composition (% within subclass)
+Cho_LHDL_pt,HDL,274257,Lipid composition (% within subclass)
+CE_LHDL_pt,HDL,274257,Lipid composition (% within subclass)
+FC_LHDL_pt,HDL,274257,Lipid composition (% within subclass)
+TG_LHDL_pt,HDL,274257,Lipid composition (% within subclass)
+Pho_MHDL_pt,HDL,274257,Lipid composition (% within subclass)
+Cho_MHDL_pt,HDL,274257,Lipid composition (% within subclass)
+CE_MHDL_pt,HDL,274257,Lipid composition (% within subclass)
+FC_MHDL_pt,HDL,274257,Lipid composition (% within subclass)
+TG_MHDL_pt,HDL,274257,Lipid composition (% within subclass)
+Pho_SHDL_pt,HDL,274257,Lipid composition (% within subclass)
+Cho_SHDL_pt,HDL,274257,Lipid composition (% within subclass)
+CE_SHDL_pt,HDL,274257,Lipid composition (% within subclass)
+FC_SHDL_pt,HDL,274257,Lipid composition (% within subclass)
+TG_SHDL_pt,HDL,274257,Lipid composition (% within subclass)

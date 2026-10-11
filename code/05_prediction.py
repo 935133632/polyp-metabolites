@@ -34,7 +34,7 @@ def mk_models(spw):
 
 
 for k in sys.argv[1:] or ["K63", "K31"]:
-    bin_rows, surv_rows = [], []
+    bin_rows, surv_rows, roc_rows = [], [], []
     c = build_cohort(k); y = c.event.values
     Xc = design_covars(c).reset_index(drop=True); Xm = M.reindex(c.eid.values).reset_index(drop=True)
     X = pd.concat([Xc, Xm], axis=1); spw = (y == 0).sum() / y.sum()
@@ -50,9 +50,13 @@ for k in sys.argv[1:] or ["K63", "K31"]:
         for s, lab in (("A", "covariates"), ("B", "cov+Bonf-selected"), ("C", "cov+all251")):
             bin_rows.append({"outcome": k, "model": name, "feature_set": lab, "auc_mean": np.mean(res[s]["auc"]), "auc_sd": np.std(res[s]["auc"]),
                              "pr_auc": average_precision_score(y, res[s]["oof"]), "n_selected_mean": np.mean(nsel) if s == "B" else np.nan, "prevalence": y.mean()})
+        for s, lab in (("A", "covariates"), ("B", "cov+Bonf-selected"), ("C", "cov+all251")):
+            roc_rows.append(roc_points(y, res[s]["oof"]).assign(outcome=k, model=name, feature_set=lab, auc_oof=roc_auc_score(y, res[s]["oof"])))
+        pd.concat(roc_rows).to_csv(d / f"binary_roc_{k}.csv", index=False)
         print(k, name, {s: round(np.mean(res[s]["auc"]), 3) for s in "ABC"}, flush=True)
         pd.DataFrame(bin_rows).to_csv(d / f"binary_performance_{k}.csv", index=False)
     # ---------- survival, 70/30
+    sroc = []
     T, E = c.follow_up_days.values / 365.25, c.event.values
     tr, te = train_test_split(np.arange(len(c)), test_size=.3, stratify=E, random_state=1)
     sel = screen(Xm.iloc[tr].values, E[tr])
@@ -69,5 +73,10 @@ for k in sys.argv[1:] or ["K63", "K31"]:
                 case = (E[te] == 1) & (T[te] <= h); ctrl = T[te] > h
                 row[f"auc_{h}y"] = roc_auc_score(np.r_[np.ones(case.sum()), np.zeros(ctrl.sum())], np.r_[r[case], r[ctrl]])
             surv_rows.append(row)
+            if name == "XGBoostCox":
+                for h in (5, 10):   # time-dependent ROC: cases = event by h years, controls = follow-up beyond h
+                    case = (E[te] == 1) & (T[te] <= h); ctrl = T[te] > h
+                    sroc.append(roc_points(np.r_[np.ones(case.sum()), np.zeros(ctrl.sum())], np.r_[r[case], r[ctrl]]).assign(outcome=k, model=name, feature_set=s, horizon_years=h))
+                pd.concat(sroc).to_csv(d / f"survival_roc_{k}.csv", index=False)
         print(k, s, [(r["model"], round(r["c_index"], 3)) for r in surv_rows[-2:]], flush=True)
         pd.DataFrame(surv_rows).to_csv(d / f"survival_performance_{k}.csv", index=False)

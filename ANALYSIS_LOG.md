@@ -24,7 +24,9 @@ Per-metabolite Cox: `Surv(days, event) ~ metabolite_z + age + sex + TDI + BMI + 
 K63.5: 14,044 events, 142 significant; 141 of the 157 main hits remain, all same direction. K31.7: 6,609 events, 166 significant; 166 of 174 remain, all same direction.
 
 ## Step 3 - subgroups (`results/step03_subgroup/`)
-All 251 metabolites re-analysed within female / male / age<58 / age>=58 (sex or age removed from covariates in its own stratum). Significant per stratum: K63.5 102 / 120 / 115 / 124; K31.7 151 / 132 / 147 / 164 (female / male / <58 / >=58). Direction agreement with the main result among main hits (female / male / <58 / >=58): K63.5 0.98 / 1.00 / 0.90 / 1.00; K31.7 1.00 / 1.00 / 0.85 / 1.00. Significant in all four strata: 51 (K63.5), 71 (K31.7). Age<58 has the fewest events and the weakest agreement.
+All 251 metabolites re-analysed within female / male / age<60 / age>=60 (sex or age removed from covariates in its own stratum). The age cut-off of 58 inherited from the Olink project (the cohort median) was replaced by 60 (conventional); 65 is reported as a supplementary cut-off (`*_subgroups_age65.csv`).
+Bonferroni-significant per stratum (female / male / <60 / >=60): K63.5 102 / 120 / 114 / 121; K31.7 151 / 132 / 148 / 151. Supplementary (<65 / >=65): K63.5 143 / 65; K31.7 164 / 101.
+Direction agreement with the main result among main hits (female / male / <60 / >=60): K63.5 0.98 / 1.00 / 0.98 / 1.00; K31.7 1.00 / 1.00 / 0.91 / 1.00; at the 65 cut-off 0.99-1.00 for both. Significant in all four sex and age-60 strata: 51 (K63.5), 75 (K31.7).
 
 ## Step 3b - baseline prevalent companion (`code/03_prevalent_logistic.py`, `results/step03b_prevalent/`)
 Adjusted logistic regression per metabolite for prevalent disease at baseline (same covariates). Significant: K63.5 75/251, K31.7 46/251.
@@ -34,8 +36,9 @@ Class breakdown and consistency counts for the Bonferroni-significant metabolite
 
 ## Step 5 - prediction (`code/05_prediction.py`, `code/05b_coxnet_tuned.py`, `code/07_prediction_summary.py`; `results/step11_13_prediction/`, `tables/Table_*prediction*.csv`, `figures/Fig7_prediction.*`)
 Three feature sets: covariates only; covariates + metabolites passing Bonferroni in a univariate screen run **inside the training data** (on average 214 metabolites for K63.5, 167 for K31.7); covariates + all 251. Binary: 5-fold CV (logistic, elastic net, LightGBM, XGBoost; AUC). Survival: 70/30 split (penalised Cox with penalty chosen on an inner validation split, XGBoost Cox); C-index and 5/10-year AUC.
-- Colon polyp: AUC 0.626-0.627 (covariates) -> 0.630-0.631 (+metabolites); C-index 0.630 -> 0.636.
-- Stomach/duodenal polyp: AUC 0.620-0.632 -> 0.636-0.647; C-index 0.634-0.635 -> 0.647-0.651.
+- Colon polyp: AUC 0.626-0.627 (covariates) -> 0.630-0.631 (+metabolites); C-index 0.630 -> 0.636; time-dependent AUC (tuned Cox) 5 y 0.676 -> 0.682, 10 y 0.648 -> 0.656.
+- Stomach/duodenal polyp: AUC 0.627-0.632 -> 0.636-0.647; C-index 0.634-0.635 -> 0.647-0.651; time-dependent AUC 5 y 0.656 -> 0.681, 10 y 0.650 -> 0.667.
+- Fig 7 shows ROC curves (binary: out-of-fold predictions of the best model; survival: time-dependent ROC at 5 and 10 years). Bar charts of all models are in supplementary Fig S7.
 - Bonferroni-selected and all-251 sets perform alike. Absolute discrimination is low (<= 0.65).
 - Random forest and extra trees were dropped for run time; random survival forest and DeepSurv were not run (packages unavailable).
 
@@ -45,8 +48,12 @@ Split-sample (70/30, all 251 in both halves): of metabolites significant in the 
 ## Step 7 - dual-site overlap (`code/04_dual_site.py`, `results/step07_dual_site/`)
 Participants eligible for both incident analyses: none 250,137; K63 only 14,497; K31 only 5,975; both 1,110. All 251 metabolites compared between dual-site and single-site cases (logistic, Bonferroni across 251): one metabolite is significant, Pho_LHDL_pt (OR 1.14 per SD, 95% CI 1.06-1.22). Treat as hypothesis-generating (1,110 cases).
 
-## Step 8 - figures and tables (`code/06_figures_tables.py`, `code/metab_annot.py`, `figures/`, `tables/`)
-Fig1 volcano; Fig2 counts of Bonferroni-significant metabolites by class (rule-based annotation in `metab_annot.py`); Fig3 top-15 forest; Fig4 cross-outcome and prevalent-vs-incident effect scatter; Fig5 sensitivity + subgroup heatmap (20 leading metabolites shown for display; all 251 analysed); Fig6 dual-site counts and dual-vs-single-site ORs. Tables: cohort characteristics, top-20 per outcome, full primary results (Table S1), class summary.
+## Step 8 - figures and tables (`code/06_figures_tables.py`, `code/07_prediction_summary.py`, `code/metab_annot.py`, `figures/`, `tables/`)
+Fig1 volcano (labels repelled; 5 leading metabolites per direction); Fig2 counts of Bonferroni-significant metabolites by class (rule-based annotation in `metab_annot.py`); Fig3 circular forest plot of all 251 metabolites (HR and 95% CI on a radial scale, by class); Fig4 cross-outcome and prevalent-vs-incident effect scatter; Fig5 sensitivity + subgroup (sex, age 60) heatmap (20 leading metabolites shown for display; all 251 analysed); Fig6 dual-site counts and dual-vs-single-site ORs; Fig7 ROC curves. Main tables: cohort characteristics, top-20 per outcome, full primary results (Table S1), class summary. The earlier top-15 linear forest is now FigS1 (top 20).
 
 ## Step 9 - manuscript draft (`manuscript/polyp_metabolites_draft.md`)
 Methods, Results and limitations drafted from the tables above; Introduction and Discussion not drafted.
+
+## Step 10 - supplementary material (`code/09_supplement.py`, `tables/supplement/`, `figures/supplement/`)
+`Supplementary_Tables.xlsx` (index sheet + 13 tables, also as CSV): S1 primary Cox; S2 sensitivity; S3 subgroups (sex, age 60); S4 age-65 subgroups; S5 prevalent logistic; S6 split-sample; S7 bootstrap; S8 dual-site; S9 original 3-character definitions; S10 binary prediction; S11 survival prediction; S12 metabolite annotation; S13 cohort characteristics.
+Supplementary figures: S2 correlation structure and effective number of tests; S3 polyp-specific vs original 3-character definitions; S4 split-sample concordance and bootstrap stability; S5 age cut-offs 60 and 65; S6 prevalent vs incident (both outcomes); S7 prediction bar charts; S8 dual-site groups and timing; (S1 top-20 forest in `figures/`).

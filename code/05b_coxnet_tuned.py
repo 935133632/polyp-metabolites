@@ -11,7 +11,7 @@ from lifelines.utils import concordance_index
 from common import *
 M = load_metabolome().set_index("eid"); MET = list(M.columns)
 GRID = [0.0005, 0.002, 0.01, 0.05]
-rows = []
+rows, sroc = [], []
 for k in sys.argv[1:] or ["K63", "K31"]:
     c = build_cohort(k); Xc = design_covars(c).reset_index(drop=True); Xm = M.reindex(c.eid.values).reset_index(drop=True); X = pd.concat([Xc, Xm], axis=1)
     T, E = c.follow_up_days.values / 365.25, c.event.values
@@ -29,5 +29,9 @@ for k in sys.argv[1:] or ["K63", "K31"]:
         for h in (5, 10):
             case = (E[te] == 1) & (T[te] <= h); ctrl = T[te] > h
             row[f"auc_{h}y"] = roc_auc_score(np.r_[np.ones(case.sum()), np.zeros(ctrl.sum())], np.r_[r[case], r[ctrl]])
+        for h in (5, 10):
+            case = (E[te] == 1) & (T[te] <= h); ctrl = T[te] > h
+            sroc.append(roc_points(np.r_[np.ones(case.sum()), np.zeros(ctrl.sum())], np.r_[r[case], r[ctrl]]).assign(outcome=k, model="CoxElasticNet_tuned", feature_set=s, horizon_years=h))
+        pd.concat(sroc).to_csv(RES / "step11_13_prediction" / f"survival_roc_coxnet_{k}.csv", index=False)
         rows.append(row); print(k, s, best, round(row["c_index"], 3), flush=True)
         pd.DataFrame(rows).to_csv(RES / "step11_13_prediction" / f"survival_coxnet_tuned_{k}.csv", index=False)

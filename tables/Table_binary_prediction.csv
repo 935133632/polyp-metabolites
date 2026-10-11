@@ -14,7 +14,7 @@ K63,XGBoost,cov+all251,0.6302,0.0033,0.0905,,0.0576
 K31,Logistic,covariates,0.6315,0.0072,0.0402,,0.0264
 K31,Logistic,cov+Bonf-selected,0.6444,0.0089,0.0437,167.2,0.0264
 K31,Logistic,cov+all251,0.6451,0.0092,0.0439,,0.0264
-K31,ElasticNet,covariates,0.6196,0.0094,0.0381,,0.0264
+K31,ElasticNet,covariates,0.6312,0.0074,0.0398,,0.0264
 K31,ElasticNet,cov+Bonf-selected,0.6459,0.0092,0.044,167.2,0.0264
 K31,ElasticNet,cov+all251,0.6469,0.0092,0.0442,,0.0264
 K31,LightGBM,covariates,0.627,0.0068,0.0402,,0.0264

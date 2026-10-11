@@ -117,3 +117,10 @@ def cox_scan(cohort, metabolites=None, drop_covars=(), n_jobs=18):
     out["p_bonf"] = np.minimum(out["p"] * out["p"].notna().sum(), 1.0)   # Bonferroni across fitted metabolites
     return out.sort_values("p").reset_index(drop=True)
 
+
+
+def roc_points(y, score, n=200):
+    """ROC curve thinned to at most n points (aggregate, not individual-level)."""
+    from sklearn.metrics import roc_curve
+    f, t, _ = roc_curve(y, score); idx = np.unique(np.linspace(0, len(f) - 1, n).astype(int))
+    return pd.DataFrame({"fpr": f[idx], "tpr": t[idx]})

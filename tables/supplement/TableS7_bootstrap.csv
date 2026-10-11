@@ -1,0 +1,503 @@
+metabolite,class,n_reps,freq_p05,freq_bonf05,prop_positive,median_coef,outcome
+3Hydroxybutyrate,Glycolysis / ketone bodies,30,1.0,0.933333,1.0,0.044544,K63
+Acetate,Glycolysis / ketone bodies,30,0.6,0.033333,0.066667,-0.01711,K63
+Acetoacetate,Glycolysis / ketone bodies,30,0.966667,0.566667,1.0,0.031988,K63
+Acetone,Glycolysis / ketone bodies,30,0.4,0.033333,0.933333,0.013753,K63
+Alanine,Amino acids,30,0.533333,0.066667,1.0,0.016205,K63
+Albumin,Fluid balance,30,1.0,0.666667,0.0,-0.036611,K63
+ApoA1,Apolipoproteins,30,0.2,0.0,0.633333,0.005859,K63
+ApoB,Apolipoproteins,30,1.0,0.8,0.0,-0.035632,K63
+ApoRatio,Apolipoproteins,30,1.0,0.6,0.0,-0.035082,K63
+CE_Chy_VLDL,Lipid content of subclass,30,1.0,0.766667,1.0,0.037668,K63
+CE_ELVLDL_pt,Lipid composition (% within subclass),30,1.0,0.933333,0.0,-0.039519,K63
+CE_HDL,Lipid content of subclass,30,0.766667,0.266667,0.0,-0.027215,K63
+CE_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.059384,K63
+CE_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.06948,K63
+CE_LDL,Lipid content of subclass,30,1.0,0.566667,0.0,-0.030435,K63
+CE_LHDL,Lipid content of subclass,30,1.0,0.933333,0.0,-0.052188,K63
+CE_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.080046,K63
+CE_LLDL,Lipid content of subclass,30,1.0,0.9,0.0,-0.037036,K63
+CE_LLDL_pt,Lipid composition (% within subclass),30,0.033333,0.0,0.366667,-0.002917,K63
+CE_LVLDL,Lipid content of subclass,30,0.066667,0.0,0.633333,0.004963,K63
+CE_LVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.080806,K63
+CE_MHDL,Lipid content of subclass,30,0.133333,0.0,0.533333,0.000951,K63
+CE_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.053771,K63
+CE_MLDL,Lipid content of subclass,30,0.666667,0.033333,0.0,-0.01746,K63
+CE_MLDL_pt,Lipid composition (% within subclass),30,0.233333,0.0,0.8,0.006071,K63
+CE_MVLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.06427,K63
+CE_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.094586,K63
+CE_SHDL,Lipid content of subclass,30,0.3,0.0,0.866667,0.009452,K63
+CE_SHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.052233,K63
+CE_SLDL,Lipid content of subclass,30,0.866667,0.2,0.0,-0.022621,K63
+CE_SLDL_pt,Lipid composition (% within subclass),30,0.033333,0.0,0.333333,-0.005642,K63
+CE_SVLDL,Lipid content of subclass,30,0.4,0.0,0.066667,-0.015157,K63
+CE_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.071785,K63
+CE_VLDL,Lipid content of subclass,30,0.9,0.3,0.0,-0.025147,K63
+CE_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.066496,K63
+CE_VLHDL_pt,Lipid composition (% within subclass),30,1.0,0.733333,0.0,-0.034072,K63
+CE_VSVLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.053668,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.101919,K63
+CE_VVLDL,Lipid content of subclass,30,0.133333,0.0,0.666667,0.006018,K63
+CE_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.091479,K63
+CLDL,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.048948,K63
+Cho_Chy_VLDL,Lipid content of subclass,30,1.0,0.933333,1.0,0.044195,K63
+Cho_ELVLDL_pt,Lipid composition (% within subclass),30,1.0,0.933333,0.0,-0.040219,K63
+Cho_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.060622,K63
+Cho_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.083595,K63
+Cho_LHDL,Lipid content of subclass,30,1.0,0.933333,0.0,-0.049741,K63
+Cho_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.082388,K63
+Cho_LLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.043153,K63
+Cho_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.075989,K63
+Cho_LVLDL,Lipid content of subclass,30,0.6,0.066667,1.0,0.019476,K63
+Cho_LVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.067383,K63
+Cho_MHDL,Lipid content of subclass,30,0.133333,0.0,0.533333,0.001416,K63
+Cho_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.056931,K63
+Cho_MLDL,Lipid content of subclass,30,0.9,0.3,0.0,-0.025633,K63
+Cho_MLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.071056,K63
+Cho_MVLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.049511,K63
+Cho_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.091874,K63
+Cho_SHDL,Lipid content of subclass,30,0.366667,0.033333,0.933333,0.0133,K63
+Cho_SHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.059238,K63
+Cho_SLDL,Lipid content of subclass,30,1.0,0.6,0.0,-0.031022,K63
+Cho_SLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.071402,K63
+Cho_SVLDL,Lipid content of subclass,30,0.633333,0.166667,0.0,-0.020005,K63
+Cho_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.082073,K63
+Cho_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.066906,K63
+Cho_VLHDL_pt,Lipid composition (% within subclass),30,0.8,0.1,0.0,-0.022302,K63
+Cho_VSVLDL,Lipid content of subclass,30,1.0,0.966667,0.0,-0.045322,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.100406,K63
+Cho_VVLDL,Lipid content of subclass,30,0.6,0.1,1.0,0.02018,K63
+Cho_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.091504,K63
+Cholines,Lipoprotein / lipid totals,30,0.0,0.0,0.4,-0.002521,K63
+Chy_VLDL,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.052462,K63
+Citrate,Glycolysis / ketone bodies,30,0.9,0.4,0.0,-0.026874,K63
+Concen_BCAA,Amino acids,30,0.0,0.0,0.666667,0.005956,K63
+Concen_HDL,Lipoprotein particle concentration,30,0.1,0.0,0.566667,0.003982,K63
+Concen_IDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.055153,K63
+Concen_LDL,Lipoprotein particle concentration,30,1.0,0.766667,0.0,-0.034416,K63
+Concen_LHDL,Lipoprotein particle concentration,30,0.966667,0.733333,0.0,-0.041672,K63
+Concen_LLDL,Lipoprotein particle concentration,30,1.0,0.8,0.0,-0.036008,K63
+Concen_LVLDL,Lipoprotein particle concentration,30,1.0,0.7,1.0,0.036846,K63
+Concen_Lipo,Lipoprotein particle concentration,30,0.033333,0.0,0.433333,-0.001227,K63
+Concen_MHDL,Lipoprotein particle concentration,30,0.3,0.0,0.866667,0.010708,K63
+Concen_MLDL,Lipoprotein particle concentration,30,0.966667,0.466667,0.0,-0.029711,K63
+Concen_MVLDL,Lipoprotein particle concentration,30,0.333333,0.0,0.1,-0.011743,K63
+Concen_SHDL,Lipoprotein particle concentration,30,0.533333,0.1,1.0,0.016845,K63
+Concen_SLDL,Lipoprotein particle concentration,30,0.966667,0.466667,0.0,-0.028108,K63
+Concen_SVLDL,Lipoprotein particle concentration,30,0.533333,0.066667,0.966667,0.017319,K63
+Concen_VLDL,Lipoprotein particle concentration,30,0.1,0.0,0.633333,0.004537,K63
+Concen_VLHDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.052106,K63
+Concen_VSVLDL,Lipoprotein particle concentration,30,0.566667,0.033333,0.033333,-0.017614,K63
+Concen_VVLDL,Lipoprotein particle concentration,30,1.0,0.866667,1.0,0.045771,K63
+Creatinine,Fluid balance,30,0.566667,0.1,0.9,0.021028,K63
+Diame_HDL,Lipoprotein particle size,30,0.933333,0.533333,0.0,-0.036394,K63
+Diame_LDL,Lipoprotein particle size,30,0.833333,0.233333,0.0,-0.025227,K63
+Diame_VLDL,Lipoprotein particle size,30,1.0,1.0,1.0,0.053997,K63
+Docopt,Fatty acids,30,0.933333,0.766667,0.0,-0.0389,K63
+Docosahexaenoic,Fatty acids,30,0.633333,0.0,0.033333,-0.018964,K63
+FC_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.05154,K63
+FC_ELVLDL_pt,Lipid composition (% within subclass),30,1.0,0.433333,0.0,-0.031311,K63
+FC_HDL,Lipid content of subclass,30,0.366667,0.0,0.1,-0.014746,K63
+FC_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.062652,K63
+FC_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.060522,K63
+FC_LDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.054417,K63
+FC_LHDL,Lipid content of subclass,30,0.966667,0.7,0.0,-0.039981,K63
+FC_LHDL_pt,Lipid composition (% within subclass),30,1.0,0.933333,0.0,-0.042612,K63
+FC_LLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.05771,K63
+FC_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.094354,K63
+FC_LVLDL,Lipid content of subclass,30,0.9,0.466667,1.0,0.032134,K63
+FC_LVLDL_pt,Lipid composition (% within subclass),30,0.833333,0.166667,0.0,-0.023388,K63
+FC_MHDL,Lipid content of subclass,30,0.233333,0.0,0.666667,0.005896,K63
+FC_MHDL_pt,Lipid composition (% within subclass),30,0.966667,0.633333,0.0,-0.03757,K63
+FC_MLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.045377,K63
+FC_MLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.079156,K63
+FC_MVLDL,Lipid content of subclass,30,0.9,0.333333,0.0,-0.026495,K63
+FC_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.082404,K63
+FC_SHDL,Lipid content of subclass,30,0.866667,0.3,1.0,0.024181,K63
+FC_SHDL_pt,Lipid composition (% within subclass),30,0.966667,0.366667,0.0,-0.030759,K63
+FC_SLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.049284,K63
+FC_SLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.075235,K63
+FC_SVLDL,Lipid content of subclass,30,0.933333,0.4,0.0,-0.02829,K63
+FC_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.090239,K63
+FC_VLDL,Lipid content of subclass,30,0.1,0.0,0.633333,0.005575,K63
+FC_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.061422,K63
+FC_VLHDL_pt,Lipid composition (% within subclass),30,0.5,0.033333,0.933333,0.019403,K63
+FC_VSVLDL,Lipid content of subclass,30,0.866667,0.233333,0.0,-0.023602,K63
+FC_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.067559,K63
+FC_VVLDL,Lipid content of subclass,30,1.0,0.566667,1.0,0.033023,K63
+FC_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.07479,K63
+FattyAcids,Fatty acids,30,1.0,0.6,1.0,0.032301,K63
+GluLac,Glycolysis / ketone bodies,30,1.0,0.9,1.0,0.040711,K63
+Glucose,Glycolysis / ketone bodies,30,0.833333,0.466667,1.0,0.027311,K63
+Glutamine,Amino acids,30,1.0,0.933333,0.0,-0.052836,K63
+Glycine,Amino acids,30,0.966667,0.733333,0.0,-0.036036,K63
+GlycoAcet,Inflammation (GlycA),30,1.0,1.0,1.0,0.081298,K63
+HDLC,Lipoprotein / lipid totals,30,0.733333,0.166667,0.0,-0.024988,K63
+Histidine,Amino acids,30,1.0,0.8,0.0,-0.036785,K63
+Isoleucine,Amino acids,30,0.6,0.0,0.966667,0.019051,K63
+LDLC,Lipoprotein / lipid totals,30,1.0,0.9,0.0,-0.037371,K63
+Lactate,Glycolysis / ketone bodies,30,1.0,0.666667,1.0,0.03431,K63
+Leucine,Amino acids,30,0.133333,0.0,0.766667,0.008624,K63
+Linoleic,Fatty acids,30,1.0,0.6,0.0,-0.033416,K63
+Linopt,Fatty acids,30,1.0,1.0,0.0,-0.114456,K63
+LipHDL,Lipoprotein / lipid totals,30,0.066667,0.0,0.466667,-0.000708,K63
+LipLDL,Lipoprotein / lipid totals,30,1.0,0.6,0.0,-0.031763,K63
+LipLIpo,Lipoprotein / lipid totals,30,0.033333,0.0,0.133333,-0.006192,K63
+LipVLDL,Lipoprotein / lipid totals,30,0.8,0.3,1.0,0.026659,K63
+Lip_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.049493,K63
+Lip_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.051984,K63
+Lip_LHDL,Lipid content of subclass,30,0.933333,0.433333,0.0,-0.034182,K63
+Lip_LLDL,Lipid content of subclass,30,1.0,0.9,0.0,-0.038356,K63
+Lip_MHDL,Lipid content of subclass,30,0.566667,0.166667,0.966667,0.019875,K63
+Lip_MLDL,Lipid content of subclass,30,0.866667,0.066667,0.0,-0.020407,K63
+Lip_MVLDL,Lipid content of subclass,30,0.066667,0.0,0.533333,0.002208,K63
+Lip_SHDL,Lipid content of subclass,30,1.0,0.733333,1.0,0.036118,K63
+Lip_SLDL,Lipid content of subclass,30,0.9,0.266667,0.0,-0.024469,K63
+Lip_SVLDL,Lipid content of subclass,30,0.366667,0.033333,0.966667,0.014423,K63
+Lip_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.055782,K63
+Lip_VSVLDL,Lipid content of subclass,30,0.4,0.0,0.066667,-0.012647,K63
+Lip_VVLDL,Lipid content of subclass,30,1.0,0.866667,1.0,0.043958,K63
+Lip__LVLDL,Lipid content of subclass,30,1.0,0.633333,1.0,0.035499,K63
+MetaTC,Lipoprotein / lipid totals,30,1.0,0.9,0.0,-0.041203,K63
+MetaTG,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.052785,K63
+Monopt,Fatty acids,30,1.0,1.0,1.0,0.091742,K63
+Monounsaturated,Fatty acids,30,1.0,1.0,1.0,0.055976,K63
+NonHDLnonLDL,Lipoprotein / lipid totals,30,1.0,0.9,0.0,-0.037667,K63
+O3pt,Fatty acids,30,0.1,0.0,0.233333,-0.006284,K63
+O6Ratio,Fatty acids,30,0.6,0.1,0.0,-0.019789,K63
+O6pt,Fatty acids,30,1.0,1.0,0.0,-0.09336,K63
+Omega3,Fatty acids,30,0.3,0.0,0.966667,0.009389,K63
+Omega6,Fatty acids,30,0.6,0.033333,0.0,-0.017459,K63
+Phenylalanine,Amino acids,30,0.0,0.0,0.633333,0.002855,K63
+PhoHDL,Lipoprotein / lipid totals,30,0.3,0.0,0.866667,0.010666,K63
+PhoLDL,Lipoprotein / lipid totals,30,1.0,0.9,0.0,-0.036471,K63
+PhoLipo,Lipoprotein / lipid totals,30,0.033333,0.0,0.2,-0.005541,K63
+PhoVLDL,Lipoprotein / lipid totals,30,0.433333,0.066667,1.0,0.015695,K63
+Pho_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.054109,K63
+Pho_ELVLDL_pt,Lipid composition (% within subclass),30,0.666667,0.066667,1.0,0.019627,K63
+Pho_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.050984,K63
+Pho_IDL_pt,Lipid composition (% within subclass),30,0.8,0.133333,1.0,0.021178,K63
+Pho_LHDL,Lipid content of subclass,30,0.6,0.066667,0.033333,-0.021229,K63
+Pho_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.086094,K63
+Pho_LLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.045896,K63
+Pho_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.042779,K63
+Pho_LVLDL,Lipid content of subclass,30,1.0,0.7,1.0,0.037247,K63
+Pho_LVLDL_pt,Lipid composition (% within subclass),30,1.0,0.566667,1.0,0.03628,K63
+Pho_MHDL,Lipid content of subclass,30,0.866667,0.366667,1.0,0.028183,K63
+Pho_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.061918,K63
+Pho_MLDL,Lipid content of subclass,30,0.9,0.166667,0.0,-0.022587,K63
+Pho_MLDL_pt,Lipid composition (% within subclass),30,0.3,0.066667,0.066667,-0.011057,K63
+Pho_MVLDL,Lipid content of subclass,30,0.466667,0.0,0.066667,-0.015094,K63
+Pho_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.07601,K63
+Pho_SHDL,Lipid content of subclass,30,1.0,0.866667,1.0,0.040964,K63
+Pho_SHDL_pt,Lipid composition (% within subclass),30,1.0,0.8,1.0,0.037163,K63
+Pho_SLDL,Lipid content of subclass,30,0.933333,0.3,0.0,-0.026327,K63
+Pho_SLDL_pt,Lipid composition (% within subclass),30,0.066667,0.0,0.566667,0.002374,K63
+Pho_SVLDL,Lipid content of subclass,30,0.233333,0.0,0.1,-0.009599,K63
+Pho_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.087548,K63
+Pho_VLHDL,Lipid content of subclass,30,1.0,0.966667,0.0,-0.050362,K63
+Pho_VLHDL_pt,Lipid composition (% within subclass),30,0.7,0.033333,0.0,-0.023965,K63
+Pho_VSVLDL,Lipid content of subclass,30,0.133333,0.0,0.2,-0.005713,K63
+Pho_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.053655,K63
+Pho_VVLDL,Lipid content of subclass,30,1.0,0.733333,1.0,0.038121,K63
+Pho_VVLDL_pt,Lipid composition (% within subclass),30,1.0,0.366667,0.0,-0.030456,K63
+Phospha,Lipoprotein / lipid totals,30,0.033333,0.0,0.6,0.000871,K63
+Phospho,Lipoprotein / lipid totals,30,0.2,0.0,0.9,0.010367,K63
+PolyRatio,Fatty acids,30,1.0,1.0,0.0,-0.099005,K63
+Polypt,Fatty acids,30,1.0,1.0,0.0,-0.097588,K63
+Polyunsaturated,Fatty acids,30,0.266667,0.0,0.0,-0.013408,K63
+Pyruvate,Glycolysis / ketone bodies,30,1.0,0.633333,1.0,0.03421,K63
+Satupt,Fatty acids,30,1.0,1.0,1.0,0.060785,K63
+Saturated,Fatty acids,30,1.0,1.0,1.0,0.043457,K63
+SpeAla,Lipoprotein / lipid totals,30,0.266667,0.033333,0.9,0.005475,K63
+Sphingomyelins,Lipoprotein / lipid totals,30,0.866667,0.1,0.0,-0.02592,K63
+TC_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.049327,K63
+TC_HDL,Lipid content of subclass,30,1.0,0.9,0.0,-0.037655,K63
+TEC,Lipoprotein / lipid totals,30,1.0,0.933333,0.0,-0.042258,K63
+TFC,Lipoprotein / lipid totals,30,1.0,0.9,0.0,-0.036613,K63
+TG_ELVLDL_pt,Lipid composition (% within subclass),30,0.866667,0.166667,1.0,0.024527,K63
+TG_HDL,Lipid content of subclass,30,1.0,1.0,1.0,0.053324,K63
+TG_IDL,Lipid content of subclass,30,1.0,1.0,1.0,0.04808,K63
+TG_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.097276,K63
+TG_LDL,Lipid content of subclass,30,1.0,1.0,1.0,0.053478,K63
+TG_LHDL,Lipid content of subclass,30,1.0,0.466667,1.0,0.029952,K63
+TG_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.053927,K63
+TG_LLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.051435,K63
+TG_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.094011,K63
+TG_LVLDL,Lipid content of subclass,30,1.0,0.833333,1.0,0.041259,K63
+TG_LVLDL_pt,Lipid composition (% within subclass),30,1.0,0.833333,1.0,0.0415,K63
+TG_MHDL,Lipid content of subclass,30,1.0,1.0,1.0,0.054382,K63
+TG_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.05081,K63
+TG_MLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.056124,K63
+TG_MLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.0899,K63
+TG_MVLDL,Lipid content of subclass,30,1.0,0.666667,1.0,0.034682,K63
+TG_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.089137,K63
+TG_SHDL,Lipid content of subclass,30,1.0,1.0,1.0,0.067363,K63
+TG_SHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.059273,K63
+TG_SLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.053861,K63
+TG_SLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.085908,K63
+TG_SVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.050857,K63
+TG_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.08495,K63
+TG_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.048967,K63
+TG_VLHDL,Lipid content of subclass,30,1.0,0.5,1.0,0.03001,K63
+TG_VLHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.068223,K63
+TG_VSVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.054746,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.100243,K63
+TG_VVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.054835,K63
+TG_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.086154,K63
+TPR,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.061091,K63
+Tyrosine,Amino acids,30,0.3,0.0,0.066667,-0.012652,K63
+Unsaturation,Fatty acids,30,1.0,1.0,0.0,-0.07171,K63
+VLDL,Lipoprotein / lipid totals,30,0.366667,0.0,0.066667,-0.011819,K63
+Valine,Amino acids,30,0.1,0.0,0.366667,-0.002951,K63
+3Hydroxybutyrate,Glycolysis / ketone bodies,30,0.433333,0.0,0.1,-0.016534,K31
+Acetate,Glycolysis / ketone bodies,30,0.8,0.2,0.0,-0.034021,K31
+Acetoacetate,Glycolysis / ketone bodies,30,0.866667,0.5,0.0,-0.04456,K31
+Acetone,Glycolysis / ketone bodies,30,1.0,0.933333,0.0,-0.066797,K31
+Alanine,Amino acids,30,0.8,0.2,1.0,0.030729,K31
+Albumin,Fluid balance,30,1.0,0.866667,0.0,-0.067797,K31
+ApoA1,Apolipoproteins,30,1.0,1.0,0.0,-0.121123,K31
+ApoB,Apolipoproteins,30,0.666667,0.166667,0.033333,-0.029823,K31
+ApoRatio,Apolipoproteins,30,0.666667,0.133333,0.966667,0.028238,K31
+CE_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.087004,K31
+CE_ELVLDL_pt,Lipid composition (% within subclass),30,0.8,0.166667,0.0,-0.036465,K31
+CE_HDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.166013,K31
+CE_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.092815,K31
+CE_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.108622,K31
+CE_LDL,Lipid content of subclass,30,0.9,0.566667,0.0,-0.049174,K31
+CE_LHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.181348,K31
+CE_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.148385,K31
+CE_LLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.064614,K31
+CE_LLDL_pt,Lipid composition (% within subclass),30,0.433333,0.0,0.066667,-0.022968,K31
+CE_LVLDL,Lipid content of subclass,30,1.0,0.866667,1.0,0.059419,K31
+CE_LVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.088253,K31
+CE_MHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.123813,K31
+CE_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.11614,K31
+CE_MLDL,Lipid content of subclass,30,0.333333,0.033333,0.133333,-0.018024,K31
+CE_MLDL_pt,Lipid composition (% within subclass),30,0.933333,0.533333,1.0,0.047092,K31
+CE_MVLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.059159,K31
+CE_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.140245,K31
+CE_SHDL,Lipid content of subclass,30,0.666667,0.133333,0.033333,-0.031031,K31
+CE_SHDL_pt,Lipid composition (% within subclass),30,0.966667,0.766667,0.0,-0.057759,K31
+CE_SLDL,Lipid content of subclass,30,0.5,0.066667,0.066667,-0.023939,K31
+CE_SLDL_pt,Lipid composition (% within subclass),30,0.6,0.066667,1.0,0.027014,K31
+CE_SVLDL,Lipid content of subclass,30,0.6,0.1,0.966667,0.026007,K31
+CE_SVLDL_pt,Lipid composition (% within subclass),30,1.0,0.833333,0.0,-0.053832,K31
+CE_VLDL,Lipid content of subclass,30,0.066667,0.0,0.6,0.001958,K31
+CE_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.176423,K31
+CE_VLHDL_pt,Lipid composition (% within subclass),30,0.966667,0.966667,0.0,-0.065516,K31
+CE_VSVLDL,Lipid content of subclass,30,1.0,0.9,0.0,-0.054224,K31
+CE_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.145563,K31
+CE_VVLDL,Lipid content of subclass,30,1.0,0.833333,1.0,0.05665,K31
+CE_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.123546,K31
+CLDL,Lipoprotein / lipid totals,30,1.0,0.866667,0.0,-0.064911,K31
+Cho_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.092513,K31
+Cho_ELVLDL_pt,Lipid composition (% within subclass),30,0.966667,0.366667,0.0,-0.043584,K31
+Cho_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.0927,K31
+Cho_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.119744,K31
+Cho_LHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.181269,K31
+Cho_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.160795,K31
+Cho_LLDL,Lipid content of subclass,30,1.0,0.933333,0.0,-0.07168,K31
+Cho_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.131569,K31
+Cho_LVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.072125,K31
+Cho_LVLDL_pt,Lipid composition (% within subclass),30,0.966667,0.866667,0.0,-0.05897,K31
+Cho_MHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.125016,K31
+Cho_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.142233,K31
+Cho_MLDL,Lipid content of subclass,30,0.6,0.133333,0.066667,-0.0311,K31
+Cho_MLDL_pt,Lipid composition (% within subclass),30,1.0,0.933333,0.0,-0.071549,K31
+Cho_MVLDL,Lipid content of subclass,30,0.833333,0.266667,0.0,-0.036671,K31
+Cho_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.133079,K31
+Cho_SHDL,Lipid content of subclass,30,0.766667,0.166667,0.033333,-0.03547,K31
+Cho_SHDL_pt,Lipid composition (% within subclass),30,1.0,0.966667,0.0,-0.082287,K31
+Cho_SLDL,Lipid content of subclass,30,0.8,0.233333,0.0,-0.036232,K31
+Cho_SLDL_pt,Lipid composition (% within subclass),30,0.966667,0.833333,0.0,-0.059575,K31
+Cho_SVLDL,Lipid content of subclass,30,0.366667,0.033333,0.966667,0.013612,K31
+Cho_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.093043,K31
+Cho_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.172142,K31
+Cho_VLHDL_pt,Lipid composition (% within subclass),30,0.433333,0.066667,0.966667,0.021402,K31
+Cho_VSVLDL,Lipid content of subclass,30,0.966667,0.4,0.0,-0.04104,K31
+Cho_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.137802,K31
+Cho_VVLDL,Lipid content of subclass,30,1.0,0.966667,1.0,0.069735,K31
+Cho_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.123131,K31
+Cholines,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.082456,K31
+Chy_VLDL,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.100961,K31
+Citrate,Glycolysis / ketone bodies,30,0.066667,0.0,0.3,-0.004505,K31
+Concen_BCAA,Amino acids,30,0.133333,0.0,0.3,-0.008851,K31
+Concen_HDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.106987,K31
+Concen_IDL,Lipoprotein particle concentration,30,1.0,0.833333,0.0,-0.055022,K31
+Concen_LDL,Lipoprotein particle concentration,30,0.7,0.166667,0.033333,-0.031795,K31
+Concen_LHDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.178386,K31
+Concen_LLDL,Lipoprotein particle concentration,30,0.866667,0.266667,0.0,-0.038423,K31
+Concen_LVLDL,Lipoprotein particle concentration,30,1.0,1.0,1.0,0.091452,K31
+Concen_Lipo,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.105836,K31
+Concen_MHDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.109516,K31
+Concen_MLDL,Lipoprotein particle concentration,30,0.333333,0.033333,0.133333,-0.019768,K31
+Concen_MVLDL,Lipoprotein particle concentration,30,0.333333,0.033333,0.866667,0.013865,K31
+Concen_SHDL,Lipoprotein particle concentration,30,0.5,0.033333,0.066667,-0.024006,K31
+Concen_SLDL,Lipoprotein particle concentration,30,0.233333,0.033333,0.1,-0.017712,K31
+Concen_SVLDL,Lipoprotein particle concentration,30,1.0,0.9,1.0,0.061175,K31
+Concen_VLDL,Lipoprotein particle concentration,30,0.866667,0.233333,1.0,0.038141,K31
+Concen_VLHDL,Lipoprotein particle concentration,30,1.0,1.0,0.0,-0.160169,K31
+Concen_VSVLDL,Lipoprotein particle concentration,30,0.033333,0.0,0.233333,-0.004117,K31
+Concen_VVLDL,Lipoprotein particle concentration,30,1.0,1.0,1.0,0.102282,K31
+Creatinine,Fluid balance,30,0.966667,0.733333,1.0,0.066938,K31
+Diame_HDL,Lipoprotein particle size,30,1.0,1.0,0.0,-0.154727,K31
+Diame_LDL,Lipoprotein particle size,30,1.0,0.933333,0.0,-0.064378,K31
+Diame_VLDL,Lipoprotein particle size,30,1.0,1.0,1.0,0.108166,K31
+Docopt,Fatty acids,30,1.0,0.966667,0.0,-0.078894,K31
+Docosahexaenoic,Fatty acids,30,1.0,0.966667,0.0,-0.074734,K31
+FC_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.093683,K31
+FC_ELVLDL_pt,Lipid composition (% within subclass),30,0.933333,0.5,0.0,-0.045503,K31
+FC_HDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.157781,K31
+FC_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.090749,K31
+FC_IDL_pt,Lipid composition (% within subclass),30,1.0,0.9,0.0,-0.067327,K31
+FC_LDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.079557,K31
+FC_LHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.177204,K31
+FC_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.124824,K31
+FC_LLDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.089895,K31
+FC_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.143189,K31
+FC_LVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.087451,K31
+FC_LVLDL_pt,Lipid composition (% within subclass),30,0.4,0.033333,0.966667,0.019794,K31
+FC_MHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.12361,K31
+FC_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.174549,K31
+FC_MLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.060141,K31
+FC_MLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.127948,K31
+FC_MVLDL,Lipid content of subclass,30,0.066667,0.0,0.4,-0.004592,K31
+FC_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.11169,K31
+FC_SHDL,Lipid content of subclass,30,0.833333,0.266667,0.0,-0.039488,K31
+FC_SHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.097196,K31
+FC_SLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.06187,K31
+FC_SLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.099812,K31
+FC_SVLDL,Lipid content of subclass,30,0.066667,0.0,0.4,-0.00548,K31
+FC_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.132643,K31
+FC_VLDL,Lipid content of subclass,30,0.866667,0.366667,1.0,0.038423,K31
+FC_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.144277,K31
+FC_VLHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.140159,K31
+FC_VSVLDL,Lipid content of subclass,30,0.166667,0.033333,0.133333,-0.010812,K31
+FC_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,0.833333,0.0,-0.057644,K31
+FC_VVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.085082,K31
+FC_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.091253,K31
+FattyAcids,Fatty acids,30,0.133333,0.0,0.733333,0.006328,K31
+GluLac,Glycolysis / ketone bodies,30,1.0,1.0,1.0,0.088103,K31
+Glucose,Glycolysis / ketone bodies,30,1.0,1.0,1.0,0.065738,K31
+Glutamine,Amino acids,30,0.2,0.033333,0.2,-0.012049,K31
+Glycine,Amino acids,30,1.0,0.533333,0.0,-0.047219,K31
+GlycoAcet,Inflammation (GlycA),30,1.0,1.0,1.0,0.166413,K31
+HDLC,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.166794,K31
+Histidine,Amino acids,30,0.033333,0.0,0.566667,0.003234,K31
+Isoleucine,Amino acids,30,0.066667,0.0,0.566667,0.001859,K31
+LDLC,Lipoprotein / lipid totals,30,1.0,0.8,0.0,-0.058245,K31
+Lactate,Glycolysis / ketone bodies,30,0.933333,0.566667,1.0,0.047002,K31
+Leucine,Amino acids,30,0.033333,0.0,0.433333,-0.00201,K31
+Linoleic,Fatty acids,30,0.966667,0.566667,0.0,-0.048713,K31
+Linopt,Fatty acids,30,1.0,1.0,0.0,-0.101911,K31
+LipHDL,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.138746,K31
+LipLDL,Lipoprotein / lipid totals,30,0.933333,0.6,0.0,-0.051953,K31
+LipLIpo,Lipoprotein / lipid totals,30,0.933333,0.366667,0.0,-0.0418,K31
+LipVLDL,Lipoprotein / lipid totals,30,1.0,0.966667,1.0,0.065975,K31
+Lip_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.096784,K31
+Lip_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.080626,K31
+Lip_LHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.172121,K31
+Lip_LLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.065055,K31
+Lip_MHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.094266,K31
+Lip_MLDL,Lipid content of subclass,30,0.533333,0.066667,0.1,-0.025586,K31
+Lip_MVLDL,Lipid content of subclass,30,0.766667,0.1,1.0,0.031273,K31
+Lip_SHDL,Lipid content of subclass,30,0.066667,0.0,0.3,-0.005397,K31
+Lip_SLDL,Lipid content of subclass,30,0.666667,0.2,0.033333,-0.030683,K31
+Lip_SVLDL,Lipid content of subclass,30,1.0,0.8,1.0,0.054715,K31
+Lip_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.161142,K31
+Lip_VSVLDL,Lipid content of subclass,30,0.066667,0.0,0.4,-0.002797,K31
+Lip_VVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.100448,K31
+Lip__LVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.089262,K31
+MetaTC,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.087615,K31
+MetaTG,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.091615,K31
+Monopt,Fatty acids,30,1.0,1.0,1.0,0.14948,K31
+Monounsaturated,Fatty acids,30,1.0,0.8,1.0,0.057831,K31
+NonHDLnonLDL,Lipoprotein / lipid totals,30,0.866667,0.233333,0.0,-0.036978,K31
+O3pt,Fatty acids,30,0.866667,0.3,0.0,-0.039768,K31
+O6Ratio,Fatty acids,30,0.166667,0.0,0.766667,0.011002,K31
+O6pt,Fatty acids,30,1.0,1.0,0.0,-0.099999,K31
+Omega3,Fatty acids,30,0.633333,0.1,0.033333,-0.028103,K31
+Omega6,Fatty acids,30,1.0,0.6,0.0,-0.050586,K31
+Phenylalanine,Amino acids,30,0.9,0.366667,1.0,0.041979,K31
+PhoHDL,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.121146,K31
+PhoLDL,Lipoprotein / lipid totals,30,0.966667,0.6,0.0,-0.052236,K31
+PhoLipo,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.073754,K31
+PhoVLDL,Lipoprotein / lipid totals,30,1.0,0.8,1.0,0.052535,K31
+Pho_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.104688,K31
+Pho_ELVLDL_pt,Lipid composition (% within subclass),30,1.0,0.866667,1.0,0.062535,K31
+Pho_IDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.076256,K31
+Pho_IDL_pt,Lipid composition (% within subclass),30,1.0,0.7,1.0,0.056026,K31
+Pho_LHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.160269,K31
+Pho_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.134189,K31
+Pho_LLDL,Lipid content of subclass,30,1.0,0.866667,0.0,-0.065593,K31
+Pho_LLDL_pt,Lipid composition (% within subclass),30,0.3,0.0,0.8,0.01359,K31
+Pho_LVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.095148,K31
+Pho_LVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.103546,K31
+Pho_MHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.079464,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.154233,K31
+Pho_MLDL,Lipid content of subclass,30,0.6,0.133333,0.066667,-0.028121,K31
+Pho_MLDL_pt,Lipid composition (% within subclass),30,0.433333,0.0,0.033333,-0.022198,K31
+Pho_MVLDL,Lipid content of subclass,30,0.1,0.033333,0.833333,0.008674,K31
+Pho_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.102359,K31
+Pho_SHDL,Lipid content of subclass,30,0.066667,0.0,0.233333,-0.005471,K31
+Pho_SHDL_pt,Lipid composition (% within subclass),30,0.1,0.0,0.4,-0.004129,K31
+Pho_SLDL,Lipid content of subclass,30,0.866667,0.3,0.0,-0.037278,K31
+Pho_SLDL_pt,Lipid composition (% within subclass),30,0.733333,0.1,0.0,-0.030229,K31
+Pho_SVLDL,Lipid content of subclass,30,0.433333,0.066667,0.966667,0.019381,K31
+Pho_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.128778,K31
+Pho_VLHDL,Lipid content of subclass,30,1.0,1.0,0.0,-0.151951,K31
+Pho_VLHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,0.0,-0.097438,K31
+Pho_VSVLDL,Lipid content of subclass,30,0.1,0.0,0.766667,0.008122,K31
+Pho_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.104595,K31
+Pho_VVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.093338,K31
+Pho_VVLDL_pt,Lipid composition (% within subclass),30,0.333333,0.0,0.9,0.017682,K31
+Phospha,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.079489,K31
+Phospho,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.0678,K31
+PolyRatio,Fatty acids,30,1.0,1.0,0.0,-0.142311,K31
+Polypt,Fatty acids,30,1.0,1.0,0.0,-0.11778,K31
+Polyunsaturated,Fatty acids,30,1.0,0.6,0.0,-0.051974,K31
+Pyruvate,Glycolysis / ketone bodies,30,0.966667,0.6,1.0,0.047566,K31
+Satupt,Fatty acids,30,0.733333,0.133333,1.0,0.029401,K31
+Saturated,Fatty acids,30,0.2,0.0,0.766667,0.011987,K31
+SpeAla,Lipoprotein / lipid totals,30,1.0,0.666667,1.0,0.049652,K31
+Sphingomyelins,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.092313,K31
+TC_Chy_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.091953,K31
+TC_HDL,Lipid content of subclass,30,0.966667,0.6,0.0,-0.049564,K31
+TEC,Lipoprotein / lipid totals,30,1.0,1.0,0.0,-0.095313,K31
+TFC,Lipoprotein / lipid totals,30,1.0,0.966667,0.0,-0.069219,K31
+TG_ELVLDL_pt,Lipid composition (% within subclass),30,0.333333,0.0,0.9,0.016499,K31
+TG_HDL,Lipid content of subclass,30,1.0,0.933333,1.0,0.066729,K31
+TG_IDL,Lipid content of subclass,30,0.933333,0.7,1.0,0.048093,K31
+TG_IDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.134491,K31
+TG_LDL,Lipid content of subclass,30,0.933333,0.6,1.0,0.049231,K31
+TG_LHDL,Lipid content of subclass,30,0.066667,0.0,0.433333,-0.003168,K31
+TG_LHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.132305,K31
+TG_LLDL,Lipid content of subclass,30,0.866667,0.233333,1.0,0.039903,K31
+TG_LLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.115589,K31
+TG_LVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.090658,K31
+TG_LVLDL_pt,Lipid composition (% within subclass),30,0.066667,0.0,0.4,-0.001913,K31
+TG_MHDL,Lipid content of subclass,30,1.0,0.966667,1.0,0.067243,K31
+TG_MHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.122247,K31
+TG_MLDL,Lipid content of subclass,30,1.0,0.766667,1.0,0.056182,K31
+TG_MLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.094337,K31
+TG_MVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.07829,K31
+TG_MVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.127508,K31
+TG_SHDL,Lipid content of subclass,30,1.0,1.0,1.0,0.113759,K31
+TG_SHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.13578,K31
+TG_SLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.074898,K31
+TG_SLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.115125,K31
+TG_SVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.095273,K31
+TG_SVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.105182,K31
+TG_VLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.096767,K31
+TG_VLHDL,Lipid content of subclass,30,0.233333,0.0,0.833333,0.014733,K31
+TG_VLHDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.133087,K31
+TG_VSVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.080321,K31
+TG_VSVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.132494,K31
+TG_VVLDL,Lipid content of subclass,30,1.0,1.0,1.0,0.110574,K31
+TG_VVLDL_pt,Lipid composition (% within subclass),30,1.0,1.0,1.0,0.103092,K31
+TPR,Lipoprotein / lipid totals,30,1.0,1.0,1.0,0.139755,K31
+Tyrosine,Amino acids,30,0.466667,0.033333,0.0,-0.023528,K31
+Unsaturation,Fatty acids,30,1.0,1.0,0.0,-0.113909,K31
+VLDL,Lipoprotein / lipid totals,30,0.4,0.033333,0.933333,0.018264,K31
+Valine,Amino acids,30,0.3,0.0,0.0,-0.016896,K31

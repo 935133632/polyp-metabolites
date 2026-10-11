@@ -1,0 +1,13 @@
+outcome,model,feature_set,n_features,c_index,auc_5y,auc_10y,penalizer
+K63,XGBoostCox,covariates,10,0.629908,0.669949,0.648366,
+K63,XGBoostCox,cov+Bonf-selected,222,0.635739,0.675925,0.65519,
+K63,XGBoostCox,cov+all251,261,0.63581,0.674803,0.654704,
+K31,XGBoostCox,covariates,10,0.635386,0.64929,0.650101,
+K31,XGBoostCox,cov+Bonf-selected,171,0.645636,0.67286,0.66195,
+K31,XGBoostCox,cov+all251,261,0.64671,0.672309,0.663367,
+K63,CoxElasticNet_tuned,covariates,10,0.629869,0.675863,0.648012,0.0005
+K63,CoxElasticNet_tuned,cov+Bonf-selected,222,0.63649,0.681673,0.655812,0.0005
+K63,CoxElasticNet_tuned,cov+all251,261,0.636392,0.681555,0.655836,0.0005
+K31,CoxElasticNet_tuned,covariates,10,0.634348,0.655751,0.649601,0.0005
+K31,CoxElasticNet_tuned,cov+Bonf-selected,171,0.650362,0.679566,0.666851,0.0005
+K31,CoxElasticNet_tuned,cov+all251,261,0.650522,0.681136,0.667319,0.002

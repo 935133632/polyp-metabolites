@@ -17,7 +17,8 @@ Only code and aggregate results are tracked. UK Biobank individual-level data (`
 | `code/04_dual_site.py` | overlap of the two outcomes |
 | `code/05_prediction.py`, `code/05b_coxnet_tuned.py` | binary and survival prediction, feature selection inside training data only |
 | `code/08_bonferroni_summary.py` | class breakdown and consistency counts for Bonferroni-significant metabolites |
-| `code/06_figures_tables.py`, `code/07_prediction_summary.py` | figures and tables |
+| `code/06_figures_tables.py`, `code/07_prediction_summary.py` | main figures and tables (incl. ROC curves) |
+| `code/09_supplement.py` | supplementary tables (Excel + CSV) and supplementary figures |
 
 `code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation.
 
