@@ -60,6 +60,22 @@ ann = pd.DataFrame({"metabolite": names, "class": [metab_class(n) for n in names
 ann = pd.concat([ann.drop(columns="class"), ann["class"]], axis=1); sheets["TableS12_metabolite_annotation"] = ("Metabolite abbreviations (as supplied) with rule-based class", ann); ann.to_csv(ST / "TableS12_metabolite_annotation.csv", index=False)
 t1 = pd.read_csv(TAB / "Table1_cohort_characteristics.csv"); sheets["TableS13_cohort"] = ("Cohort characteristics", t1); t1.to_csv(ST / "TableS13_cohort.csv", index=False)
 
+# extended analyses (steps 12-14)
+def cat(pattern, names, label):
+    parts = [rd(pattern.format(n=n)) for n in names]; parts = [p.assign(**{label: n}) for p, n in zip(parts, names) if p is not None]
+    return pd.concat(parts) if parts else None
+adj = [rd(f"step12_model_adjustment/{k}_{m}.csv") for k in LAB for m in ("M1", "M2a", "M2b", "M2c")]
+add("TableS14_model_adjustment", pd.concat([a.assign(outcome=k) for a, k in zip(adj, [k for k in LAB for _ in range(4)]) if a is not None]) if all(a is not None for a in adj) else None,
+    "Primary Cox in the same complete-case sample: M1; M2a (+waist, body fat %); M2b (+HbA1c, log CRP); M2c (+all four)")
+add("TableS15_model_adjustment_summary", rd("step15_summary/model_adjustment_summary.csv"), "Attenuation of main hits after extended adjustment")
+codes = ["K57", "K21", "K29", "K44", "K59", "K62", "K64", "K92", "K80", "K40", "K22", "K52", "K76", "K58", "K20", "K30", "K56", "K66", "K25", "K42", "K83", "K43", "K26", "CRC"]
+add("TableS16_specificity_effects", cat("step13_specificity/{n}.csv", codes, "outcome_code"), "Model 1 Cox of all 251 metabolites for other digestive outcomes (K = 3-character ICD-10; CRC = C18-C20)")
+add("TableS17_specificity_summary", rd("step15_summary/specificity_profile_correlation.csv"), "Correlation of each outcome's 251 ln(HR) values with the colon and stomach/duodenal polyp profiles")
+sq = cat("step14_score_dose_response/{n}_score_quartiles.csv", list(LAB), "outcome"); add("TableS18_score_quartiles", sq, "Metabolite score in the 30% test set: HR per SD and by quartile")
+add("TableS19_score_weights", cat("step14_score_dose_response/{n}_score_weights.csv", list(LAB), "outcome"), "Score weights (penalised Cox, training set)")
+add("TableS20_dose_response", cat("step14_score_dose_response/{n}_dose_response.csv", list(LAB), "outcome"), "Restricted cubic spline curves (HR vs median)")
+add("TableS21_nonlinearity", cat("step14_score_dose_response/{n}_nonlinearity.csv", list(LAB), "outcome"), "P for non-linearity (likelihood ratio, 4-knot spline vs linear)")
+
 with pd.ExcelWriter(ST / "Supplementary_Tables.xlsx", engine="xlsxwriter") as xw:
     idx = pd.DataFrame({"sheet": list(sheets), "description": [v[0] for v in sheets.values()]}); idx.to_excel(xw, "Index", index=False)
     for name, (title, df) in sheets.items(): df.to_excel(xw, name[:31], index=False)

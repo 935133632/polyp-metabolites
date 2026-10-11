@@ -1,0 +1,868 @@
+metabolite,class,z,hr,lower95,upper95,outcome
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.5,0.848925,0.765001,0.942056,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.4,0.854108,0.774439,0.941974,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.3,0.859323,0.783964,0.941927,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.2,0.86457,0.79357,0.941921,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.1,0.869848,0.803251,0.941967,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-2.0,0.875159,0.812994,0.942077,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.9,0.880502,0.822785,0.942268,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.8,0.885878,0.832602,0.942563,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.7,0.891287,0.842414,0.942995,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.6,0.896729,0.852178,0.943609,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.5,0.902211,0.861819,0.944495,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.4,0.907746,0.87124,0.945781,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.3,0.913348,0.880346,0.947587,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.2,0.919032,0.889055,0.950021,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.1,0.924813,0.897321,0.953148,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-1.0,0.930706,0.905161,0.956972,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.9,0.936726,0.912673,0.961413,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.8,0.942889,0.920034,0.966313,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.7,0.949213,0.927478,0.971457,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.6,0.955712,0.935267,0.976605,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.5,0.962406,0.943661,0.981523,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.4,0.969312,0.952907,0.985998,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.3,0.976454,0.963204,0.989886,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.2,0.983896,0.974554,0.993328,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),-0.1,0.991718,0.98686,0.9966,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.1,1.008827,1.003845,1.013833,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.2,1.018287,1.008462,1.028207,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.3,1.028471,1.014179,1.042964,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.4,1.039475,1.021329,1.057944,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.5,1.051362,1.030105,1.073058,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.6,1.064107,1.04039,1.088365,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.7,1.077675,1.052013,1.103963,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.8,1.092027,1.064782,1.119969,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),0.9,1.107125,1.078488,1.136522,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.0,1.122927,1.092902,1.153777,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.1,1.139389,1.107789,1.171889,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.2,1.156464,1.12293,1.190999,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.3,1.174103,1.138136,1.211206,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.4,1.192253,1.153273,1.23255,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.5,1.210857,1.168262,1.255004,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.6,1.229854,1.183073,1.278484,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.7,1.249181,1.197713,1.302861,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.8,1.268813,1.212229,1.328039,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),1.9,1.288754,1.226677,1.353972,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.0,1.309008,1.241103,1.380628,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.1,1.32958,1.255542,1.407984,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.2,1.350476,1.270022,1.436025,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.3,1.3717,1.284566,1.464744,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.4,1.393257,1.299189,1.494136,K63
+TG_VSVLDL_pt,Lipid composition (% within subclass),2.5,1.415153,1.313906,1.524202,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.5,0.866705,0.781788,0.960846,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.4,0.871038,0.790525,0.959752,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.3,0.875393,0.79933,0.958695,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.2,0.87977,0.808198,0.957681,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.1,0.884169,0.817119,0.956721,K63
+TG_IDL_pt,Lipid composition (% within subclass),-2.0,0.888589,0.826081,0.955827,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.9,0.893032,0.83507,0.955017,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.8,0.897497,0.844063,0.954314,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.7,0.901984,0.853028,0.95375,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.6,0.906494,0.861921,0.953373,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.5,0.911038,0.870671,0.953277,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.4,0.915637,0.879188,0.953597,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.3,0.920314,0.887386,0.954465,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.2,0.925094,0.895193,0.955993,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.1,0.929999,0.902576,0.958255,K63
+TG_IDL_pt,Lipid composition (% within subclass),-1.0,0.935055,0.909566,0.961258,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.9,0.940286,0.916274,0.964927,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.8,0.945718,0.92289,0.96911,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.7,0.951377,0.929664,0.973598,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.6,0.957291,0.936864,0.978163,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.5,0.963486,0.94476,0.982583,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.4,0.969992,0.953609,0.986657,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.3,0.976842,0.963614,0.990251,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.2,0.984086,0.974762,0.993498,K63
+TG_IDL_pt,Lipid composition (% within subclass),-0.1,0.991785,0.986938,0.996655,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.1,1.008796,1.003831,1.013786,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.2,1.018241,1.008451,1.028125,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.3,1.028403,1.014172,1.042834,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.4,1.039357,1.0213,1.057734,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.5,1.051149,1.030012,1.072721,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.6,1.063755,1.040189,1.087854,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.7,1.077139,1.051658,1.103237,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.8,1.091266,1.064228,1.118991,K63
+TG_IDL_pt,Lipid composition (% within subclass),0.9,1.106099,1.077685,1.135262,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.0,1.121598,1.0918,1.15221,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.1,1.137723,1.106339,1.169997,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.2,1.154428,1.121081,1.188766,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.3,1.171666,1.135844,1.208618,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.4,1.189388,1.1505,1.229589,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.5,1.207539,1.164979,1.251653,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.6,1.226062,1.17926,1.274722,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.7,1.244899,1.193357,1.298667,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.8,1.264026,1.207321,1.323394,K63
+TG_IDL_pt,Lipid composition (% within subclass),1.9,1.283447,1.22121,1.348855,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.0,1.303166,1.235069,1.375018,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.1,1.323188,1.248933,1.401859,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.2,1.343518,1.262828,1.429365,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.3,1.364161,1.276776,1.457526,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.4,1.38512,1.290795,1.486338,K63
+TG_IDL_pt,Lipid composition (% within subclass),2.5,1.406401,1.304897,1.515802,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.5,0.888003,0.80219,0.982996,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.4,0.890815,0.809613,0.980161,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.3,0.893636,0.817074,0.977371,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.2,0.896465,0.824567,0.974632,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.1,0.899304,0.832082,0.971956,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-2.0,0.902151,0.839607,0.969354,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.9,0.905008,0.847125,0.966845,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.8,0.907873,0.854614,0.964451,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.7,0.910748,0.862042,0.962206,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.6,0.913632,0.869363,0.960156,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.5,0.916551,0.876518,0.958412,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.4,0.919553,0.883446,0.957134,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.3,0.922689,0.890089,0.956482,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.2,0.926011,0.896409,0.956591,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.1,0.929573,0.902407,0.957557,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-1.0,0.933428,0.908151,0.959409,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.9,0.93763,0.913788,0.962094,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.8,0.942237,0.919546,0.965487,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.7,0.947304,0.925704,0.969409,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.6,0.952893,0.93256,0.973668,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.5,0.959063,0.940416,0.97808,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.4,0.965879,0.949557,0.982483,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.3,0.973396,0.960209,0.986765,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.2,0.981607,0.972304,0.990999,K63
+TG_LLDL_pt,Lipid composition (% within subclass),-0.1,0.990484,0.985644,0.995348,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.1,1.010125,1.005156,1.015119,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.2,1.020831,1.011026,1.030732,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.3,1.032087,1.017823,1.046551,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.4,1.043863,1.025758,1.062287,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.5,1.05613,1.034939,1.077755,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.6,1.068873,1.045256,1.093023,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.7,1.082075,1.056556,1.108211,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.8,1.095721,1.06866,1.123466,K63
+TG_LLDL_pt,Lipid composition (% within subclass),0.9,1.109791,1.081372,1.138957,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.0,1.124268,1.094477,1.15487,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.1,1.139133,1.107759,1.171394,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.2,1.154362,1.12102,1.188697,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.3,1.169935,1.134104,1.206899,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.4,1.185827,1.146915,1.22606,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.5,1.202013,1.159418,1.246174,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.6,1.218466,1.171628,1.267177,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.7,1.235158,1.183597,1.288966,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.8,1.25208,1.195391,1.311457,K63
+TG_LLDL_pt,Lipid composition (% within subclass),1.9,1.269233,1.207068,1.334599,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.0,1.286621,1.218674,1.358356,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.1,1.304247,1.230242,1.382703,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.2,1.322114,1.241801,1.407622,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.3,1.340227,1.25337,1.433102,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.4,1.358587,1.264966,1.459138,K63
+TG_LLDL_pt,Lipid composition (% within subclass),2.5,1.377199,1.276602,1.485724,K63
+Linopt,Fatty acids,-2.5,1.408228,1.307239,1.517019,K63
+Linopt,Fatty acids,-2.4,1.389824,1.295773,1.490702,K63
+Linopt,Fatty acids,-2.3,1.37166,1.284336,1.464922,K63
+Linopt,Fatty acids,-2.2,1.353734,1.272914,1.439684,K63
+Linopt,Fatty acids,-2.1,1.336042,1.261491,1.414998,K63
+Linopt,Fatty acids,-2.0,1.318581,1.250044,1.390875,K63
+Linopt,Fatty acids,-1.9,1.301348,1.238546,1.367335,K63
+Linopt,Fatty acids,-1.8,1.284341,1.226959,1.344406,K63
+Linopt,Fatty acids,-1.7,1.267555,1.215237,1.322127,K63
+Linopt,Fatty acids,-1.6,1.250989,1.203319,1.300549,K63
+Linopt,Fatty acids,-1.5,1.234628,1.191114,1.279732,K63
+Linopt,Fatty acids,-1.4,1.218445,1.178525,1.259718,K63
+Linopt,Fatty acids,-1.3,1.202413,1.165488,1.240508,K63
+Linopt,Fatty acids,-1.2,1.186507,1.152001,1.222047,K63
+Linopt,Fatty acids,-1.1,1.170702,1.138121,1.204216,K63
+Linopt,Fatty acids,-1.0,1.154975,1.123967,1.186838,K63
+Linopt,Fatty acids,-0.9,1.139305,1.109698,1.169701,K63
+Linopt,Fatty acids,-0.8,1.123671,1.095492,1.152574,K63
+Linopt,Fatty acids,-0.7,1.108054,1.081522,1.135236,K63
+Linopt,Fatty acids,-0.6,1.092436,1.067945,1.117489,K63
+Linopt,Fatty acids,-0.5,1.076801,1.054898,1.099159,K63
+Linopt,Fatty acids,-0.4,1.061133,1.042495,1.080105,K63
+Linopt,Fatty acids,-0.3,1.04544,1.030823,1.060265,K63
+Linopt,Fatty acids,-0.2,1.02988,1.019881,1.039977,K63
+Linopt,Fatty acids,-0.1,1.014666,1.009624,1.019733,K63
+Linopt,Fatty acids,0.0,1.0,1.0,1.0,K63
+Linopt,Fatty acids,0.1,0.986071,0.981209,0.990957,K63
+Linopt,Fatty acids,0.2,0.973058,0.963756,0.98245,K63
+Linopt,Fatty acids,0.3,0.961132,0.947999,0.974447,K63
+Linopt,Fatty acids,0.4,0.950455,0.934253,0.966939,K63
+Linopt,Fatty acids,0.5,0.941118,0.922646,0.95996,K63
+Linopt,Fatty acids,0.6,0.933016,0.912891,0.953585,K63
+Linopt,Fatty acids,0.7,0.926021,0.904631,0.947917,K63
+Linopt,Fatty acids,0.8,0.920009,0.897504,0.943078,K63
+Linopt,Fatty acids,0.9,0.914864,0.891157,0.939201,K63
+Linopt,Fatty acids,1.0,0.910474,0.885266,0.9364,K63
+Linopt,Fatty acids,1.1,0.906732,0.879562,0.934741,K63
+Linopt,Fatty acids,1.2,0.903533,0.873857,0.934216,K63
+Linopt,Fatty acids,1.3,0.900774,0.868039,0.934744,K63
+Linopt,Fatty acids,1.4,0.898356,0.862061,0.93618,K63
+Linopt,Fatty acids,1.5,0.89618,0.855911,0.938344,K63
+Linopt,Fatty acids,1.6,0.894148,0.849598,0.941034,K63
+Linopt,Fatty acids,1.7,0.892167,0.843139,0.944046,K63
+Linopt,Fatty acids,1.8,0.890191,0.836567,0.947253,K63
+Linopt,Fatty acids,1.9,0.88822,0.829925,0.95061,K63
+Linopt,Fatty acids,2.0,0.886253,0.823244,0.954085,K63
+Linopt,Fatty acids,2.1,0.88429,0.816546,0.957656,K63
+Linopt,Fatty acids,2.2,0.882332,0.809846,0.961306,K63
+Linopt,Fatty acids,2.3,0.880378,0.803157,0.965024,K63
+Linopt,Fatty acids,2.4,0.878429,0.796488,0.9688,K63
+Linopt,Fatty acids,2.5,0.876484,0.789844,0.972627,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.5,1.424876,1.322804,1.534824,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.4,1.402912,1.30805,1.504654,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.3,1.381287,1.29339,1.475158,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.2,1.359996,1.278808,1.446337,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.1,1.339032,1.264288,1.418195,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-2.0,1.318392,1.249808,1.390739,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.9,1.298069,1.235339,1.363985,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.8,1.27806,1.220848,1.337954,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.7,1.25836,1.206287,1.31268,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.6,1.238964,1.191601,1.288208,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.5,1.219891,1.176737,1.264627,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.4,1.201191,1.161676,1.242051,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.3,1.182913,1.146436,1.22055,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.2,1.1651,1.131085,1.200137,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.1,1.147794,1.115747,1.180762,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-1.0,1.131035,1.100599,1.162314,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.9,1.11486,1.08585,1.144644,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.8,1.099301,1.071726,1.127587,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.7,1.084392,1.058443,1.110978,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.6,1.070163,1.046205,1.094669,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.5,1.056641,1.035191,1.078536,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.4,1.043855,1.025564,1.062473,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.3,1.031826,1.017435,1.04642,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.2,1.020532,1.010648,1.030511,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),-0.1,1.009935,1.004929,1.014966,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.1,0.990693,0.98582,0.99559,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.2,0.981982,0.972617,0.991438,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.3,0.973837,0.960558,0.9873,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.4,0.966229,0.949786,0.982956,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.5,0.959125,0.940325,0.978301,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.6,0.952483,0.931958,0.973461,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.7,0.946258,0.92441,0.968623,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.8,0.940407,0.917397,0.963995,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),0.9,0.934889,0.910635,0.959789,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.0,0.929663,0.903869,0.956194,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.1,0.924691,0.896898,0.953345,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.2,0.919934,0.889602,0.951299,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.3,0.915354,0.88194,0.950034,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.4,0.910915,0.873932,0.949464,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.5,0.906582,0.865635,0.949467,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.6,0.902319,0.857122,0.949899,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.7,0.898093,0.848471,0.950617,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.8,0.893887,0.839745,0.95152,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),1.9,0.889701,0.830989,0.952561,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.0,0.885534,0.822232,0.95371,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.1,0.881387,0.813497,0.954943,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.2,0.87726,0.8048,0.956243,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.3,0.873151,0.796152,0.957597,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.4,0.869062,0.787562,0.958997,K63
+CE_VSVLDL_pt,Lipid composition (% within subclass),2.5,0.864992,0.779036,0.960433,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.5,1.421377,1.319576,1.531031,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.4,1.399419,1.304824,1.500871,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.3,1.3778,1.290167,1.471385,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.2,1.356515,1.27559,1.442575,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.1,1.335559,1.261075,1.414443,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-2.0,1.314927,1.246602,1.386998,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.9,1.294614,1.232142,1.360254,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.8,1.274614,1.21766,1.334233,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.7,1.254924,1.20311,1.308968,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.6,1.235538,1.188437,1.284505,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.5,1.216479,1.173589,1.260936,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.4,1.197801,1.158551,1.238381,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.3,1.179558,1.143346,1.216916,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.2,1.161798,1.128044,1.196562,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.1,1.144569,1.112775,1.177272,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-1.0,1.127914,1.097717,1.158941,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.9,1.111873,1.083087,1.141424,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.8,1.096484,1.069111,1.124557,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.7,1.081783,1.056014,1.10818,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.6,1.067803,1.044,1.092149,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.5,1.054578,1.033255,1.07634,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.4,1.042137,1.023945,1.060652,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.3,1.030503,1.016183,1.045024,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.2,1.01964,1.009801,1.029575,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),-0.1,1.009491,1.004505,1.014502,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.1,0.991114,0.986257,0.995996,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.2,0.982784,0.973445,0.992212,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.3,0.974961,0.961717,0.988386,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.4,0.967598,0.951199,0.98428,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.5,0.960654,0.941908,0.979773,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.6,0.95409,0.933633,0.974996,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.7,0.947871,0.926108,0.970145,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.8,0.941962,0.919058,0.965436,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),0.9,0.936329,0.912207,0.961088,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.0,0.930939,0.905302,0.957302,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.1,0.925762,0.898152,0.95422,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.2,0.920765,0.890643,0.951907,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.3,0.915919,0.882739,0.950346,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.4,0.911194,0.87447,0.949461,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.5,0.906561,0.8659,0.949132,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.6,0.901992,0.857111,0.949223,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.7,0.897459,0.848185,0.949596,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.8,0.892949,0.83919,0.950153,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),1.9,0.888462,0.83017,0.950848,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.0,0.883998,0.821156,0.951649,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.1,0.879556,0.81217,0.952532,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.2,0.875136,0.803227,0.953482,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.3,0.870739,0.79434,0.954485,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.4,0.866363,0.785515,0.955532,K63
+Cho_VSVLDL_pt,Lipid composition (% within subclass),2.5,0.86201,0.77676,0.956615,K63
+GlycoAcet,Inflammation (GlycA),-2.5,0.867683,0.783126,0.96137,K63
+GlycoAcet,Inflammation (GlycA),-2.4,0.870774,0.790695,0.958963,K63
+GlycoAcet,Inflammation (GlycA),-2.3,0.873876,0.798307,0.956599,K63
+GlycoAcet,Inflammation (GlycA),-2.2,0.87699,0.805955,0.954285,K63
+GlycoAcet,Inflammation (GlycA),-2.1,0.880114,0.813629,0.952031,K63
+GlycoAcet,Inflammation (GlycA),-2.0,0.883249,0.821319,0.949849,K63
+GlycoAcet,Inflammation (GlycA),-1.9,0.886396,0.829008,0.947756,K63
+GlycoAcet,Inflammation (GlycA),-1.8,0.889553,0.836672,0.945777,K63
+GlycoAcet,Inflammation (GlycA),-1.7,0.892722,0.844282,0.943942,K63
+GlycoAcet,Inflammation (GlycA),-1.6,0.895904,0.851793,0.942299,K63
+GlycoAcet,Inflammation (GlycA),-1.5,0.899129,0.859157,0.940962,K63
+GlycoAcet,Inflammation (GlycA),-1.4,0.902466,0.866332,0.940107,K63
+GlycoAcet,Inflammation (GlycA),-1.3,0.905983,0.873285,0.939905,K63
+GlycoAcet,Inflammation (GlycA),-1.2,0.90975,0.879999,0.940508,K63
+GlycoAcet,Inflammation (GlycA),-1.1,0.91384,0.886498,0.942026,K63
+GlycoAcet,Inflammation (GlycA),-1.0,0.918326,0.89287,0.944507,K63
+GlycoAcet,Inflammation (GlycA),-0.9,0.923282,0.899279,0.947926,K63
+GlycoAcet,Inflammation (GlycA),-0.8,0.928786,0.905963,0.952184,K63
+GlycoAcet,Inflammation (GlycA),-0.7,0.934918,0.913215,0.957136,K63
+GlycoAcet,Inflammation (GlycA),-0.6,0.94176,0.92135,0.962621,K63
+GlycoAcet,Inflammation (GlycA),-0.5,0.949399,0.93069,0.968484,K63
+GlycoAcet,Inflammation (GlycA),-0.4,0.957925,0.941548,0.974588,K63
+GlycoAcet,Inflammation (GlycA),-0.3,0.967402,0.954162,0.980825,K63
+GlycoAcet,Inflammation (GlycA),-0.2,0.977704,0.968357,0.987142,K63
+GlycoAcet,Inflammation (GlycA),-0.1,0.988638,0.983771,0.99353,K63
+GlycoAcet,Inflammation (GlycA),0.0,1.0,1.0,1.0,K63
+GlycoAcet,Inflammation (GlycA),0.1,1.011577,1.006577,1.016602,K63
+GlycoAcet,Inflammation (GlycA),0.2,1.023147,1.013286,1.033103,K63
+GlycoAcet,Inflammation (GlycA),0.3,1.034476,1.020154,1.048999,K63
+GlycoAcet,Inflammation (GlycA),0.4,1.045322,1.027191,1.063773,K63
+GlycoAcet,Inflammation (GlycA),0.5,1.055515,1.034372,1.077091,K63
+GlycoAcet,Inflammation (GlycA),0.6,1.065073,1.041616,1.089058,K63
+GlycoAcet,Inflammation (GlycA),0.7,1.07404,1.048813,1.099873,K63
+GlycoAcet,Inflammation (GlycA),0.8,1.082466,1.055835,1.109769,K63
+GlycoAcet,Inflammation (GlycA),0.9,1.090404,1.062533,1.119006,K63
+GlycoAcet,Inflammation (GlycA),1.0,1.097908,1.068749,1.127862,K63
+GlycoAcet,Inflammation (GlycA),1.1,1.105035,1.074337,1.13661,K63
+GlycoAcet,Inflammation (GlycA),1.2,1.111845,1.079186,1.145491,K63
+GlycoAcet,Inflammation (GlycA),1.3,1.118399,1.083249,1.154688,K63
+GlycoAcet,Inflammation (GlycA),1.4,1.12476,1.086549,1.164315,K63
+GlycoAcet,Inflammation (GlycA),1.5,1.130993,1.089173,1.174419,K63
+GlycoAcet,Inflammation (GlycA),1.6,1.137164,1.091258,1.185001,K63
+GlycoAcet,Inflammation (GlycA),1.7,1.143339,1.092966,1.196034,K63
+GlycoAcet,Inflammation (GlycA),1.8,1.149547,1.094412,1.20746,K63
+GlycoAcet,Inflammation (GlycA),1.9,1.155789,1.095656,1.219221,K63
+GlycoAcet,Inflammation (GlycA),2.0,1.162064,1.096743,1.231276,K63
+GlycoAcet,Inflammation (GlycA),2.1,1.168374,1.097706,1.243591,K63
+GlycoAcet,Inflammation (GlycA),2.2,1.174717,1.09857,1.256143,K63
+GlycoAcet,Inflammation (GlycA),2.3,1.181096,1.099355,1.268915,K63
+GlycoAcet,Inflammation (GlycA),2.4,1.187509,1.100074,1.281893,K63
+GlycoAcet,Inflammation (GlycA),2.5,1.193956,1.100739,1.295067,K63
+HDLC,Lipoprotein / lipid totals,-2.5,1.182827,1.092203,1.280971,K63
+HDLC,Lipoprotein / lipid totals,-2.4,1.171585,1.086829,1.26295,K63
+HDLC,Lipoprotein / lipid totals,-2.3,1.160449,1.081424,1.245249,K63
+HDLC,Lipoprotein / lipid totals,-2.2,1.14942,1.075977,1.227875,K63
+HDLC,Lipoprotein / lipid totals,-2.1,1.138495,1.070474,1.210838,K63
+HDLC,Lipoprotein / lipid totals,-2.0,1.127674,1.064896,1.194152,K63
+HDLC,Lipoprotein / lipid totals,-1.9,1.116955,1.05922,1.177838,K63
+HDLC,Lipoprotein / lipid totals,-1.8,1.106339,1.053415,1.161921,K63
+HDLC,Lipoprotein / lipid totals,-1.7,1.095823,1.047442,1.146439,K63
+HDLC,Lipoprotein / lipid totals,-1.6,1.085409,1.041249,1.131442,K63
+HDLC,Lipoprotein / lipid totals,-1.5,1.075141,1.034807,1.117047,K63
+HDLC,Lipoprotein / lipid totals,-1.4,1.06512,1.028141,1.103429,K63
+HDLC,Lipoprotein / lipid totals,-1.3,1.055447,1.021303,1.090732,K63
+HDLC,Lipoprotein / lipid totals,-1.2,1.046218,1.01439,1.079045,K63
+HDLC,Lipoprotein / lipid totals,-1.1,1.037528,1.007546,1.068403,K63
+HDLC,Lipoprotein / lipid totals,-1.0,1.029469,1.000971,1.058777,K63
+HDLC,Lipoprotein / lipid totals,-0.9,1.022127,0.994906,1.050094,K63
+HDLC,Lipoprotein / lipid totals,-0.8,1.015592,0.989614,1.042253,K63
+HDLC,Lipoprotein / lipid totals,-0.7,1.00995,0.985365,1.035148,K63
+HDLC,Lipoprotein / lipid totals,-0.6,1.005286,0.982424,1.028681,K63
+HDLC,Lipoprotein / lipid totals,-0.5,1.001689,0.981044,1.022768,K63
+HDLC,Lipoprotein / lipid totals,-0.4,0.999246,0.981469,1.017345,K63
+HDLC,Lipoprotein / lipid totals,-0.3,0.998022,0.983882,1.012365,K63
+HDLC,Lipoprotein / lipid totals,-0.2,0.997884,0.988057,1.007808,K63
+HDLC,Lipoprotein / lipid totals,-0.1,0.998614,0.993574,1.00368,K63
+HDLC,Lipoprotein / lipid totals,0.0,1.0,1.0,1.0,K63
+HDLC,Lipoprotein / lipid totals,0.1,1.001827,0.996788,1.006891,K63
+HDLC,Lipoprotein / lipid totals,0.2,1.00388,0.994064,1.013793,K63
+HDLC,Lipoprotein / lipid totals,0.3,1.005944,0.991838,1.02025,K63
+HDLC,Lipoprotein / lipid totals,0.4,1.007799,0.990098,1.025817,K63
+HDLC,Lipoprotein / lipid totals,0.5,1.009286,0.988782,1.030214,K63
+HDLC,Lipoprotein / lipid totals,0.6,1.010405,0.987749,1.03358,K63
+HDLC,Lipoprotein / lipid totals,0.7,1.011187,0.986824,1.036151,K63
+HDLC,Lipoprotein / lipid totals,0.8,1.011663,0.985816,1.038188,K63
+HDLC,Lipoprotein / lipid totals,0.9,1.011867,0.984526,1.039967,K63
+HDLC,Lipoprotein / lipid totals,1.0,1.011829,0.982768,1.04175,K63
+HDLC,Lipoprotein / lipid totals,1.1,1.011583,0.980398,1.043759,K63
+HDLC,Lipoprotein / lipid totals,1.2,1.01116,0.977338,1.046152,K63
+HDLC,Lipoprotein / lipid totals,1.3,1.010593,0.973581,1.049012,K63
+HDLC,Lipoprotein / lipid totals,1.4,1.009915,0.969189,1.052352,K63
+HDLC,Lipoprotein / lipid totals,1.5,1.009158,0.964266,1.05614,K63
+HDLC,Lipoprotein / lipid totals,1.6,1.008354,0.958942,1.060313,K63
+HDLC,Lipoprotein / lipid totals,1.7,1.007535,0.953354,1.064795,K63
+HDLC,Lipoprotein / lipid totals,1.8,1.006716,0.947602,1.069518,K63
+HDLC,Lipoprotein / lipid totals,1.9,1.005898,0.941736,1.074432,K63
+HDLC,Lipoprotein / lipid totals,2.0,1.005081,0.935793,1.079499,K63
+HDLC,Lipoprotein / lipid totals,2.1,1.004264,0.929798,1.084694,K63
+HDLC,Lipoprotein / lipid totals,2.2,1.003448,0.923771,1.089997,K63
+HDLC,Lipoprotein / lipid totals,2.3,1.002632,0.917727,1.095393,K63
+HDLC,Lipoprotein / lipid totals,2.4,1.001818,0.911676,1.100872,K63
+HDLC,Lipoprotein / lipid totals,2.5,1.001003,0.905628,1.106423,K63
+MetaTG,Lipoprotein / lipid totals,-2.5,0.858489,0.773603,0.95269,K63
+MetaTG,Lipoprotein / lipid totals,-2.4,0.865135,0.784408,0.954171,K63
+MetaTG,Lipoprotein / lipid totals,-2.3,0.871833,0.795334,0.95569,K63
+MetaTG,Lipoprotein / lipid totals,-2.2,0.878582,0.806377,0.957253,K63
+MetaTG,Lipoprotein / lipid totals,-2.1,0.885384,0.817528,0.958872,K63
+MetaTG,Lipoprotein / lipid totals,-2.0,0.892238,0.828777,0.960559,K63
+MetaTG,Lipoprotein / lipid totals,-1.9,0.899146,0.840108,0.962332,K63
+MetaTG,Lipoprotein / lipid totals,-1.8,0.906106,0.8515,0.964215,K63
+MetaTG,Lipoprotein / lipid totals,-1.7,0.913121,0.862922,0.966241,K63
+MetaTG,Lipoprotein / lipid totals,-1.6,0.920189,0.874328,0.968456,K63
+MetaTG,Lipoprotein / lipid totals,-1.5,0.927287,0.885614,0.970921,K63
+MetaTG,Lipoprotein / lipid totals,-1.4,0.934361,0.896615,0.973696,K63
+MetaTG,Lipoprotein / lipid totals,-1.3,0.941356,0.907165,0.976836,K63
+MetaTG,Lipoprotein / lipid totals,-1.2,0.948215,0.917107,0.980379,K63
+MetaTG,Lipoprotein / lipid totals,-1.1,0.95488,0.92632,0.98432,K63
+MetaTG,Lipoprotein / lipid totals,-1.0,0.961289,0.934744,0.988588,K63
+MetaTG,Lipoprotein / lipid totals,-0.9,0.967382,0.942399,0.993026,K63
+MetaTG,Lipoprotein / lipid totals,-0.8,0.973096,0.949388,0.997395,K63
+MetaTG,Lipoprotein / lipid totals,-0.7,0.978367,0.95587,1.001393,K63
+MetaTG,Lipoprotein / lipid totals,-0.6,0.983131,0.962027,1.004697,K63
+MetaTG,Lipoprotein / lipid totals,-0.5,0.987323,0.968042,1.006989,K63
+MetaTG,Lipoprotein / lipid totals,-0.4,0.99088,0.974076,1.007974,K63
+MetaTG,Lipoprotein / lipid totals,-0.3,0.993766,0.980261,1.007457,K63
+MetaTG,Lipoprotein / lipid totals,-0.2,0.996115,0.986648,1.005672,K63
+MetaTG,Lipoprotein / lipid totals,-0.1,0.998126,0.993236,1.003039,K63
+MetaTG,Lipoprotein / lipid totals,0.0,1.0,1.0,1.0,K63
+MetaTG,Lipoprotein / lipid totals,0.1,1.00194,0.997003,1.006902,K63
+MetaTG,Lipoprotein / lipid totals,0.2,1.00415,0.994495,1.0139,K63
+MetaTG,Lipoprotein / lipid totals,0.3,1.006837,0.992916,1.020953,K63
+MetaTG,Lipoprotein / lipid totals,0.4,1.010209,0.992695,1.028032,K63
+MetaTG,Lipoprotein / lipid totals,0.5,1.014406,0.994084,1.035143,K63
+MetaTG,Lipoprotein / lipid totals,0.6,1.019397,0.99694,1.042361,K63
+MetaTG,Lipoprotein / lipid totals,0.7,1.025126,1.00105,1.049782,K63
+MetaTG,Lipoprotein / lipid totals,0.8,1.031536,1.006185,1.057526,K63
+MetaTG,Lipoprotein / lipid totals,0.9,1.038569,1.012099,1.065731,K63
+MetaTG,Lipoprotein / lipid totals,1.0,1.046169,1.018538,1.074549,K63
+MetaTG,Lipoprotein / lipid totals,1.1,1.054276,1.025249,1.084126,K63
+MetaTG,Lipoprotein / lipid totals,1.2,1.062831,1.032006,1.094576,K63
+MetaTG,Lipoprotein / lipid totals,1.3,1.071772,1.038635,1.105966,K63
+MetaTG,Lipoprotein / lipid totals,1.4,1.081035,1.04502,1.118292,K63
+MetaTG,Lipoprotein / lipid totals,1.5,1.090555,1.051108,1.131483,K63
+MetaTG,Lipoprotein / lipid totals,1.6,1.100264,1.056889,1.14542,K63
+MetaTG,Lipoprotein / lipid totals,1.7,1.110094,1.062383,1.159947,K63
+MetaTG,Lipoprotein / lipid totals,1.8,1.120012,1.067642,1.174951,K63
+MetaTG,Lipoprotein / lipid totals,1.9,1.130018,1.072721,1.190377,K63
+MetaTG,Lipoprotein / lipid totals,2.0,1.140115,1.077663,1.206186,K63
+MetaTG,Lipoprotein / lipid totals,2.1,1.150301,1.0825,1.222348,K63
+MetaTG,Lipoprotein / lipid totals,2.2,1.160579,1.087258,1.238844,K63
+MetaTG,Lipoprotein / lipid totals,2.3,1.170948,1.091953,1.255657,K63
+MetaTG,Lipoprotein / lipid totals,2.4,1.18141,1.096602,1.272776,K63
+MetaTG,Lipoprotein / lipid totals,2.5,1.191965,1.101214,1.290195,K63
+GlycoAcet,Inflammation (GlycA),-2.5,0.607115,0.512538,0.719143,K31
+GlycoAcet,Inflammation (GlycA),-2.4,0.620689,0.529247,0.727932,K31
+GlycoAcet,Inflammation (GlycA),-2.3,0.634567,0.546472,0.736864,K31
+GlycoAcet,Inflammation (GlycA),-2.2,0.648756,0.564224,0.745951,K31
+GlycoAcet,Inflammation (GlycA),-2.1,0.663261,0.58251,0.755207,K31
+GlycoAcet,Inflammation (GlycA),-2.0,0.678091,0.601332,0.764647,K31
+GlycoAcet,Inflammation (GlycA),-1.9,0.693252,0.620691,0.774297,K31
+GlycoAcet,Inflammation (GlycA),-1.8,0.708753,0.640576,0.784185,K31
+GlycoAcet,Inflammation (GlycA),-1.7,0.724599,0.660969,0.794355,K31
+GlycoAcet,Inflammation (GlycA),-1.6,0.7408,0.681832,0.804868,K31
+GlycoAcet,Inflammation (GlycA),-1.5,0.757335,0.703053,0.815808,K31
+GlycoAcet,Inflammation (GlycA),-1.4,0.774154,0.724441,0.827277,K31
+GlycoAcet,Inflammation (GlycA),-1.3,0.791198,0.745782,0.839381,K31
+GlycoAcet,Inflammation (GlycA),-1.2,0.808407,0.766852,0.852213,K31
+GlycoAcet,Inflammation (GlycA),-1.1,0.82571,0.787448,0.86583,K31
+GlycoAcet,Inflammation (GlycA),-1.0,0.843034,0.807425,0.880214,K31
+GlycoAcet,Inflammation (GlycA),-0.9,0.8603,0.826735,0.895228,K31
+GlycoAcet,Inflammation (GlycA),-0.8,0.877423,0.845455,0.910601,K31
+GlycoAcet,Inflammation (GlycA),-0.7,0.894313,0.863769,0.925936,K31
+GlycoAcet,Inflammation (GlycA),-0.6,0.910873,0.881936,0.94076,K31
+GlycoAcet,Inflammation (GlycA),-0.5,0.927003,0.900235,0.954568,K31
+GlycoAcet,Inflammation (GlycA),-0.4,0.942599,0.918942,0.966866,K31
+GlycoAcet,Inflammation (GlycA),-0.3,0.95758,0.938283,0.977274,K31
+GlycoAcet,Inflammation (GlycA),-0.2,0.972033,0.9583,0.985963,K31
+GlycoAcet,Inflammation (GlycA),-0.1,0.986117,0.978915,0.993371,K31
+GlycoAcet,Inflammation (GlycA),0.0,1.0,1.0,1.0,K31
+GlycoAcet,Inflammation (GlycA),0.1,1.013864,1.006392,1.021391,K31
+GlycoAcet,Inflammation (GlycA),0.2,1.027898,1.01311,1.042902,K31
+GlycoAcet,Inflammation (GlycA),0.3,1.042306,1.020734,1.064333,K31
+GlycoAcet,Inflammation (GlycA),0.4,1.057298,1.029847,1.085482,K31
+GlycoAcet,Inflammation (GlycA),0.5,1.073034,1.04082,1.106244,K31
+GlycoAcet,Inflammation (GlycA),0.6,1.089517,1.053529,1.126735,K31
+GlycoAcet,Inflammation (GlycA),0.7,1.106731,1.067749,1.147135,K31
+GlycoAcet,Inflammation (GlycA),0.8,1.124653,1.083227,1.167664,K31
+GlycoAcet,Inflammation (GlycA),0.9,1.143263,1.09967,1.188585,K31
+GlycoAcet,Inflammation (GlycA),1.0,1.162538,1.116758,1.210194,K31
+GlycoAcet,Inflammation (GlycA),1.1,1.182451,1.13416,1.232798,K31
+GlycoAcet,Inflammation (GlycA),1.2,1.202974,1.151565,1.256677,K31
+GlycoAcet,Inflammation (GlycA),1.3,1.224076,1.168724,1.28205,K31
+GlycoAcet,Inflammation (GlycA),1.4,1.245725,1.185474,1.309038,K31
+GlycoAcet,Inflammation (GlycA),1.5,1.267882,1.201749,1.337655,K31
+GlycoAcet,Inflammation (GlycA),1.6,1.29051,1.217566,1.367823,K31
+GlycoAcet,Inflammation (GlycA),1.7,1.313565,1.232999,1.399395,K31
+GlycoAcet,Inflammation (GlycA),1.8,1.337033,1.248149,1.432246,K31
+GlycoAcet,Inflammation (GlycA),1.9,1.36092,1.263109,1.466304,K31
+GlycoAcet,Inflammation (GlycA),2.0,1.385234,1.277949,1.501524,K31
+GlycoAcet,Inflammation (GlycA),2.1,1.409982,1.292725,1.537875,K31
+GlycoAcet,Inflammation (GlycA),2.2,1.435172,1.307477,1.575339,K31
+GlycoAcet,Inflammation (GlycA),2.3,1.460813,1.322239,1.613909,K31
+GlycoAcet,Inflammation (GlycA),2.4,1.486911,1.337036,1.653586,K31
+GlycoAcet,Inflammation (GlycA),2.5,1.513476,1.351891,1.694375,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.5,0.630757,0.540803,0.735675,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.4,0.641534,0.555054,0.741488,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.3,0.652495,0.569649,0.747389,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.2,0.663643,0.584589,0.753388,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.1,0.674981,0.59987,0.759498,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-2.0,0.686514,0.615487,0.765737,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.9,0.698243,0.631428,0.772128,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.8,0.710173,0.647674,0.778702,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.7,0.722306,0.664194,0.785503,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.6,0.734648,0.680938,0.792594,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.5,0.74722,0.697831,0.800105,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.4,0.760069,0.714781,0.808226,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.3,0.773243,0.731695,0.817151,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.2,0.786796,0.748496,0.827055,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.1,0.800782,0.76515,0.838073,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-1.0,0.815261,0.781702,0.850261,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.9,0.830297,0.798298,0.863578,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.8,0.845956,0.815193,0.87788,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.7,0.862311,0.832727,0.892946,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.6,0.87944,0.851296,0.908514,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.5,0.897423,0.871315,0.924314,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.4,0.916351,0.893214,0.940088,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.3,0.936281,0.917339,0.955614,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.2,0.957047,0.943503,0.970785,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),-0.1,0.978384,0.971242,0.985578,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.0,1.0,1.0,1.0,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.1,1.021578,1.014081,1.029131,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.2,1.042773,1.027856,1.057906,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.3,1.063213,1.041358,1.085527,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.4,1.082505,1.054605,1.111143,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.5,1.100359,1.067564,1.134163,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.6,1.116796,1.080133,1.154704,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.7,1.131896,1.092175,1.173062,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.8,1.145751,1.103519,1.1896,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),0.9,1.158467,1.113968,1.204744,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.0,1.170159,1.123316,1.218954,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.1,1.18095,1.131379,1.232694,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.2,1.190975,1.138032,1.246381,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.3,1.200373,1.143251,1.260348,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.4,1.209289,1.147119,1.274828,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.5,1.217875,1.149821,1.289957,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.6,1.226288,1.151617,1.3058,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.7,1.234683,1.152803,1.322378,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.8,1.243133,1.153583,1.339635,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),1.9,1.251641,1.154048,1.357487,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.0,1.260208,1.154269,1.37587,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.1,1.268833,1.154296,1.394735,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.2,1.277517,1.154168,1.414048,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.3,1.28626,1.153915,1.433784,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.4,1.295064,1.15356,1.453925,K31
+Pho_MHDL_pt,Lipid composition (% within subclass),2.5,1.303927,1.153121,1.474456,K31
+Monopt,Fatty acids,-2.5,0.772623,0.665276,0.89729,K31
+Monopt,Fatty acids,-2.4,0.775811,0.673948,0.893071,K31
+Monopt,Fatty acids,-2.3,0.779013,0.682692,0.888923,K31
+Monopt,Fatty acids,-2.2,0.782227,0.691501,0.884857,K31
+Monopt,Fatty acids,-2.1,0.785455,0.700363,0.880886,K31
+Monopt,Fatty acids,-2.0,0.788697,0.709262,0.877027,K31
+Monopt,Fatty acids,-1.9,0.791951,0.718177,0.873304,K31
+Monopt,Fatty acids,-1.8,0.795219,0.727077,0.869748,K31
+Monopt,Fatty acids,-1.7,0.798501,0.73592,0.866404,K31
+Monopt,Fatty acids,-1.6,0.801799,0.744649,0.863335,K31
+Monopt,Fatty acids,-1.5,0.805196,0.753239,0.860738,K31
+Monopt,Fatty acids,-1.4,0.808868,0.761718,0.858937,K31
+Monopt,Fatty acids,-1.3,0.812998,0.770131,0.858251,K31
+Monopt,Fatty acids,-1.2,0.817773,0.778552,0.85897,K31
+Monopt,Fatty acids,-1.1,0.823386,0.787115,0.861328,K31
+Monopt,Fatty acids,-1.0,0.830037,0.796041,0.865485,K31
+Monopt,Fatty acids,-0.9,0.837936,0.805657,0.871509,K31
+Monopt,Fatty acids,-0.8,0.847305,0.816394,0.879386,K31
+Monopt,Fatty acids,-0.7,0.85838,0.828766,0.889053,K31
+Monopt,Fatty acids,-0.6,0.871418,0.843339,0.900433,K31
+Monopt,Fatty acids,-0.5,0.8867,0.860715,0.91347,K31
+Monopt,Fatty acids,-0.4,0.904536,0.881533,0.928139,K31
+Monopt,Fatty acids,-0.3,0.925176,0.906333,0.944411,K31
+Monopt,Fatty acids,-0.2,0.94833,0.934827,0.962028,K31
+Monopt,Fatty acids,-0.1,0.973466,0.966322,0.980664,K31
+Monopt,Fatty acids,0.0,1.0,1.0,1.0,K31
+Monopt,Fatty acids,0.1,1.027275,1.019704,1.034903,K31
+Monopt,Fatty acids,0.2,1.054562,1.039422,1.069924,K31
+Monopt,Fatty acids,0.3,1.081052,1.058763,1.103811,K31
+Monopt,Fatty acids,0.4,1.105863,1.077289,1.135194,K31
+Monopt,Fatty acids,0.5,1.128321,1.09462,1.163059,K31
+Monopt,Fatty acids,0.6,1.148407,1.11063,1.187469,K31
+Monopt,Fatty acids,0.7,1.166231,1.125211,1.208746,K31
+Monopt,Fatty acids,0.8,1.181931,1.13823,1.22731,K31
+Monopt,Fatty acids,0.9,1.195673,1.149532,1.243665,K31
+Monopt,Fatty acids,1.0,1.207643,1.158967,1.258363,K31
+Monopt,Fatty acids,1.1,1.218047,1.166417,1.271962,K31
+Monopt,Fatty acids,1.2,1.227108,1.171847,1.284976,K31
+Monopt,Fatty acids,1.3,1.235061,1.175331,1.297826,K31
+Monopt,Fatty acids,1.4,1.242149,1.177066,1.310831,K31
+Monopt,Fatty acids,1.5,1.248627,1.177357,1.324212,K31
+Monopt,Fatty acids,1.6,1.254755,1.176579,1.338126,K31
+Monopt,Fatty acids,1.7,1.26079,1.175141,1.352682,K31
+Monopt,Fatty acids,1.8,1.266851,1.173295,1.367867,K31
+Monopt,Fatty acids,1.9,1.272941,1.171139,1.383592,K31
+Monopt,Fatty acids,2.0,1.27906,1.168744,1.399789,K31
+Monopt,Fatty acids,2.1,1.285209,1.166163,1.416407,K31
+Monopt,Fatty acids,2.2,1.291387,1.163435,1.433411,K31
+Monopt,Fatty acids,2.3,1.297595,1.16059,1.450772,K31
+Monopt,Fatty acids,2.4,1.303832,1.157653,1.46847,K31
+Monopt,Fatty acids,2.5,1.3101,1.15464,1.486491,K31
+CE_VLHDL,Lipid content of subclass,-2.5,1.325799,1.175077,1.495854,K31
+CE_VLHDL,Lipid content of subclass,-2.4,1.318402,1.176758,1.477096,K31
+CE_VLHDL,Lipid content of subclass,-2.3,1.311046,1.178348,1.458687,K31
+CE_VLHDL,Lipid content of subclass,-2.2,1.303731,1.179828,1.440645,K31
+CE_VLHDL,Lipid content of subclass,-2.1,1.296457,1.181174,1.422991,K31
+CE_VLHDL,Lipid content of subclass,-2.0,1.289223,1.182351,1.405755,K31
+CE_VLHDL,Lipid content of subclass,-1.9,1.28203,1.183319,1.388975,K31
+CE_VLHDL,Lipid content of subclass,-1.8,1.274877,1.184021,1.372704,K31
+CE_VLHDL,Lipid content of subclass,-1.7,1.267764,1.184384,1.357013,K31
+CE_VLHDL,Lipid content of subclass,-1.6,1.260687,1.184308,1.34199,K31
+CE_VLHDL,Lipid content of subclass,-1.5,1.253532,1.183551,1.32765,K31
+CE_VLHDL,Lipid content of subclass,-1.4,1.246057,1.181738,1.313878,K31
+CE_VLHDL,Lipid content of subclass,-1.3,1.238021,1.178539,1.300505,K31
+CE_VLHDL,Lipid content of subclass,-1.2,1.229186,1.173704,1.28729,K31
+CE_VLHDL,Lipid content of subclass,-1.1,1.219325,1.167091,1.273898,K31
+CE_VLHDL,Lipid content of subclass,-1.0,1.208222,1.158667,1.259896,K31
+CE_VLHDL,Lipid content of subclass,-0.9,1.19567,1.148494,1.244783,K31
+CE_VLHDL,Lipid content of subclass,-0.8,1.181479,1.136696,1.228027,K31
+CE_VLHDL,Lipid content of subclass,-0.7,1.165477,1.123416,1.209113,K31
+CE_VLHDL,Lipid content of subclass,-0.6,1.147511,1.108794,1.187579,K31
+CE_VLHDL,Lipid content of subclass,-0.5,1.127451,1.09295,1.163041,K31
+CE_VLHDL,Lipid content of subclass,-0.4,1.105196,1.07598,1.135206,K31
+CE_VLHDL,Lipid content of subclass,-0.3,1.080749,1.057979,1.104008,K31
+CE_VLHDL,Lipid content of subclass,-0.2,1.054622,1.039163,1.07031,K31
+CE_VLHDL,Lipid content of subclass,-0.1,1.027496,1.019769,1.035282,K31
+CE_VLHDL,Lipid content of subclass,0.0,1.0,1.0,1.0,K31
+CE_VLHDL,Lipid content of subclass,0.1,0.972704,0.965419,0.980045,K31
+CE_VLHDL,Lipid content of subclass,0.2,0.946123,0.932365,0.960083,K31
+CE_VLHDL,Lipid content of subclass,0.3,0.920714,0.90154,0.940296,K31
+CE_VLHDL,Lipid content of subclass,0.4,0.896887,0.873518,0.920881,K31
+CE_VLHDL,Lipid content of subclass,0.5,0.874874,0.84853,0.902037,K31
+CE_VLHDL,Lipid content of subclass,0.6,0.854534,0.82614,0.883904,K31
+CE_VLHDL,Lipid content of subclass,0.7,0.835677,0.805832,0.866626,K31
+CE_VLHDL,Lipid content of subclass,0.8,0.81813,0.787119,0.850363,K31
+CE_VLHDL,Lipid content of subclass,0.9,0.801736,0.769551,0.835268,K31
+CE_VLHDL,Lipid content of subclass,1.0,0.786349,0.752732,0.821467,K31
+CE_VLHDL,Lipid content of subclass,1.1,0.771833,0.736349,0.809028,K31
+CE_VLHDL,Lipid content of subclass,1.2,0.758064,0.720186,0.797935,K31
+CE_VLHDL,Lipid content of subclass,1.3,0.744925,0.704121,0.788093,K31
+CE_VLHDL,Lipid content of subclass,1.4,0.732306,0.688113,0.779338,K31
+CE_VLHDL,Lipid content of subclass,1.5,0.720106,0.672168,0.771464,K31
+CE_VLHDL,Lipid content of subclass,1.6,0.708229,0.656317,0.764248,K31
+CE_VLHDL,Lipid content of subclass,1.7,0.696587,0.640601,0.757466,K31
+CE_VLHDL,Lipid content of subclass,1.8,0.685138,0.625074,0.750973,K31
+CE_VLHDL,Lipid content of subclass,1.9,0.673876,0.609782,0.744708,K31
+CE_VLHDL,Lipid content of subclass,2.0,0.6628,0.594758,0.738627,K31
+CE_VLHDL,Lipid content of subclass,2.1,0.651906,0.580023,0.732698,K31
+CE_VLHDL,Lipid content of subclass,2.2,0.641191,0.56559,0.726897,K31
+CE_VLHDL,Lipid content of subclass,2.3,0.630652,0.551467,0.721207,K31
+CE_VLHDL,Lipid content of subclass,2.4,0.620286,0.537657,0.715614,K31
+CE_VLHDL,Lipid content of subclass,2.5,0.610091,0.524161,0.710108,K31
+CE_LHDL,Lipid content of subclass,-2.5,1.361771,1.201608,1.543283,K31
+CE_LHDL,Lipid content of subclass,-2.4,1.351583,1.201231,1.520755,K31
+CE_LHDL,Lipid content of subclass,-2.3,1.341471,1.200761,1.49867,K31
+CE_LHDL,Lipid content of subclass,-2.2,1.331435,1.200181,1.477043,K31
+CE_LHDL,Lipid content of subclass,-2.1,1.321474,1.199466,1.455891,K31
+CE_LHDL,Lipid content of subclass,-2.0,1.311587,1.198586,1.435242,K31
+CE_LHDL,Lipid content of subclass,-1.9,1.301774,1.1975,1.415128,K31
+CE_LHDL,Lipid content of subclass,-1.8,1.292035,1.196157,1.395598,K31
+CE_LHDL,Lipid content of subclass,-1.7,1.282368,1.194486,1.376716,K31
+CE_LHDL,Lipid content of subclass,-1.6,1.272771,1.192396,1.358564,K31
+CE_LHDL,Lipid content of subclass,-1.5,1.263146,1.189663,1.341167,K31
+CE_LHDL,Lipid content of subclass,-1.4,1.253286,1.185954,1.32444,K31
+CE_LHDL,Lipid content of subclass,-1.3,1.242985,1.180975,1.308251,K31
+CE_LHDL,Lipid content of subclass,-1.2,1.232045,1.174508,1.292402,K31
+CE_LHDL,Lipid content of subclass,-1.1,1.220275,1.166433,1.276603,K31
+CE_LHDL,Lipid content of subclass,-1.0,1.207494,1.156741,1.260474,K31
+CE_LHDL,Lipid content of subclass,-0.9,1.193532,1.145514,1.243563,K31
+CE_LHDL,Lipid content of subclass,-0.8,1.178231,1.132897,1.22538,K31
+CE_LHDL,Lipid content of subclass,-0.7,1.161449,1.11906,1.205442,K31
+CE_LHDL,Lipid content of subclass,-0.6,1.143058,1.104173,1.183312,K31
+CE_LHDL,Lipid content of subclass,-0.5,1.122951,1.088381,1.158619,K31
+CE_LHDL,Lipid content of subclass,-0.4,1.101041,1.071806,1.131074,K31
+CE_LHDL,Lipid content of subclass,-0.3,1.077324,1.05455,1.10059,K31
+CE_LHDL,Lipid content of subclass,-0.2,1.052215,1.036751,1.06791,K31
+CE_LHDL,Lipid content of subclass,-0.1,1.026269,1.018535,1.034062,K31
+CE_LHDL,Lipid content of subclass,0.0,1.0,1.0,1.0,K31
+CE_LHDL,Lipid content of subclass,0.1,0.973877,0.966573,0.981235,K31
+CE_LHDL,Lipid content of subclass,0.2,0.948324,0.934523,0.962329,K31
+CE_LHDL,Lipid content of subclass,0.3,0.923723,0.904476,0.943379,K31
+CE_LHDL,Lipid content of subclass,0.4,0.900413,0.876949,0.924506,K31
+CE_LHDL,Lipid content of subclass,0.5,0.878596,0.852145,0.905868,K31
+CE_LHDL,Lipid content of subclass,0.6,0.858164,0.829666,0.887641,K31
+CE_LHDL,Lipid content of subclass,0.7,0.838972,0.809036,0.870016,K31
+CE_LHDL,Lipid content of subclass,0.8,0.820886,0.789801,0.853195,K31
+CE_LHDL,Lipid content of subclass,0.9,0.803783,0.771543,0.83737,K31
+CE_LHDL,Lipid content of subclass,1.0,0.787548,0.753896,0.822702,K31
+CE_LHDL,Lipid content of subclass,1.1,0.772075,0.736574,0.809287,K31
+CE_LHDL,Lipid content of subclass,1.2,0.757267,0.719392,0.797136,K31
+CE_LHDL,Lipid content of subclass,1.3,0.743032,0.702259,0.786172,K31
+CE_LHDL,Lipid content of subclass,1.4,0.729284,0.68516,0.77625,K31
+CE_LHDL,Lipid content of subclass,1.5,0.715944,0.668128,0.767183,K31
+CE_LHDL,Lipid content of subclass,1.6,0.702938,0.651217,0.758766,K31
+CE_LHDL,Lipid content of subclass,1.7,0.690197,0.63449,0.750795,K31
+CE_LHDL,Lipid content of subclass,1.8,0.677688,0.618006,0.743134,K31
+CE_LHDL,Lipid content of subclass,1.9,0.665406,0.601812,0.735719,K31
+CE_LHDL,Lipid content of subclass,2.0,0.653346,0.585939,0.728508,K31
+CE_LHDL,Lipid content of subclass,2.1,0.641505,0.570405,0.721468,K31
+CE_LHDL,Lipid content of subclass,2.2,0.629879,0.555221,0.714576,K31
+CE_LHDL,Lipid content of subclass,2.3,0.618463,0.540393,0.707812,K31
+CE_LHDL,Lipid content of subclass,2.4,0.607254,0.525922,0.701163,K31
+CE_LHDL,Lipid content of subclass,2.5,0.596248,0.511808,0.694619,K31
+Cho_LHDL,Lipid content of subclass,-2.5,1.37173,1.210219,1.554796,K31
+Cho_LHDL,Lipid content of subclass,-2.4,1.360526,1.209012,1.531028,K31
+Cho_LHDL,Lipid content of subclass,-2.3,1.349413,1.207714,1.507739,K31
+Cho_LHDL,Lipid content of subclass,-2.2,1.338392,1.206306,1.484941,K31
+Cho_LHDL,Lipid content of subclass,-2.1,1.32746,1.204764,1.462653,K31
+Cho_LHDL,Lipid content of subclass,-2.0,1.316618,1.203057,1.440898,K31
+Cho_LHDL,Lipid content of subclass,-1.9,1.305864,1.201146,1.419712,K31
+Cho_LHDL,Lipid content of subclass,-1.8,1.295198,1.198978,1.39914,K31
+Cho_LHDL,Lipid content of subclass,-1.7,1.284619,1.196486,1.379244,K31
+Cho_LHDL,Lipid content of subclass,-1.6,1.274124,1.193576,1.360109,K31
+Cho_LHDL,Lipid content of subclass,-1.5,1.263623,1.190034,1.341762,K31
+Cho_LHDL,Lipid content of subclass,-1.4,1.252927,1.185545,1.324138,K31
+Cho_LHDL,Lipid content of subclass,-1.3,1.241847,1.179832,1.307121,K31
+Cho_LHDL,Lipid content of subclass,-1.2,1.230202,1.172696,1.290527,K31
+Cho_LHDL,Lipid content of subclass,-1.1,1.217818,1.164036,1.274085,K31
+Cho_LHDL,Lipid content of subclass,-1.0,1.204532,1.153861,1.257429,K31
+Cho_LHDL,Lipid content of subclass,-0.9,1.190189,1.142267,1.240121,K31
+Cho_LHDL,Lipid content of subclass,-0.8,1.174645,1.129414,1.221687,K31
+Cho_LHDL,Lipid content of subclass,-0.7,1.157771,1.115486,1.201659,K31
+Cho_LHDL,Lipid content of subclass,-0.6,1.139451,1.100661,1.179608,K31
+Cho_LHDL,Lipid content of subclass,-0.5,1.119587,1.085096,1.155174,K31
+Cho_LHDL,Lipid content of subclass,-0.4,1.098097,1.068919,1.12807,K31
+Cho_LHDL,Lipid content of subclass,-0.3,1.074974,1.052234,1.098206,K31
+Cho_LHDL,Lipid content of subclass,-0.2,1.050592,1.035141,1.066273,K31
+Cho_LHDL,Lipid content of subclass,-0.1,1.025446,1.017713,1.033239,K31
+Cho_LHDL,Lipid content of subclass,0.0,1.0,1.0,1.0,K31
+Cho_LHDL,Lipid content of subclass,0.1,0.974676,0.967361,0.982046,K31
+Cho_LHDL,Lipid content of subclass,0.2,0.949858,0.936023,0.963897,K31
+Cho_LHDL,Lipid content of subclass,0.3,0.925892,0.906584,0.945611,K31
+Cho_LHDL,Lipid content of subclass,0.4,0.903088,0.879533,0.927273,K31
+Cho_LHDL,Lipid content of subclass,0.5,0.88163,0.855063,0.909022,K31
+Cho_LHDL,Lipid content of subclass,0.6,0.861427,0.832794,0.891046,K31
+Cho_LHDL,Lipid content of subclass,0.7,0.842354,0.812268,0.873554,K31
+Cho_LHDL,Lipid content of subclass,0.8,0.824291,0.793048,0.856764,K31
+Cho_LHDL,Lipid content of subclass,0.9,0.807131,0.774731,0.840886,K31
+Cho_LHDL,Lipid content of subclass,1.0,0.790775,0.756963,0.826096,K31
+Cho_LHDL,Lipid content of subclass,1.1,0.775128,0.739472,0.812502,K31
+Cho_LHDL,Lipid content of subclass,1.2,0.760104,0.722081,0.800128,K31
+Cho_LHDL,Lipid content of subclass,1.3,0.745622,0.704711,0.788908,K31
+Cho_LHDL,Lipid content of subclass,1.4,0.731608,0.687356,0.778708,K31
+Cho_LHDL,Lipid content of subclass,1.5,0.71799,0.67006,0.76935,K31
+Cho_LHDL,Lipid content of subclass,1.6,0.704704,0.652885,0.760637,K31
+Cho_LHDL,Lipid content of subclass,1.7,0.691689,0.6359,0.752373,K31
+Cho_LHDL,Lipid content of subclass,1.8,0.678916,0.619171,0.744426,K31
+Cho_LHDL,Lipid content of subclass,1.9,0.666378,0.602742,0.736732,K31
+Cho_LHDL,Lipid content of subclass,2.0,0.654072,0.586645,0.729247,K31
+Cho_LHDL,Lipid content of subclass,2.1,0.641993,0.570899,0.72194,K31
+Cho_LHDL,Lipid content of subclass,2.2,0.630137,0.555513,0.714784,K31
+Cho_LHDL,Lipid content of subclass,2.3,0.6185,0.540494,0.707764,K31
+Cho_LHDL,Lipid content of subclass,2.4,0.607078,0.525842,0.700863,K31
+Cho_LHDL,Lipid content of subclass,2.5,0.595866,0.511556,0.694072,K31
+HDLC,Lipoprotein / lipid totals,-2.5,1.355594,1.19305,1.540283,K31
+HDLC,Lipoprotein / lipid totals,-2.4,1.34394,1.191575,1.515787,K31
+HDLC,Lipoprotein / lipid totals,-2.3,1.332386,1.190016,1.49179,K31
+HDLC,Lipoprotein / lipid totals,-2.2,1.320932,1.188354,1.468301,K31
+HDLC,Lipoprotein / lipid totals,-2.1,1.309576,1.186567,1.445337,K31
+HDLC,Lipoprotein / lipid totals,-2.0,1.298318,1.184627,1.42292,K31
+HDLC,Lipoprotein / lipid totals,-1.9,1.287156,1.182495,1.401081,K31
+HDLC,Lipoprotein / lipid totals,-1.8,1.276091,1.180121,1.379865,K31
+HDLC,Lipoprotein / lipid totals,-1.7,1.26512,1.177439,1.359331,K31
+HDLC,Lipoprotein / lipid totals,-1.6,1.254242,1.174358,1.339561,K31
+HDLC,Lipoprotein / lipid totals,-1.5,1.243387,1.170684,1.320606,K31
+HDLC,Lipoprotein / lipid totals,-1.4,1.232407,1.166129,1.302453,K31
+HDLC,Lipoprotein / lipid totals,-1.3,1.221154,1.160445,1.285039,K31
+HDLC,Lipoprotein / lipid totals,-1.2,1.209485,1.153452,1.26824,K31
+HDLC,Lipoprotein / lipid totals,-1.1,1.197264,1.145071,1.251836,K31
+HDLC,Lipoprotein / lipid totals,-1.0,1.184361,1.135329,1.235511,K31
+HDLC,Lipoprotein / lipid totals,-0.9,1.170655,1.124353,1.218864,K31
+HDLC,Lipoprotein / lipid totals,-0.8,1.156031,1.112334,1.201446,K31
+HDLC,Lipoprotein / lipid totals,-0.7,1.140386,1.09949,1.182803,K31
+HDLC,Lipoprotein / lipid totals,-0.6,1.123625,1.086033,1.162517,K31
+HDLC,Lipoprotein / lipid totals,-0.5,1.105664,1.072149,1.140226,K31
+HDLC,Lipoprotein / lipid totals,-0.4,1.086433,1.057993,1.115638,K31
+HDLC,Lipoprotein / lipid totals,-0.3,1.06592,1.04368,1.088634,K31
+HDLC,Lipoprotein / lipid totals,-0.2,1.044417,1.029254,1.059803,K31
+HDLC,Lipoprotein / lipid totals,-0.1,1.02232,1.014703,1.029993,K31
+HDLC,Lipoprotein / lipid totals,0.0,1.0,1.0,1.0,K31
+HDLC,Lipoprotein / lipid totals,0.1,0.977801,0.970546,0.98511,K31
+HDLC,Lipoprotein / lipid totals,0.2,0.956037,0.94227,0.970004,K31
+HDLC,Lipoprotein / lipid totals,0.3,0.934994,0.915723,0.954671,K31
+HDLC,Lipoprotein / lipid totals,0.4,0.914935,0.891363,0.93913,K31
+HDLC,Lipoprotein / lipid totals,0.5,0.896016,0.869377,0.923472,K31
+HDLC,Lipoprotein / lipid totals,0.6,0.878164,0.84941,0.907892,K31
+HDLC,Lipoprotein / lipid totals,0.7,0.861272,0.83103,0.892616,K31
+HDLC,Lipoprotein / lipid totals,0.8,0.845242,0.813817,0.87788,K31
+HDLC,Lipoprotein / lipid totals,0.9,0.829981,0.797375,0.86392,K31
+HDLC,Lipoprotein / lipid totals,1.0,0.815404,0.781354,0.850937,K31
+HDLC,Lipoprotein / lipid totals,1.1,0.80143,0.765479,0.83907,K31
+HDLC,Lipoprotein / lipid totals,1.2,0.787984,0.749573,0.828364,K31
+HDLC,Lipoprotein / lipid totals,1.3,0.774996,0.73356,0.818774,K31
+HDLC,Lipoprotein / lipid totals,1.4,0.7624,0.717442,0.810174,K31
+HDLC,Lipoprotein / lipid totals,1.5,0.750132,0.701272,0.802395,K31
+HDLC,Lipoprotein / lipid totals,1.6,0.738133,0.685126,0.795242,K31
+HDLC,Lipoprotein / lipid totals,1.7,0.726351,0.669084,0.788519,K31
+HDLC,Lipoprotein / lipid totals,1.8,0.714757,0.653219,0.782093,K31
+HDLC,Lipoprotein / lipid totals,1.9,0.703349,0.637583,0.775898,K31
+HDLC,Lipoprotein / lipid totals,2.0,0.692122,0.62221,0.769889,K31
+HDLC,Lipoprotein / lipid totals,2.1,0.681075,0.607124,0.764033,K31
+HDLC,Lipoprotein / lipid totals,2.2,0.670204,0.592338,0.758305,K31
+HDLC,Lipoprotein / lipid totals,2.3,0.659506,0.577861,0.752687,K31
+HDLC,Lipoprotein / lipid totals,2.4,0.648979,0.563696,0.747166,K31
+HDLC,Lipoprotein / lipid totals,2.5,0.638621,0.549845,0.741729,K31
+MetaTG,Lipoprotein / lipid totals,-2.5,0.787472,0.67612,0.917162,K31
+MetaTG,Lipoprotein / lipid totals,-2.4,0.793194,0.687205,0.915531,K31
+MetaTG,Lipoprotein / lipid totals,-2.3,0.798958,0.698433,0.913952,K31
+MetaTG,Lipoprotein / lipid totals,-2.2,0.804764,0.709797,0.912438,K31
+MetaTG,Lipoprotein / lipid totals,-2.1,0.810613,0.721287,0.911001,K31
+MetaTG,Lipoprotein / lipid totals,-2.0,0.816503,0.732888,0.909659,K31
+MetaTG,Lipoprotein / lipid totals,-1.9,0.822437,0.744579,0.908436,K31
+MetaTG,Lipoprotein / lipid totals,-1.8,0.828413,0.756331,0.907365,K31
+MetaTG,Lipoprotein / lipid totals,-1.7,0.834433,0.768103,0.906492,K31
+MetaTG,Lipoprotein / lipid totals,-1.6,0.840498,0.779834,0.905882,K31
+MetaTG,Lipoprotein / lipid totals,-1.5,0.84664,0.791446,0.905684,K31
+MetaTG,Lipoprotein / lipid totals,-1.4,0.85293,0.802855,0.906129,K31
+MetaTG,Lipoprotein / lipid totals,-1.3,0.859442,0.813983,0.90744,K31
+MetaTG,Lipoprotein / lipid totals,-1.2,0.866253,0.824773,0.909819,K31
+MetaTG,Lipoprotein / lipid totals,-1.1,0.873442,0.835221,0.913412,K31
+MetaTG,Lipoprotein / lipid totals,-1.0,0.881091,0.845411,0.918277,K31
+MetaTG,Lipoprotein / lipid totals,-0.9,0.889286,0.855537,0.924366,K31
+MetaTG,Lipoprotein / lipid totals,-0.8,0.898115,0.865908,0.931521,K31
+MetaTG,Lipoprotein / lipid totals,-0.7,0.907673,0.876913,0.939512,K31
+MetaTG,Lipoprotein / lipid totals,-0.6,0.918056,0.888987,0.948075,K31
+MetaTG,Lipoprotein / lipid totals,-0.5,0.929369,0.902578,0.956955,K31
+MetaTG,Lipoprotein / lipid totals,-0.4,0.941721,0.91813,0.965917,K31
+MetaTG,Lipoprotein / lipid totals,-0.3,0.955188,0.935999,0.97477,K31
+MetaTG,Lipoprotein / lipid totals,-0.2,0.969588,0.955956,0.983414,K31
+MetaTG,Lipoprotein / lipid totals,-0.1,0.984629,0.977488,0.991822,K31
+MetaTG,Lipoprotein / lipid totals,0.0,1.0,1.0,1.0,K31
+MetaTG,Lipoprotein / lipid totals,0.1,1.015371,1.00797,1.022826,K31
+MetaTG,Lipoprotein / lipid totals,0.2,1.030389,1.01576,1.045229,K31
+MetaTG,Lipoprotein / lipid totals,0.3,1.044684,1.023393,1.066419,K31
+MetaTG,Lipoprotein / lipid totals,0.4,1.057868,1.030874,1.085568,K31
+MetaTG,Lipoprotein / lipid totals,0.5,1.069659,1.038162,1.102112,K31
+MetaTG,Lipoprotein / lipid totals,0.6,1.080089,1.045149,1.116198,K31
+MetaTG,Lipoprotein / lipid totals,0.7,1.089248,1.051693,1.128145,K31
+MetaTG,Lipoprotein / lipid totals,0.8,1.097234,1.057618,1.138335,K31
+MetaTG,Lipoprotein / lipid totals,0.9,1.104153,1.062719,1.147202,K31
+MetaTG,Lipoprotein / lipid totals,1.0,1.110118,1.066786,1.155211,K31
+MetaTG,Lipoprotein / lipid totals,1.1,1.115248,1.069628,1.162815,K31
+MetaTG,Lipoprotein / lipid totals,1.2,1.119667,1.071119,1.170414,K31
+MetaTG,Lipoprotein / lipid totals,1.3,1.1235,1.071236,1.178313,K31
+MetaTG,Lipoprotein / lipid totals,1.4,1.126878,1.070068,1.186703,K31
+MetaTG,Lipoprotein / lipid totals,1.5,1.129933,1.0678,1.19568,K31
+MetaTG,Lipoprotein / lipid totals,1.6,1.132798,1.064687,1.205268,K31
+MetaTG,Lipoprotein / lipid totals,1.7,1.135607,1.061011,1.215448,K31
+MetaTG,Lipoprotein / lipid totals,1.8,1.13842,1.056969,1.226149,K31
+MetaTG,Lipoprotein / lipid totals,1.9,1.141241,1.052655,1.237281,K31
+MetaTG,Lipoprotein / lipid totals,2.0,1.144068,1.048137,1.248779,K31
+MetaTG,Lipoprotein / lipid totals,2.1,1.146902,1.043465,1.260593,K31
+MetaTG,Lipoprotein / lipid totals,2.2,1.149743,1.038677,1.272686,K31
+MetaTG,Lipoprotein / lipid totals,2.3,1.152592,1.033801,1.285032,K31
+MetaTG,Lipoprotein / lipid totals,2.4,1.155447,1.028859,1.297611,K31
+MetaTG,Lipoprotein / lipid totals,2.5,1.15831,1.023868,1.310405,K31

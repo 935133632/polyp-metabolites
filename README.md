@@ -20,15 +20,20 @@ Only code and aggregate results are tracked. UK Biobank individual-level data (`
 | `code/08_bonferroni_summary.py` | class breakdown and consistency counts for Bonferroni-significant metabolites |
 | `code/09_supplement.py` | supplementary tables (Excel + CSV) and supplementary figures |
 | `code/10_discussion_numbers.py` | family-level effect summaries quoted in the Discussion |
+| `code/11_extra_covariates.py`, `code/12_model_adjustment.py` | extended adjustment (waist, body fat %, HbA1c, CRP) in the same complete-case sample |
+| `code/13_specificity.py` | Model 1 scan for 23 other digestive outcomes and colorectal cancer |
+| `code/14_score_dose_response.py` | metabolite score (train/test) and spline dose-response |
+| `code/15_extended_figures.py` | figures and tables for steps 11-13 |
+| `code/run_queue.ps1` | throttled launcher for the extended analyses (Windows) |
 
 `code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation; `code/circular_barplot.py` the circular bar and heat-ring plots.
 
 Multiple testing uses Bonferroni (P < 0.05/251) throughout.
 
 ## Outputs
-- `figures/`: Fig1 volcano; Fig2 class summary; Fig3A/B circular bar plots of all 251 metabolites; Fig4 cross-outcome and prevalent-vs-incident; Fig5A/B circular heat rings by sex/age stratum, Fig5C sensitivity scatter; Fig6A dual-site counts, Fig6B circular OR plot; Fig7 ROC curves.
-- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 age cut-off 65, S6 prevalent vs incident, S7 prediction bars, S8 dual-site timing.
-- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 13 tables, also as CSV).
+- `figures/`: Fig1 volcano; Fig2 class summary; Fig3A/B circular bar plots of all 251 metabolites; Fig4 cross-outcome and prevalent-vs-incident; Fig5A/B circular heat rings by sex/age stratum, Fig5C sensitivity scatter; Fig6A dual-site counts, Fig6B circular OR plot; Fig7 ROC curves; Fig8A/B circular heat rings after extended adjustment; Fig9 specificity against other digestive diseases; Fig10 metabolite score (cumulative incidence and quartile HRs).
+- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 age cut-off 65, S6 prevalent vs incident, S7 prediction bars, S8 dual-site timing, S9 dose-response curves.
+- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 21 tables, also as CSV).
 - `results/`: per-step aggregate results; `manuscript/`: Introduction, Methods, Results and Discussion draft (references to be verified).
 
 ## Model 1 covariates

@@ -19,9 +19,9 @@ NUM_COVARS = ["AgeRecr", "Sex", "TDI", "BMI", "SBPmean", "DBPmean"]
 CAT_COVARS = ["SmokeStatus", "DrinkStatus"]
 
 
-def design_covars(df: pd.DataFrame, drop=()) -> pd.DataFrame:
-    """Numeric covariates + dummy-coded smoking/drinking (reference = first level alphabetically)."""
-    cols = [c for c in NUM_COVARS if c not in drop]
+def design_covars(df: pd.DataFrame, drop=(), extra=()) -> pd.DataFrame:
+    """Numeric covariates (+ optional extra numeric columns) + dummy-coded smoking/drinking (reference = first level alphabetically)."""
+    cols = [c for c in NUM_COVARS if c not in drop] + list(extra)
     X = df[cols].copy()
     for c in CAT_COVARS:
         d = pd.get_dummies(df[c], prefix=c, dtype=float)
@@ -60,8 +60,14 @@ def load_outcome_dates() -> pd.DataFrame:
 
 def build_cohort(outcome: str, exclude_first_years: float = 0.0) -> pd.DataFrame:
     """Incident cohort: prevalent cases removed; time = days from baseline to event/censoring."""
-    base = load_base(); od = load_outcome_dates()
-    c = base.merge(od[["eid", outcome]].rename(columns={outcome: "disease_first_date"}), on="eid", how="left")
+    od = load_outcome_dates()
+    return cohort_from_first_dates(od.set_index("eid")[outcome].dropna(), exclude_first_years)
+
+
+def cohort_from_first_dates(first: pd.Series, exclude_first_years: float = 0.0) -> pd.DataFrame:
+    """Same cohort logic for any outcome given its first-diagnosis dates (Series indexed by eid)."""
+    base = load_base()
+    c = base.merge(first.rename("disease_first_date").rename_axis("eid").reset_index(), on="eid", how="left")
     c["prevalent"] = c.disease_first_date.notna() & (c.disease_first_date <= c.baseline_date)
     c["incident"] = c.disease_first_date.notna() & (c.disease_first_date > c.baseline_date)
     c = c.loc[~c.prevalent].copy()
@@ -103,13 +109,12 @@ def _fit_one(name, x, T, E, X):
             "hr_upper95": s["exp(coef) upper 95%"], "se": s["se(coef)"], "z": s["z"], "p": s["p"], "status": "ok"}
 
 
-def cox_scan(cohort, metabolites=None, drop_covars=(), n_jobs=18):
-    """Per-metabolite adjusted Cox (metabolite already RINT; re-standardised within complete cases)."""
-    from joblib import Parallel, delayed
+def cox_scan(cohort, metabolites=None, drop_covars=(), n_jobs=18, extra=()):
+    """Per-metabolite adjusted Cox (metabolite already RINT; re-standardised within complete cases). `extra` = additional numeric covariate columns."""
     M = load_metabolome().set_index("eid")
     names = list(metabolites) if metabolites is not None else list(M.columns)
     c = cohort.reset_index(drop=True)
-    X = design_covars(c, drop_covars)
+    X = design_covars(c, drop_covars, extra)
     Mc = M.reindex(c.eid.values)
     T, E = c.follow_up_days.values, c.event.values
     res = [_fit_one(m, Mc[m].values, T, E, X) for m in names]

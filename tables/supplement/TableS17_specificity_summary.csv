@@ -1,0 +1,27 @@
+Unnamed: 0,Colon polyp (K63.5),Stomach/duodenal polyp (K31.7),events,bonf_sig
+Colon polyp (K63.5),1.0,0.812,15484,157
+Stomach/duodenal polyp (K31.7),0.812,1.0,7121,174
+Oesophagitis,0.894,0.77,5909,69
+Gastro-oesophageal reflux,0.825,0.973,26549,184
+Other oesophageal diseases,0.882,0.754,9060,103
+Gastric ulcer,0.782,0.55,3685,116
+Duodenal ulcer,0.921,0.703,2023,104
+Gastritis / duodenitis,0.917,0.874,23121,199
+Dyspepsia,0.604,0.898,5747,26
+Inguinal hernia,-0.875,-0.686,9410,35
+Umbilical hernia,0.431,0.561,2847,2
+Ventral hernia,0.798,0.589,2607,91
+Hiatus hernia,0.835,0.951,22760,171
+Other non-infective colitis,0.931,0.853,8661,185
+Ileus / obstruction,0.549,0.321,4761,143
+Diverticular disease,0.93,0.931,32744,191
+Irritable bowel syndrome,0.895,0.928,6116,135
+Other functional bowel disorders,0.541,0.472,16233,178
+Other anorectal diseases,0.93,0.921,14525,145
+Haemorrhoids,0.908,0.901,13259,93
+Other peritoneal disorders,0.881,0.967,4506,127
+Other liver diseases (incl. fatty liver),0.915,0.8,6955,198
+Gallstones,0.726,0.974,10317,195
+Other biliary diseases,0.889,0.856,2752,160
+Other digestive diseases (incl. GI bleeding),0.729,0.54,11329,151
+Colorectal cancer (C18-C20),0.761,0.575,4340,4
