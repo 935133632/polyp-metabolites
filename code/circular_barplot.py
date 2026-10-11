@@ -67,7 +67,7 @@ def stars(p):
 def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5):
     """res: Cox result table with metabolite, hr, hr_lower95, hr_upper95, p_bonf."""
     L = layout(list(res.metabolite)).merge(res[["metabolite", "hr", "hr_lower95", "hr_upper95", "p_bonf"]], on="metabolite")
-    n = len(L); ng = L.group.nunique(); gap = np.radians(1.6); top_gap = np.radians(7)
+    n = len(L); ng = L.group.nunique(); gap = np.radians(1.6); top_gap = np.radians(11)
     w = (2 * np.pi - ng * gap - top_gap) / n
     th = np.zeros(n); t = top_gap / 2; prev = None
     for i, g in enumerate(L.group):
@@ -83,10 +83,10 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5):
         if k % 2 == 0:
             a0, a1 = d.theta.min() - w / 2, d.theta.max() + w / 2
             ax.bar((a0 + a1) / 2, r_out - r_in + .04, width=a1 - a0, bottom=r_in - .02, color="#EBEBEB", zorder=0, lw=0)
-    gg = np.linspace(0, 2 * np.pi, 600)
+    gg = np.linspace(top_gap / 2, 2 * np.pi - top_gap / 2, 600)   # reference rings stop at the top gap, where the scale labels sit
     for v in (.8, .9, 1.1, 1.2): ax.plot(gg, np.full_like(gg, rad(v)), c="#9A9A9A", lw=.35, zorder=1)
     ax.plot(gg, np.full_like(gg, rad(1.0)), c="k", lw=.7, zorder=4)
-    for v in (.8, .9, 1.0, 1.1, 1.2): ax.text(top_gap / 2 * -0.25, rad(v), f"{v:.2f}", fontsize=6.5, ha="right", va="center", rotation=0, zorder=5)
+    for v in (.8, .9, 1.0, 1.1, 1.2): ax.text(0, rad(v), f"{v:.2f}", fontsize=6.5, ha="center", va="center", zorder=6)
     for _, r in L.iterrows():
         sig = r.p_bonf < .05; col = "#B22A2A" if r.hr > 1 else "#2D5DA8"
         ax.bar(r.theta, rad(r.hr) - rad(1.0), width=w * .78, bottom=rad(1.0), color=col, alpha=1 if sig else .35, lw=0, zorder=3)
