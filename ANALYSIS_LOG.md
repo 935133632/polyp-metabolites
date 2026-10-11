@@ -34,7 +34,7 @@ Adjusted logistic regression per metabolite for prevalent disease at baseline (s
 ## Step 4 - Bonferroni summary (`code/08_bonferroni_summary.py`)
 Class breakdown and consistency counts for the Bonferroni-significant metabolites.
 
-## Step 5 - prediction (`code/05_prediction.py`, `code/05b_coxnet_tuned.py`, `code/07_prediction_summary.py`; `results/step11_13_prediction/`, `tables/Table_*prediction*.csv`, `figures/Fig7_prediction.*`)
+## Step 5 - prediction (`code/05_prediction.py`, `code/05b_coxnet_tuned.py`, `code/07_prediction_summary.py`; `results/step11_13_prediction/`, `tables/Table_*prediction*.csv`, `figures/Fig7_prediction_ROC.*`)
 Three feature sets: covariates only; covariates + metabolites passing Bonferroni in a univariate screen run **inside the training data** (on average 214 metabolites for K63.5, 167 for K31.7); covariates + all 251. Binary: 5-fold CV (logistic, elastic net, LightGBM, XGBoost; AUC). Survival: 70/30 split (penalised Cox with penalty chosen on an inner validation split, XGBoost Cox); C-index and 5/10-year AUC.
 - Colon polyp: AUC 0.626-0.627 (covariates) -> 0.630-0.631 (+metabolites); C-index 0.630 -> 0.636; time-dependent AUC (tuned Cox) 5 y 0.676 -> 0.682, 10 y 0.648 -> 0.656.
 - Stomach/duodenal polyp: AUC 0.627-0.632 -> 0.636-0.647; C-index 0.634-0.635 -> 0.647-0.651; time-dependent AUC 5 y 0.656 -> 0.681, 10 y 0.650 -> 0.667.
@@ -43,7 +43,7 @@ Three feature sets: covariates only; covariates + metabolites passing Bonferroni
 - Random forest and extra trees were dropped for run time; random survival forest and DeepSurv were not run (packages unavailable).
 
 ## Step 6 - internal validation (`results/step06_internal_validation/`)
-Split-sample (70/30, all 251 in both halves): of metabolites significant in the discovery half (K63.5 134, K31.7 149), 100% have the same direction in the validation half, 95% (127, 142) are nominally significant (P<0.05) there and 41% (55) / 77% (114) also pass Bonferroni there; the validation half has only 30% of the sample. Bootstrap (30 resamples, all 251): among the main hits, P<0.05 in >=95% of resamples for 156/157 (K63.5) and 168/174 (K31.7). These show stability within one cohort, not independent replication.
+Split-sample (70/30, all 251 in both halves): of metabolites significant in the discovery half (K63.5 134, K31.7 149), 100% have the same direction in the validation half, 95% (127, 142) are nominally significant (P<0.05) there and 41% (55) / 77% (114) also pass Bonferroni there; the validation half has only 30% of the sample. Bootstrap (30 resamples, all 251; summary table also holds the 2.5th/97.5th percentile of the bootstrap coefficient, used in FigS4): among the main hits, P<0.05 in >=95% of resamples for 156/157 (K63.5) and 168/174 (K31.7). These show stability within one cohort, not independent replication.
 
 ## Step 7 - dual-site overlap (`code/04_dual_site.py`, `results/step07_dual_site/`)
 Participants eligible for both incident analyses: none 250,137; K63 only 14,497; K31 only 5,975; both 1,110. All 251 metabolites compared between dual-site and single-site cases (logistic, Bonferroni across 251): one metabolite is significant, Pho_LHDL_pt (OR 1.14 per SD, 95% CI 1.06-1.22). Treat as hypothesis-generating (1,110 cases).
@@ -59,3 +59,16 @@ Methods, Results and limitations drafted from the tables above; Introduction and
 Supplementary figures: S1 sensitivity analysis (circular); S2A circular heat rings of the correlation of each metabolite with principal components 1-8, S2B cumulative variance (effective number of tests); S3 polyp-specific vs original 3-character definitions; S4 split-sample concordance and bootstrap caterpillar plot (main estimate with bootstrap 95% interval, all 251 metabolites); S5A/B circular heat rings for the supplementary age cut-off 65 (overall, <65, >=65; colour = ln HR, faded = not Bonferroni-significant within the ring); S6 prevalent vs incident (both outcomes); S7 prediction bar charts; S8 dual-site groups and timing; S1A/B circular bar plots of the sensitivity analysis excluding events in the first 2 years (all 251 metabolites).
 
 Note on Fig3 grouping: metabolite abbreviations were assigned to groups by rule. `TC_Chy_VLDL` is treated as triglycerides in the chylomicron/XXL-VLDL subclass (it is the seventh item of the `*_Chy_VLDL` series); `TPR`, `GluLac` and `SpeAla` are placed under 'Sizes, apolipoproteins & other'. Check these against the data dictionary if the figure is used in a paper.
+
+## Decision log (what changed from the first version and why)
+- **Outcome definition**: polyp-specific ICD-10 codes (K63.5, K31.7) instead of the 3-character K63/K31 of the Olink project; 3-character versions kept as `K63any`/`K31any` (Step 0).
+- **Multiple testing**: BH-FDR was used first and replaced by Bonferroni everywhere (all result tables carry `p_bonf`, no FDR columns remain).
+- **No arbitrary top-N**: subgroup, split-sample, bootstrap, dual-site and prediction analyses use all 251 metabolites; figures show all 251 in circular plots (linear top-N forest plots dropped).
+- **Prediction**: features are chosen inside the training data (earlier top-30 selection on the full data leaked information); penalised Cox penalty tuned on an inner validation split.
+- **Age cut-off**: 60 (main) and 65 (supplementary) instead of 58 (the Olink project's hard-coded cohort median).
+- **Smoking and drinking** were added as covariates once the WH-eid exports were provided.
+- **Figures**: ROC curves for prediction (not bar charts); circular bar/heat plots for all-metabolite results; volcano labels repelled.
+
+## Repository notes
+- Git history was rewritten (four times, on request) to remove superseded versions of code, results, figures and the analysis log that used top-N subsets or BH-FDR; the history now contains one commit per analysis step plus later revisions. Commit hashes before 2026-10-11 therefore no longer exist.
+- Run logs (`results/*.log`, `*.err`) and bootstrap replicate files (`results/step06_internal_validation/bootstrap_chunks/`) are not tracked; individual-level data (`processed/`) are never tracked.

@@ -16,13 +16,19 @@ Only code and aggregate results are tracked. UK Biobank individual-level data (`
 | `code/03_prevalent_logistic.py` | baseline prevalent companion analysis |
 | `code/04_dual_site.py` | overlap of the two outcomes |
 | `code/05_prediction.py`, `code/05b_coxnet_tuned.py` | binary and survival prediction, feature selection inside training data only |
+| `code/06_figures_tables.py`, `code/07_prediction_summary.py` | main figures (Fig 1-7) and tables |
 | `code/08_bonferroni_summary.py` | class breakdown and consistency counts for Bonferroni-significant metabolites |
-| `code/06_figures_tables.py`, `code/07_prediction_summary.py` | main figures and tables (incl. ROC curves) |
 | `code/09_supplement.py` | supplementary tables (Excel + CSV) and supplementary figures |
 
-`code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation.
+`code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation; `code/circular_barplot.py` the circular bar and heat-ring plots.
 
 Multiple testing uses Bonferroni (P < 0.05/251) throughout.
+
+## Outputs
+- `figures/`: Fig1 volcano; Fig2 class summary; Fig3A/B circular bar plots of all 251 metabolites; Fig4 cross-outcome and prevalent-vs-incident; Fig5A/B circular heat rings by sex/age stratum, Fig5C sensitivity scatter; Fig6A dual-site counts, Fig6B circular OR plot; Fig7 ROC curves.
+- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 age cut-off 65, S6 prevalent vs incident, S7 prediction bars, S8 dual-site timing.
+- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 13 tables, also as CSV).
+- `results/`: per-step aggregate results; `manuscript/`: Methods and Results draft.
 
 ## Model 1 covariates
 Age, sex, Townsend deprivation index, BMI, systolic and diastolic blood pressure, smoking status, drinking status.
@@ -30,6 +36,7 @@ Age, sex, Townsend deprivation index, BMI, systolic and diastolic blood pressure
 ## Differences from the Olink project
 - Outcomes use polyp-specific codes (K63.5, K31.7). The Olink project used the 3-character codes K63 and K31; K31 mostly captures non-polyp stomach disease. 3-character versions are run for the primary scan as `K63any` and `K31any`.
 - Follow-up is censored at death.
+- Bonferroni instead of BH-FDR; subgroup age cut-off 60 (65 supplementary) instead of 58; all analyses use all 251 metabolites rather than top-N subsets.
 - Pathway enrichment, druggability and protein-network steps are not applicable to metabolites and are not repeated.
 - scikit-survival and PyTorch were unavailable, so random survival forest and DeepSurv are replaced by a penalised Cox model and XGBoost survival.
 - The metabolome and the Olink project use different participant-ID spaces; all inputs here come from the `WH-*` files.
