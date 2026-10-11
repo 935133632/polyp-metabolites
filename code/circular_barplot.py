@@ -64,9 +64,10 @@ def stars(p):
     return "***" if p < .001 else "**" if p < .01 else "*" if p < .05 else ""
 
 
-def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5):
-    """res: Cox result table with metabolite, hr, hr_lower95, hr_upper95, p_bonf."""
-    L = layout(list(res.metabolite)).merge(res[["metabolite", "hr", "hr_lower95", "hr_upper95", "p_bonf"]], on="metabolite")
+def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5, est="hr", est_lo="hr_lower95", est_hi="hr_upper95", unit="HR per 1 SD", ticks=(.8, .9, 1.0, 1.1, 1.2)):
+    """res: result table with metabolite, <est>, <est_lo>, <est_hi>, p_bonf (ratio scale; bars start at 1)."""
+    R = res[["metabolite", est, est_lo, est_hi, "p_bonf"]].rename(columns={est: "hr", est_lo: "hr_lower95", est_hi: "hr_upper95"})
+    L = layout(list(R.metabolite)).merge(R, on="metabolite")
     n = len(L); ng = L.group.nunique(); gap = np.radians(1.6); top_gap = np.radians(11)
     w = (2 * np.pi - ng * gap - top_gap) / n
     th = np.zeros(n); t = top_gap / 2; prev = None
@@ -84,9 +85,9 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5):
             a0, a1 = d.theta.min() - w / 2, d.theta.max() + w / 2
             ax.bar((a0 + a1) / 2, r_out - r_in + .04, width=a1 - a0, bottom=r_in - .02, color="#EBEBEB", zorder=0, lw=0)
     gg = np.linspace(top_gap / 2, 2 * np.pi - top_gap / 2, 600)   # reference rings stop at the top gap, where the scale labels sit
-    for v in (.8, .9, 1.1, 1.2): ax.plot(gg, np.full_like(gg, rad(v)), c="#9A9A9A", lw=.35, zorder=1)
+    for v in [t for t in ticks if t != 1.0]: ax.plot(gg, np.full_like(gg, rad(v)), c="#9A9A9A", lw=.35, zorder=1)
     ax.plot(gg, np.full_like(gg, rad(1.0)), c="k", lw=.7, zorder=4)
-    for v in (.8, .9, 1.0, 1.1, 1.2): ax.text(0, rad(v), f"{v:.2f}", fontsize=6.5, ha="center", va="center", zorder=6)
+    for v in ticks: ax.text(0, rad(v), f"{v:.2f}", fontsize=6.5, ha="center", va="center", zorder=6)
     for _, r in L.iterrows():
         sig = r.p_bonf < .05; col = "#B22A2A" if r.hr > 1 else "#2D5DA8"
         ax.bar(r.theta, rad(r.hr) - rad(1.0), width=w * .78, bottom=rad(1.0), color=col, alpha=1 if sig else .35, lw=0, zorder=3)
@@ -110,6 +111,6 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5):
         rot = -deg if (deg < 90 or deg > 270) else -deg + 180
         ax.text(tm, .90 if len(g) < 28 else .90, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
                 fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor", zorder=6)
-    ax.text(0, 0, title + "\nHR per 1 SD\n* P$_{Bonf}$<0.05  ** <0.01  *** <0.001\nred: higher risk, blue: lower risk\nfaded bar: not significant", fontsize=7.5, ha="center", va="center", linespacing=1.5)
+    ax.text(0, 0, title + "\n" + unit + "\n* P$_{Bonf}$<0.05  ** <0.01  *** <0.001\nred: higher risk, blue: lower risk\nfaded bar: not significant", fontsize=7.5, ha="center", va="center", linespacing=1.5)
     fig.savefig(f"{outfile_stem}.png", dpi=300); fig.savefig(f"{outfile_stem}.pdf"); plt.close(fig)
     return L

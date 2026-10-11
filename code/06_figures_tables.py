@@ -7,7 +7,7 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "
                      "axes.spines.right": False, "pdf.fonttype": 42, "savefig.dpi": 300})
 UP, DN, GR = "#D55E00", "#0072B2", "#BBBBBB"   # Wong palette
 LAB = {"K63": "Colon polyp (K63.5)", "K31": "Stomach/duodenal polyp (K31.7)"}
-FIG.mkdir(exist_ok=True); TAB.mkdir(exist_ok=True)
+FIG.mkdir(exist_ok=True); TAB.mkdir(exist_ok=True); (FIG / "supplement").mkdir(exist_ok=True)
 
 def load(k, kind="step01_primary/model1_{k}_cox_all_metabolites.csv"):
     r = pd.read_csv(RES / kind.format(k=k)); r = r[r.status == "ok"].copy(); r["cls"] = r.metabolite.map(metab_class); return r
@@ -45,13 +45,10 @@ ax[0].legend(frameon=False, fontsize=7, loc="lower left"); fig.tight_layout(); s
 from circular_barplot import circular_barplot
 for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
     circular_barplot(P[k], LAB[k], str(FIG / f"Fig3{tag}"))
-# supplementary: linear forest of the 20 leading metabolites per outcome
-fig, ax = plt.subplots(1, 2, figsize=(7.1, 4.6))
-for a, k in zip(ax, LAB):
-    r = P[k].nsmallest(20, "p").iloc[::-1]; yy = np.arange(len(r))
-    a.errorbar(r.hr, yy, xerr=[r.hr - r.hr_lower95, r.hr_upper95 - r.hr], fmt="o", ms=3, c="k", lw=.8)
-    a.axvline(1, c=GR, lw=.7); a.set_yticks(yy, r.metabolite); a.set_xlabel("HR per 1 SD (95% CI)"); a.set_title(LAB[k], fontsize=8)
-fig.tight_layout(); save(fig, "FigS1_forest_top20")
+# supplementary S1: sensitivity analysis excluding events in the first 2 years, all 251 metabolites, one circular plot per outcome
+for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
+    sens = pd.read_csv(RES / f"step02_sensitivity_exclude_first2y/{k}_sensitivity.csv"); sens = sens[sens.status == "ok"]
+    circular_barplot(sens, LAB[k] + ", excl. events <2 y", str(FIG / "supplement" / f"FigS1{tag}_sensitivity_circular"))
 # ---- Fig 4 cross-outcome scatter + prevalent vs incident
 j = P["K31"].merge(P["K63"], on="metabolite", suffixes=("_k31", "_k63"))
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.3))
@@ -77,14 +74,14 @@ for k, a in zip(LAB, ax[1:]):
     im = a.imshow(np.log(H.values), cmap="RdBu_r", vmin=-.3, vmax=.3, aspect="auto"); a.set_xticks(range(4), H.columns, rotation=45, ha="right"); a.set_yticks(range(len(H)), H.index, fontsize=6)
     a.set_title(LAB[k].split(" (")[0] + " subgroups", fontsize=8)
 fig.colorbar(im, ax=ax[2], shrink=.7, label="ln(HR)"); fig.tight_layout(); save(fig, "Fig5_sensitivity_subgroup")
-# ---- Fig 6 dual site
-gc = pd.read_csv(RES / "step07_dual_site/group_counts.csv"); dl = pd.read_csv(RES / "step07_dual_site/dual_vs_single_logistic.csv").nsmallest(12, "p").iloc[::-1]
-fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.2))
-g2 = gc.set_index("group").loc[["K63_only", "K31_only", "both"]]; ax[0].bar(["Colon only", "Stomach/duod. only", "Both"], g2.n, color=[UP, DN, "#009E73"])
-for i, v in enumerate(g2.n): ax[0].text(i, v, f"{v:,}", ha="center", va="bottom", fontsize=7)
-ax[0].set_ylabel("Participants with incident polyp"); ax[0].tick_params(axis="x", rotation=20)
-yy = np.arange(len(dl)); ax[1].errorbar(dl["or"], yy, xerr=[dl["or"] - dl.or_lower95, dl.or_upper95 - dl["or"]], fmt="o", ms=3, c="k", lw=.8); ax[1].axvline(1, c=GR, lw=.7)
-ax[1].set_yticks(yy, dl.metabolite); ax[1].set_xlabel("OR per 1 SD, both sites vs single site"); fig.tight_layout(); save(fig, "Fig6_dual_site")
+# ---- Fig 6 dual site: (A) group sizes; (B) circular bar plot of all 251 metabolites, both polyps vs one (OR per 1 SD)
+gc = pd.read_csv(RES / "step07_dual_site/group_counts.csv"); dl = pd.read_csv(RES / "step07_dual_site/dual_vs_single_logistic.csv")
+fig, ax = plt.subplots(figsize=(3.6, 3.2))
+g2 = gc.set_index("group").loc[["K63_only", "K31_only", "both"]]; ax.bar(["Colon only", "Stomach/duod. only", "Both"], g2.n, color=[UP, DN, "#009E73"])
+for i, v in enumerate(g2.n): ax.text(i, v, f"{v:,}", ha="center", va="bottom", fontsize=7)
+ax.set_ylabel("Participants with incident polyp"); ax.tick_params(axis="x", rotation=20); fig.tight_layout(); save(fig, "Fig6A_dual_site_counts")
+circular_barplot(dl, "Both polyps (n=1,110) vs one", str(FIG / "Fig6B_dual_site_circular"), lo=.70, hi=1.30, est="or", est_lo="or_lower95", est_hi="or_upper95",
+                 unit="OR per 1 SD", ticks=(.7, .85, 1.0, 1.15, 1.3))
 # ---- tables
 T1 = []
 for k in LAB:
