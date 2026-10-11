@@ -71,7 +71,9 @@ elif mode == "merge":
     d = RES / "step06_internal_validation"
     bs = pd.concat([pd.read_csv(f) for f in sorted((d / "bootstrap_chunks").glob(f"{k}_rep*.csv"))])
     bs = bs[bs.status == "ok"]
+    q = lambda p: (lambda x: np.percentile(x, p))
     g = bs.groupby("metabolite").agg(n_reps=("rep", "nunique"), freq_p05=("p", lambda x: (x < .05).mean()), freq_bonf05=("p_bonf", lambda x: (x < .05).mean()),
-                                     prop_positive=("coef", lambda x: (x > 0).mean()), median_coef=("coef", "median")).reset_index()
+                                     prop_positive=("coef", lambda x: (x > 0).mean()), median_coef=("coef", "median"),
+                                     coef_p2_5=("coef", q(2.5)), coef_p97_5=("coef", q(97.5))).reset_index()
     g.to_csv(d / f"{k}_bootstrap_all_metabolites.csv", index=False)
     print(k, "reps merged:", bs.rep.nunique(), "metabolites:", len(g))

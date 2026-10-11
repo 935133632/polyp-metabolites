@@ -61,19 +61,19 @@ ax[1].scatter(np.log(pv["or"]), pv.coef, c=GR, s=8, lw=0); ax[1].axhline(0, c="k
 ax[1].set_xlabel("ln(OR) prevalent, colon polyp"); ax[1].set_ylabel("ln(HR) incident, colon polyp")
 ax[1].set_title(f"Prevalent vs incident, r={np.log(pv['or']).corr(pv.coef):.2f}", fontsize=8)
 fig.tight_layout(); save(fig, "Fig4_cross_outcome"); j.to_csv(TAB / "cross_outcome_cox.csv", index=False)
-# ---- Fig 5 sensitivity + subgroup heatmap
-fig, ax = plt.subplots(1, 3, figsize=(7.1, 4.6), gridspec_kw={"width_ratios": [1, 1.1, 1.1]})
-for k, a in zip(["K63"], [ax[0]]):
+# ---- Fig 5: (A,B) circular heat rings of all 251 metabolites by sex and age (60) stratum; (C) sensitivity analysis excluding events <2 y
+from circular_barplot import circular_heatmap
+for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
+    g = pd.read_csv(RES / f"step03_subgroup/{k}_subgroups.csv"); g = g[g.status == "ok"]
+    rings = {"Overall": P[k]}
+    for nm, lab in {"Female": "Female", "Male": "Male", "Age<60": "<60 y", "Age>=60": "≥60 y"}.items(): rings[lab] = g[g.subgroup == nm]
+    circular_heatmap(rings, LAB[k], str(FIG / f"Fig5{tag}_strata_circular_heatmap"))
+fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.4))
+for k, a in zip(LAB, ax):
     s = load(k, "step02_sensitivity_exclude_first2y/{k}_sensitivity.csv").merge(P[k], on="metabolite", suffixes=("_s", ""))
     a.scatter(s.coef, s.coef_s, c=GR, s=8, lw=0); a.plot([s.coef.min(), s.coef.max()], [s.coef.min(), s.coef.max()], "k--", lw=.5)
-    a.set_xlabel("ln(HR) main"); a.set_ylabel("ln(HR) excl. events <2y"); a.set_title(f"{LAB[k]}\nr={s.coef.corr(s.coef_s):.3f}", fontsize=8)
-for k, a in zip(LAB, ax[1:]):
-    g = pd.read_csv(RES / f"step03_subgroup/{k}_subgroups.csv"); g = g[g.status == "ok"]
-    H = g.pivot(index="metabolite", columns="subgroup", values="hr")[["Female", "Male", "Age<60", "Age>=60"]]
-    H = H.loc[P[k].metabolite[P[k].metabolite.isin(H.index)].head(20).tolist()]   # display only: 20 leading metabolites; all 251 were analysed
-    im = a.imshow(np.log(H.values), cmap="RdBu_r", vmin=-.3, vmax=.3, aspect="auto"); a.set_xticks(range(4), H.columns, rotation=45, ha="right"); a.set_yticks(range(len(H)), H.index, fontsize=6)
-    a.set_title(LAB[k].split(" (")[0] + " subgroups", fontsize=8)
-fig.colorbar(im, ax=ax[2], shrink=.7, label="ln(HR)"); fig.tight_layout(); save(fig, "Fig5_sensitivity_subgroup")
+    a.set_xlabel("ln(HR) main"); a.set_ylabel("ln(HR) excl. events <2y"); a.set_title(f"{LAB[k]}, r={s.coef.corr(s.coef_s):.3f}", fontsize=8)
+fig.tight_layout(); save(fig, "Fig5C_sensitivity_scatter")
 # ---- Fig 6 dual site: (A) group sizes; (B) circular bar plot of all 251 metabolites, both polyps vs one (OR per 1 SD)
 gc = pd.read_csv(RES / "step07_dual_site/group_counts.csv"); dl = pd.read_csv(RES / "step07_dual_site/dual_vs_single_logistic.csv")
 fig, ax = plt.subplots(figsize=(3.6, 3.2))

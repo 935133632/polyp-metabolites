@@ -116,7 +116,7 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5, est=
     return L
 
 
-def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdBu_r", cbar_label="ln(HR) per 1 SD"):
+def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdBu_r", cbar_label="ln(HR) per 1 SD", note="faded cells: not significant" + chr(10) + "(Bonferroni, within ring)"):
     """rings: ordered dict {ring name: DataFrame(metabolite, coef, p_bonf)} -> concentric heat rings (inner = first). Non-significant cells are faded."""
     from matplotlib import cm, colors
     first = next(iter(rings.values()))
@@ -149,6 +149,6 @@ def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdB
         tm = (d.theta.min() + d.theta.max()) / 2; deg = np.degrees(tm) % 360; rot = -deg if (deg < 90 or deg > 270) else -deg + 180
         ax.text(tm, .90, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
                 fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor")
-    ax.text(0, 0, title + "\nfaded cells: not significant\n(Bonferroni, within ring)", fontsize=7.5, ha="center", va="center", linespacing=1.5)
+    ax.text(0, 0, title + (chr(10) + note if note else ""), fontsize=7.5, ha="center", va="center", linespacing=1.5)
     cax = fig.add_axes([.43, .43, .14, .012]); cb = fig.colorbar(cm.ScalarMappable(norm, cm_), cax=cax, orientation="horizontal"); cb.ax.tick_params(labelsize=6); cb.set_label(cbar_label, fontsize=6.5)
     fig.savefig(f"{outfile_stem}.png", dpi=300); fig.savefig(f"{outfile_stem}.pdf"); plt.close(fig)

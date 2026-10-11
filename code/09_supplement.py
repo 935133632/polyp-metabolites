@@ -66,17 +66,16 @@ with pd.ExcelWriter(ST / "Supplementary_Tables.xlsx", engine="xlsxwriter") as xw
 print("tables:", len(sheets))
 
 # ------------------------------------------------------------------ figures
-# S2 correlation structure and effective number of tests
+# S2 correlation structure: (A) circular heat rings of the correlation of each metabolite with principal components 1-8; (B) cumulative variance
+from circular_barplot import circular_heatmap
 Mt = load_metabolome().drop(columns="eid").sample(60000, random_state=1).dropna()
-C = Mt.corr(); ev = np.linalg.eigvalsh(C.values)[::-1]; ev = ev[ev > 0]; cum = np.cumsum(ev) / ev.sum()
-n95 = int(np.searchsorted(cum, .95) + 1)
-order = sorted(C.columns, key=lambda n: (metab_class(n), n))
-fig, ax = plt.subplots(1, 2, figsize=(7.4, 3.4), gridspec_kw={"width_ratios": [1.2, 1]})
-im = ax[0].imshow(C.loc[order, order].values, cmap="RdBu_r", vmin=-1, vmax=1); ax[0].set_xticks([]); ax[0].set_yticks([]); ax[0].set_title("Correlation of 251 metabolites\n(ordered by class)", fontsize=8)
-fig.colorbar(im, ax=ax[0], shrink=.75, label="Pearson r")
-ax[1].plot(np.arange(1, 61), cum[:60], c="k"); ax[1].axhline(.95, c=GR, ls="--"); ax[1].axvline(n95, c=GR, ls="--")
-ax[1].set_xlabel("Number of principal components"); ax[1].set_ylabel("Cumulative variance explained"); ax[1].set_title(f"{n95} components explain 95%; Bonferroni over 251 is conservative", fontsize=7.5)
-fig.tight_layout(); save(fig, "FigS2_correlation_effective_tests")
+Z = (Mt - Mt.mean()) / Mt.std(); C = Z.corr(); evals, evecs = np.linalg.eigh(C.values); o = np.argsort(evals)[::-1]; evals, evecs = evals[o], evecs[:, o]
+cum = np.cumsum(evals) / evals.sum(); n95 = int(np.searchsorted(cum, .95) + 1)
+rings = {f"PC{j + 1} ({100 * evals[j] / evals.sum():.0f}%)": pd.DataFrame({"metabolite": C.columns, "coef": evecs[:, j] * np.sqrt(evals[j]), "p_bonf": 0.0}) for j in range(8)}
+circular_heatmap(rings, "Correlation of each metabolite with principal components", str(SF / "FigS2A_correlation_structure_circular"), vmax=1.0, note="rings: PC1 (inner) to PC8; % = variance explained", cbar_label="Correlation with PC")
+fig, a = plt.subplots(figsize=(3.8, 3.2))
+a.plot(np.arange(1, 61), cum[:60], c="k"); a.axhline(.95, c=GR, ls="--"); a.axvline(n95, c=GR, ls="--")
+a.set_xlabel("Number of principal components"); a.set_ylabel("Cumulative variance explained"); a.set_title(f"{n95} components explain 95%", fontsize=8); fig.tight_layout(); save(fig, "FigS2B_effective_tests_scree")
 
 # S3 original 3-character definition vs polyp-specific codes
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.3)); ok = True
@@ -88,27 +87,27 @@ for a, k in zip(ax, LAB):
     a.set_title(f"{LAB[k].split(' (')[0]}: r={m.coef_s.corr(m.coef_a):.2f}\n{(m.p_bonf_s < .05).sum()} vs {(m.p_bonf_a < .05).sum()} Bonferroni-significant", fontsize=8)
 if ok: fig.tight_layout(); save(fig, "FigS3_original_vs_polyp_definition")
 
-# S4 internal validation: split-sample concordance and bootstrap stability
-fig, ax = plt.subplots(2, 2, figsize=(7.1, 5.6)); ok = True
+# S4 internal validation: split-sample concordance (top) and bootstrap caterpillar plot of all 251 metabolites (bottom)
+fig, ax = plt.subplots(2, 2, figsize=(7.1, 6.4)); ok = True
 for j, k in enumerate(LAB):
-    s = rd(f"step06_internal_validation/{k}_split_sample.csv"); b = rd(f"step06_internal_validation/{k}_bootstrap_all_metabolites.csv"); p = rd(f"step01_primary/model1_{k}_cox_all_metabolites.csv")
-    if s is None or b is None: ok = False; break
-    a = ax[0, j]; sig = s.p_bonf_disc < .05; a.scatter(s.coef_disc, s.coef_valid, c=np.where(sig, UP, GR), s=8, lw=0); lim = [s.coef_disc.min(), s.coef_disc.max()]
-    a.plot(lim, lim, "k--", lw=.5); a.set_xlabel("ln(HR) discovery (70%)"); a.set_ylabel("ln(HR) validation (30%)"); a.set_title(f"{LAB[k]}\nr={s.coef_disc.corr(s.coef_valid):.2f}", fontsize=8)
-    a = ax[1, j]; sigm = set(p[p.p_bonf < .05].metabolite); bb = b[b.metabolite.isin(sigm)]
-    a.hist(bb.freq_p05, bins=np.linspace(0, 1, 21), color=DN); a.set_xlabel("Fraction of bootstrap resamples with P<0.05"); a.set_ylabel("Main-analysis hits"); a.set_title(f"Bootstrap, {len(bb)} Bonferroni-significant metabolites", fontsize=8)
+    s_ = rd(f"step06_internal_validation/{k}_split_sample.csv"); b = rd(f"step06_internal_validation/{k}_bootstrap_all_metabolites.csv"); p = rd(f"step01_primary/model1_{k}_cox_all_metabolites.csv")
+    if s_ is None or b is None or "coef_p2_5" not in b: ok = False; break
+    a = ax[0, j]; sig = s_.p_bonf_disc < .05; a.scatter(s_.coef_disc, s_.coef_valid, c=np.where(sig, UP, GR), s=8, lw=0); lim = [s_.coef_disc.min(), s_.coef_disc.max()]
+    a.plot(lim, lim, "k--", lw=.5); a.set_xlabel("ln(HR) discovery (70%)"); a.set_ylabel("ln(HR) validation (30%)"); a.set_title(f"{LAB[k]}" + chr(10) + f"split-sample, r={s_.coef_disc.corr(s_.coef_valid):.2f}", fontsize=8)
+    a = ax[1, j]; m = p[p.status == "ok"].merge(b, on="metabolite").sort_values("coef").reset_index(drop=True); x = np.arange(len(m))
+    a.fill_between(x, m.coef_p2_5, m.coef_p97_5, color="#9DB7D5", alpha=.8, lw=0, label="Bootstrap 95% interval (30 resamples)")
+    col = np.where(m.p_bonf < .05, np.where(m.coef > 0, UP, DN), GR); a.scatter(x, m.coef, c=col, s=5, lw=0, zorder=3, label="Main analysis")
+    a.axhline(0, c="k", lw=.5); a.set_xlabel("Metabolites ranked by main-analysis ln(HR)"); a.set_ylabel("ln(HR) per 1 SD"); a.set_title(f"Bootstrap stability, all {len(m)} metabolites", fontsize=8)
+    a.legend(frameon=False, fontsize=6, loc="upper left")
 if ok: fig.tight_layout(); save(fig, "FigS4_internal_validation")
 
-# S5 sex and age strata as circular heat rings (all 251 metabolites): overall, female, male, <60, >=60, <65, >=65
-from circular_barplot import circular_heatmap
+# S5 supplementary age cut-off 65 as circular heat rings (all 251 metabolites): overall, <65, >=65
 for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
-    g = rd(f"step03_subgroup/{k}_subgroups.csv"); g65 = rd(f"step03_subgroup/{k}_subgroups_age65.csv"); p = rd(f"step01_primary/model1_{k}_cox_all_metabolites.csv")
-    if g is None or g65 is None or p is None: continue
-    allg = pd.concat([g, g65]); allg = allg[allg.status == "ok"]
-    rings = {"Overall": p[p.status == "ok"]}
-    for nm, lab in {"Female": "Female", "Male": "Male", "Age<60": "<60 y", "Age>=60": "≥60 y", "Age<65": "<65 y", "Age>=65": "≥65 y"}.items():
-        rings[lab] = allg[allg.subgroup == nm]
-    circular_heatmap(rings, LAB[k], str(SF / f"FigS5{tag}_strata_circular_heatmap"))
+    g65 = rd(f"step03_subgroup/{k}_subgroups_age65.csv"); p = rd(f"step01_primary/model1_{k}_cox_all_metabolites.csv")
+    if g65 is None or p is None: continue
+    g65 = g65[g65.status == "ok"]
+    rings = {"Overall": p[p.status == "ok"], "<65 y": g65[g65.subgroup == "Age<65"], "≥65 y": g65[g65.subgroup == "Age>=65"]}
+    circular_heatmap(rings, LAB[k] + ", age cut-off 65", str(SF / f"FigS5{tag}_age65_circular_heatmap"))
 
 # S6 prevalent vs incident, both outcomes
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.3))
