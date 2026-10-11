@@ -1,0 +1,23 @@
+outcome,class,n,n_sig_pos,n_sig_neg
+K63,Amino acids,10,0,3
+K63,Apolipoproteins,3,0,2
+K63,Fatty acids,18,5,7
+K63,Fluid balance,2,0,1
+K63,Glycolysis / ketone bodies,9,5,0
+K63,Inflammation (GlycA),1,1,0
+K63,Lipid composition (% within subclass),70,18,38
+K63,Lipid content of subclass,94,28,28
+K63,Lipoprotein / lipid totals,24,3,8
+K63,Lipoprotein particle concentration,17,2,7
+K63,Lipoprotein particle size,3,1,0
+K31,Amino acids,10,0,0
+K31,Apolipoproteins,3,0,1
+K31,Fatty acids,18,2,10
+K31,Fluid balance,2,1,1
+K31,Glycolysis / ketone bodies,9,4,1
+K31,Inflammation (GlycA),1,1,0
+K31,Lipid composition (% within subclass),70,20,37
+K31,Lipid content of subclass,94,30,33
+K31,Lipoprotein / lipid totals,24,6,15
+K31,Lipoprotein particle concentration,17,3,6
+K31,Lipoprotein particle size,3,1,2
