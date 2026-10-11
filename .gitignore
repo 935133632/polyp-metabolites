@@ -9,3 +9,5 @@ results/*_err.txt
 __pycache__/
 *.pyc
 results/step06_internal_validation/bootstrap_chunks/
+results/*.log
+results/*.err
