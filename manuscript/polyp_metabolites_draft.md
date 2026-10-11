@@ -1,6 +1,18 @@
-# Plasma NMR metabolomics and incident colon and stomach/duodenal polyps in the UK Biobank (draft)
+# Plasma NMR metabolomic profiles and incident colon and stomach/duodenal polyps: a prospective analysis of 274,260 UK Biobank participants
 
 Draft generated from the analysis record in `ANALYSIS_LOG.md`. Numbers come from `tables/` and `results/`. Citations in square brackets refer to the list at the end; entries marked *verify* or *identify* were found from search-result summaries only and must be checked against the full papers before submission. `[ref needed]` marks statements that still need a citation. Before submission, also check the grouping of the metabolite abbreviations `TC_Chy_VLDL`, `TPR`, `GluLac` and `SpeAla` in the circular figures against the UK Biobank/Nightingale data dictionary.
+
+## Abstract
+
+**Background.** Polyps of the colon and of the stomach and duodenum differ in aetiology, and the circulating metabolic features that precede them are largely unknown.
+
+**Methods.** We analysed 251 plasma nuclear magnetic resonance (NMR) metabolites measured at baseline in 274,260 UK Biobank participants. Incident colon polyp (ICD-10 K63.5; 15,677 cases) and polyp of the stomach and duodenum (K31.7; 7,213 cases) were identified from hospital records over a median follow-up of 13.6 years. Cox models adjusted for age, sex, deprivation, body mass index, blood pressure, smoking and alcohol use, with Bonferroni correction across metabolites. Further analyses covered exclusion of the first two years, additional adjustment for adiposity, HbA1c and C-reactive protein, sex and age subgroups, split-sample and bootstrap validation, comparison with 23 other digestive diseases, a metabolite risk score evaluated in an independent test set, and prediction models.
+
+**Results.** Of 251 metabolites, 157 were associated with colon polyp and 174 with stomach/duodenal polyp; 127 were associated with both, in the same direction. The associated metabolites formed one profile: triglyceride-enriched, cholesterol-depleted lipoproteins, low HDL lipid content (HDL cholesterol HR per SD 0.85 for stomach/duodenal polyp), raised glycoprotein acetyls (HR 1.08 and 1.18) and a lower proportion of linoleic acid (HR 0.89 and 0.90 per SD higher proportion). The associations persisted after excluding early events, and 61% (colon) and 81% (stomach/duodenal) of the main associations remained significant after adjustment for adiposity, HbA1c and C-reactive protein. The profile correlated with that of other digestive diseases (r up to 0.97). In the test set, the highest versus lowest quartile of the metabolite score had a hazard ratio of 1.52 (95% CI 1.39–1.66) for colon polyp and 2.02 (1.76–2.31) for stomach/duodenal polyp. Adding metabolites to clinical covariates raised the C-index from 0.630 to 0.636 and from 0.634 to 0.651.
+
+**Conclusions.** A triglyceride-enriched, HDL-depleted, pro-inflammatory metabolic profile with an unfavourable fatty-acid composition is associated with a higher risk of colon and stomach/duodenal polyps. The profile is shared with other digestive diseases and marks a general metabolic–inflammatory susceptibility, with a clear group-level risk gradient.
+
+**Keywords:** metabolomics; nuclear magnetic resonance; digestive polyps; lipoproteins; glycoprotein acetyls; UK Biobank; cohort study
 
 ## Introduction
 
