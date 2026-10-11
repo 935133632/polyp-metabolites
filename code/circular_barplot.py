@@ -114,3 +114,41 @@ def circular_barplot(res, title, outfile_stem, lo=0.80, hi=1.20, size=10.5, est=
     ax.text(0, 0, title + "\n" + unit + "\n* P$_{Bonf}$<0.05  ** <0.01  *** <0.001\nred: higher risk, blue: lower risk\nfaded bar: not significant", fontsize=7.5, ha="center", va="center", linespacing=1.5)
     fig.savefig(f"{outfile_stem}.png", dpi=300); fig.savefig(f"{outfile_stem}.pdf"); plt.close(fig)
     return L
+
+
+def circular_heatmap(rings, title, outfile_stem, vmax=0.25, size=10.5, cmap="RdBu_r", cbar_label="ln(HR) per 1 SD"):
+    """rings: ordered dict {ring name: DataFrame(metabolite, coef, p_bonf)} -> concentric heat rings (inner = first). Non-significant cells are faded."""
+    from matplotlib import cm, colors
+    first = next(iter(rings.values()))
+    L = layout(list(first.metabolite)); n = len(L); ng = L.group.nunique(); gap = np.radians(1.6); top_gap = np.radians(11)
+    w = (2 * np.pi - ng * gap - top_gap) / n
+    th = np.zeros(n); t = top_gap / 2; prev = None
+    for i, g in enumerate(L.group):
+        if prev is not None and g != prev: t += gap
+        th[i] = t + w / 2; t += w; prev = g
+    L["theta"] = th
+    nr = len(rings); r0, r1 = .30, .30 + .045 * nr; ring_h = (r1 - r0) / nr
+    norm = colors.Normalize(-vmax, vmax); cm_ = cm.get_cmap(cmap)
+    fig = plt.figure(figsize=(size, size)); ax = fig.add_axes([.02, .02, .96, .96], projection="polar")
+    ax.set_theta_zero_location("N"); ax.set_theta_direction(-1); ax.set_ylim(0, 1.0); ax.axis("off")
+    for k, (name, d) in enumerate(rings.items()):
+        D = d.set_index("metabolite"); bottom = r0 + k * ring_h
+        for _, r in L.iterrows():
+            if r.metabolite not in D.index: continue
+            row = D.loc[r.metabolite]; sig = row.p_bonf < .05
+            ax.bar(r.theta, ring_h * .94, width=w * 1.02, bottom=bottom + ring_h * .03, color=cm_(norm(row.coef)), alpha=1 if sig else .32, lw=0, zorder=2)
+        ax.text(0, bottom + ring_h / 2, name, fontsize=6, ha="center", va="center", zorder=6)
+    for _, r in L.iterrows():
+        deg = np.degrees(r.theta); phi = 90 - deg; right = np.cos(np.radians(phi)) >= 0
+        ax.text(r.theta, r1 + .012, r.label, fontsize=3.7, ha="left" if right else "right", va="center", rotation=phi if right else phi + 180, rotation_mode="anchor", zorder=6)
+    for g, d in L[L.family != ""].groupby("group"):
+        for fam, f in d.groupby("family", sort=False):
+            tm = f.theta.mean(); phi = 90 - np.degrees(tm); right = np.cos(np.radians(phi)) >= 0
+            ax.text(tm, r1 + .075, fam, fontsize=5, fontweight="bold", ha="left" if right else "right", va="center", rotation=phi if right else phi + 180, rotation_mode="anchor")
+    for g, d in L.groupby("group"):
+        tm = (d.theta.min() + d.theta.max()) / 2; deg = np.degrees(tm) % 360; rot = -deg if (deg < 90 or deg > 270) else -deg + 180
+        ax.text(tm, .90, g.replace("Amino acids, glycolysis, ketone bodies & fluid balance", "Amino acids, glycolysis,\nketone bodies & fluid balance").replace("Sizes, apolipoproteins & other", "Sizes, ApoLP & other"),
+                fontsize=8, fontweight="bold", ha="center", va="center", rotation=rot, rotation_mode="anchor")
+    ax.text(0, 0, title + "\nfaded cells: not significant\n(Bonferroni, within ring)", fontsize=7.5, ha="center", va="center", linespacing=1.5)
+    cax = fig.add_axes([.43, .43, .14, .012]); cb = fig.colorbar(cm.ScalarMappable(norm, cm_), cax=cax, orientation="horizontal"); cb.ax.tick_params(labelsize=6); cb.set_label(cbar_label, fontsize=6.5)
+    fig.savefig(f"{outfile_stem}.png", dpi=300); fig.savefig(f"{outfile_stem}.pdf"); plt.close(fig)

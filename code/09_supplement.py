@@ -99,16 +99,16 @@ for j, k in enumerate(LAB):
     a.hist(bb.freq_p05, bins=np.linspace(0, 1, 21), color=DN); a.set_xlabel("Fraction of bootstrap resamples with P<0.05"); a.set_ylabel("Main-analysis hits"); a.set_title(f"Bootstrap, {len(bb)} Bonferroni-significant metabolites", fontsize=8)
 if ok: fig.tight_layout(); save(fig, "FigS4_internal_validation")
 
-# S5 age cut-offs 60 and 65
-fig, ax = plt.subplots(1, 2, figsize=(7.4, 5.2)); ok = True
-for a, k in zip(ax, LAB):
+# S5 sex and age strata as circular heat rings (all 251 metabolites): overall, female, male, <60, >=60, <65, >=65
+from circular_barplot import circular_heatmap
+for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
     g = rd(f"step03_subgroup/{k}_subgroups.csv"); g65 = rd(f"step03_subgroup/{k}_subgroups_age65.csv"); p = rd(f"step01_primary/model1_{k}_cox_all_metabolites.csv")
-    if g is None or g65 is None: ok = False; break
-    G = pd.concat([g[g.subgroup.str.startswith("Age")], g65]); G = G[G.status == "ok"]
-    H = G.pivot(index="metabolite", columns="subgroup", values="coef")[["Age<60", "Age>=60", "Age<65", "Age>=65"]]
-    H = H.loc[p[p.metabolite.isin(H.index)].metabolite.head(25)]
-    im = a.imshow(H.values, cmap="RdBu_r", vmin=-.3, vmax=.3, aspect="auto"); a.set_xticks(range(4), H.columns, rotation=45, ha="right"); a.set_yticks(range(len(H)), H.index, fontsize=6); a.set_title(LAB[k], fontsize=8)
-if ok: fig.colorbar(im, ax=ax, shrink=.5, label="ln(HR)"); save(fig, "FigS5_age_cutoffs_60_65")
+    if g is None or g65 is None or p is None: continue
+    allg = pd.concat([g, g65]); allg = allg[allg.status == "ok"]
+    rings = {"Overall": p[p.status == "ok"]}
+    for nm, lab in {"Female": "Female", "Male": "Male", "Age<60": "<60 y", "Age>=60": "≥60 y", "Age<65": "<65 y", "Age>=65": "≥65 y"}.items():
+        rings[lab] = allg[allg.subgroup == nm]
+    circular_heatmap(rings, LAB[k], str(SF / f"FigS5{tag}_strata_circular_heatmap"))
 
 # S6 prevalent vs incident, both outcomes
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.3))
