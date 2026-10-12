@@ -38,4 +38,7 @@ number,first_author,year,journal,doi,zotero_collection
 37,Li,2025,The American Journal of Clinical Nutrition,10.1016/j.ajcnut.2025.09.039,polyp_metabolites
 38,Atashi,2025,Nutrition & Diabetes,10.1038/s41387-025-00367-w,polyp_metabolites
 39,Lu,2023,Nutrients,10.3390/nu15030730,polyp_metabolites
-40,Fry,2017,American Journal of Epidemiology,10.1093/aje/kwx246,polyp_metabolites
+40,Global Lipids Genetics Consortium,2013,Nature Genetics,10.1038/ng.2797,polyp_metabolites
+41,Schaeffer,2006,Human Molecular Genetics,10.1093/hmg/ddl117,polyp_metabolites
+42,Voight,2012,The Lancet,10.1016/s0140-6736(12)60312-2,polyp_metabolites
+43,Fry,2017,American Journal of Epidemiology,10.1093/aje/kwx246,polyp_metabolites
