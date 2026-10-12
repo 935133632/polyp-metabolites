@@ -1,4 +1,4 @@
-"""Supplementary Fig S9 and Table S6: audit of the lipoprotein results (NMR vs clinical chemistry, adjustment for prior-diagnosis proxies, crude rates)."""
+"""Supplementary Fig S9 and Table S5: audit of the lipoprotein results (NMR vs clinical chemistry, adjustment for prior-diagnosis proxies, crude rates)."""
 import sys; sys.path.insert(0, r"D:\research\Xingang Li\polyp_metabolites\code")
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -10,13 +10,13 @@ LAB = {"K63": "Colon polyp (K63.5)", "K31": "Stomach/duodenal polyp (K31.7)"}
 A = RES / "step16_lipid_audit"; B = RES / "step17_proxy_adjustment"
 al = pd.read_csv(A / "A_alignment_nmr_vs_clinical.csv"); hr = pd.read_csv(A / "D_G_hazard_ratios.csv"); crude = pd.read_csv(A / "C_crude_rates_by_hdl_tertile.csv"); dec = pd.read_csv(B / "decomposition_key_lipids.csv")
 
-# ---------------------------------------------------------------- Table S6 (long format)
+# ---------------------------------------------------------------- Table S5 (long format)
 rows = []
 for _, r in al.iterrows(): rows.append({"analysis": "alignment: NMR vs clinical chemistry", "outcome": "", "exposure": f"{r.nmr} vs {r.clinical}", "model": "", "n": r.n, "estimate": r.spearman_r, "lo": None, "hi": None, "note": "Spearman r"})
 for _, r in hr.iterrows(): rows.append({"analysis": "hazard ratio per SD", "outcome": LAB[r.outcome], "exposure": r.exposure, "model": r.model, "n": r.n, "estimate": r.hr, "lo": r.lo, "hi": r.hi, "note": f"events {int(r.events)}; P {r.p:.1e}"})
 for _, r in dec.iterrows(): rows.append({"analysis": "hazard ratio per SD, stepwise proxies", "outcome": LAB[r.outcome], "exposure": r.metabolite, "model": r.model, "n": None, "estimate": r.hr, "lo": r.lo, "hi": r.hi, "note": f"P {r.p:.1e}"})
 for _, r in crude.iterrows(): rows.append({"analysis": "crude incidence per 1000 person-years", "outcome": LAB[r.outcome], "exposure": f"HDL cholesterol ({r.source})", "model": f"{'female' if r.Sex == 0 else 'male'}, {r.t}", "n": r.n, "estimate": r.rate_per_1000py, "lo": None, "hi": None, "note": f"events {int(r.events)}"})
-T = pd.DataFrame(rows); T.round(4).to_csv(A / "TableS6_lipid_audit.csv", index=False)
+T = pd.DataFrame(rows); T.round(4).to_csv(A / "lipid_audit_table.csv", index=False)
 
 # ---------------------------------------------------------------- Fig S9
 fig, ax = plt.subplots(2, 3, figsize=(7.8, 6.6))
@@ -51,4 +51,4 @@ for m, ml, mk in (("MetaTG", "Total triglycerides", "o"), ("GlycoAcet", "Glycopr
 a.axvline(1, c=GR, lw=.6); a.set_yticks(y, SHORT, fontsize=6.5); a.set_xlabel("HR per SD (95% CI)"); a.set_title("Triglycerides and glycoprotein acetyls", fontsize=8); a.legend(frameon=False, fontsize=6, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
 fig.tight_layout(); (FIG / "supplement").mkdir(exist_ok=True)
 fig.savefig(FIG / "supplement" / "FigS9_lipid_audit.png", bbox_inches="tight"); fig.savefig(FIG / "supplement" / "FigS9_lipid_audit.pdf", bbox_inches="tight"); plt.close(fig)
-print("FigS9 and TableS6 written;", len(T), "rows")
+print("FigS9 and lipid audit table written;", len(T), "rows")

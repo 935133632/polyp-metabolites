@@ -10,7 +10,7 @@
 - [ ] Read the full texts of the cited papers and confirm each cited statement and estimate (see `manuscript/TODO_before_submission.md` in the repository for the statements that rest on abstracts or titles)
 - [ ] Run a systematic literature search to confirm the statement in the Introduction that the metabolic profile preceding polyps has received little attention; soften or remove it if earlier analyses exist
 - [ ] Add colorectal citations for the Introduction statement that adenomas can progress to cancer if the journal expects them
-- [ ] Compare the metabolite abbreviations and groupings (Table S2) with the official Nightingale/UK Biobank field list
+- [ ] Compare the metabolite abbreviations and groupings (Table S1) with the official Nightingale/UK Biobank field list
 
 ## Format conversion on request
 - [ ] Reference style (currently numbered, Vancouver-like) to the target journal; the Zotero collection can generate any style

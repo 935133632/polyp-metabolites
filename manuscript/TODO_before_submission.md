@@ -11,7 +11,7 @@ All 43 references have DOIs resolved and bibliographic details taken from Crossr
 - Introduction, paragraph 1: "adenomas can progress to cancer" is supported by the gastric polyp reviews (refs 5, 6) only for the stomach; add a colorectal reference if wanted.
 
 ## 3. Data dictionary (resolved by arithmetic checks)
-Metabolite definitions were verified from exact identities in the data (see ANALYSIS_LOG, Step 14): `TC_HDL` is non-HDL cholesterol, `TC_Chy_VLDL` is the triglyceride measure of the chylomicron/XXL-VLDL series, `TPR` is the triglyceride-to-phosphoglyceride ratio, `Phospho` is phosphoglycerides, and `GluLac` and `SpeAla` are corrected glucose and alanine. Compare these with the official Nightingale/UK Biobank field list once if the supplementary annotation (Table S2) is published.
+Metabolite definitions were verified from exact identities in the data (see ANALYSIS_LOG, Step 14): `TC_HDL` is non-HDL cholesterol, `TC_Chy_VLDL` is the triglyceride measure of the chylomicron/XXL-VLDL series, `TPR` is the triglyceride-to-phosphoglyceride ratio, `Phospho` is phosphoglycerides, and `GluLac` and `SpeAla` are corrected glucose and alanine. Compare these with the official Nightingale/UK Biobank field list once if the supplementary annotation (Table S1) is published.
 
 ## 4. Lipoprotein results
 The audit changed the interpretation of LDL cholesterol (confounding by treatment and health-care contact) and of HDL cholesterol (stomach/duodenal polyp only). Prior hospital diagnoses are an incomplete proxy for medication use; if medication (lipid-lowering drugs, aspirin, proton-pump inhibitors) and endoscopy/screening records can be exported later, repeat M3/M4 with them.

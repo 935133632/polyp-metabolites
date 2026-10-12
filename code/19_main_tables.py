@@ -56,15 +56,15 @@ def table2():
     MET = [("Lipids and lipoproteins", None), ("Total triglycerides", "MetaTG"), ("HDL cholesterol", "HDLC"), ("Apolipoprotein A1", "ApoA1"), ("LDL cholesterol", "LDLC"), ("Apolipoprotein B", "ApoB"),
            ("Total cholesterol", "MetaTC"), ("Triglycerides in very small VLDL, % of lipids", "TG_VSVLDL_pt"), ("Inflammation", None), ("Glycoprotein acetyls", "GlycoAcet"), ("Albumin", "Albumin"),
            ("Fatty acids, % of total fatty acids", None), ("Linoleic acid", "Linopt"), ("Omega-6 fatty acids", "O6pt"), ("Monounsaturated fatty acids", "Monopt"), ("Saturated fatty acids", "Satupt")]
-    R = {(k, m): pd.read_csv(RES / f"step12_model_adjustment/{k}_{m}.csv").query("status == 'ok'").set_index("metabolite") for k in LAB for m in ("M1", "M3", "M4")}
+    R = {(k, m): pd.read_csv(RES / f"step12_model_adjustment/{k}_{m}.csv").query("status == 'ok'").set_index("metabolite") for k in LAB for m in ("M1", "M2c", "M3", "M4")}
     body, bold, groups = [], [], []
     for name, key in MET:
-        if key is None: groups.append(len(body)); body.append([name] + [""] * 6); continue
+        if key is None: groups.append(len(body)); body.append([name] + [""] * 8); continue
         row = [name]
         for j, k in enumerate(LAB):
-            for mj, m in enumerate(("M1", "M3", "M4")):
+            for mj, m in enumerate(("M1", "M2c", "M3", "M4")):
                 r = R[(k, m)].loc[key]; row.append(f"{r.hr:.2f} ({r.hr_lower95:.2f}–{r.hr_upper95:.2f})")
-                if r.p_bonf < 0.05: bold.append((len(body), 1 + j * 3 + mj))
+                if r.p_bonf < 0.05: bold.append((len(body), 1 + j * 4 + mj))
         body.append(row)
     ns = {k: (int(R[(k, 'M1')].n_complete.max()), int(R[(k, 'M1')].n_events.max())) for k in LAB}
     return body, bold, groups, ns
@@ -86,14 +86,14 @@ if __name__ == "__main__":
     d.save(OUT / "Table1_baseline_characteristics.docx")
 
     body2, bold2, groups2, ns = table2()
-    h1 = ["Metabolite", LAB["K63"], "", "", LAB["K31"], "", ""]; h2 = [""] + ["Model 1", "Model 3", "Model 4"] * 2
+    h1 = ["Metabolite", LAB["K63"], "", "", "", LAB["K31"], "", "", ""]; h2 = [""] + ["Model 1", "Model 2", "Model 3", "Model 4"] * 2
     pd.DataFrame([h2] + body2, columns=h1).to_csv(OUT / "Table2_key_metabolites.csv", index=False, encoding="utf-8-sig")
     d = new_document(size=9, line_spacing=1.0); landscape(d.sections[0])
     caption(d, "**Table 2.** Associations of key metabolites with incident colon polyp and stomach/duodenal polyp across adjustment models (hazard ratio per 1 SD, 95% CI)", size=10)
-    three_line_table(d, [h1, h2], body2, col_widths_cm=[7.0] + [3.0] * 6, font_size=8, merges=[(0, 1, 3), (0, 4, 6)], bold_cells=bold2, indent_rows=[i for i in range(len(body2)) if i not in groups2], group_rows=groups2)
+    three_line_table(d, [h1, h2], body2, col_widths_cm=[6.0] + [2.5] * 8, font_size=7.5, merges=[(0, 1, 4), (0, 5, 8)], bold_cells=bold2, indent_rows=[i for i in range(len(body2)) if i not in groups2], group_rows=groups2)
     caption(d, f"Same complete-case sample for all models (colon polyp: {ns['K63'][0]:,} participants, {ns['K63'][1]:,} events; stomach/duodenal polyp: {ns['K31'][0]:,}, {ns['K31'][1]:,}). "
-               "Model 1: age, sex, Townsend deprivation index, body mass index, systolic and diastolic blood pressure, smoking and alcohol drinking. Model 3: Model 1 plus prior hospital diagnoses (log number of ICD-10 codes; disorders of lipoprotein metabolism, ischaemic heart disease, hypertension, diabetes, reflux disease, gastritis or ulcer). "
-               "Model 4: Model 3 plus waist circumference, body fat percentage, HbA1c and C-reactive protein. Metabolites were rank-normalised and standardised. Bold: P < 0.05 after Bonferroni correction across 251 metabolites. Results for all 251 metabolites are in Table S1 and Fig. 3.", size=8)
+               "Model 1: age, sex, Townsend deprivation index, body mass index, systolic and diastolic blood pressure, smoking and alcohol drinking. Model 2: Model 1 plus waist circumference, body fat percentage, HbA1c and C-reactive protein. Model 3: Model 1 plus prior hospital diagnoses (log number of ICD-10 codes; disorders of lipoprotein metabolism, ischaemic heart disease, hypertension, diabetes, reflux disease, gastritis or ulcer). "
+               "Model 4: Models 2 and 3 combined. Metabolites were rank-normalised and standardised. Bold: P < 0.05 after Bonferroni correction across 251 metabolites. Results for all 251 metabolites are in Table S1 and Fig. 3.", size=8)
     d.save(OUT / "Table2_key_metabolites.docx")
     with pd.ExcelWriter(OUT / "Main_Tables.xlsx", engine="xlsxwriter") as xw:
         pd.DataFrame([head2] + body, columns=head1).to_excel(xw, "Table 1", index=False); pd.DataFrame([h2] + body2, columns=h1).to_excel(xw, "Table 2", index=False)
