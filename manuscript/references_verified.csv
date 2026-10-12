@@ -1,0 +1,41 @@
+number,first_author,year,journal,doi,zotero_collection
+1,Bray,2024,CA: A Cancer Journal for Clinicians,10.3322/caac.21834,polyp_metabolites
+2,Winawer,1993,New England Journal of Medicine,10.1056/nejm199312303292701,polyp_metabolites
+3,Zauber,2012,New England Journal of Medicine,10.1056/nejmoa1100370,polyp_metabolites
+4,Rex,2017,Gastroenterology,10.1053/j.gastro.2017.05.013,polyp_metabolites
+5,Carmack,2009,Nature Reviews Gastroenterology & Hepatology,10.1038/nrgastro.2009.70,polyp_metabolites
+6,Shaib,2013,Clinical Gastroenterology and Hepatology,10.1016/j.cgh.2013.03.019,polyp_metabolites
+7,Jalving,2006,Alimentary Pharmacology & Therapeutics,10.1111/j.1365-2036.2006.03127.x,polyp_metabolites
+8,Ouyang,2021,Helicobacter,10.1111/hel.12838,polyp_metabolites
+9,Botteri,2008,Gastroenterology,10.1053/j.gastro.2007.11.007,polyp_metabolites
+10,Ben,2012,Gastroenterology,10.1053/j.gastro.2011.12.050,polyp_metabolites
+11,Giovannucci,2007,The American Journal of Clinical Nutrition,10.1093/ajcn/86.3.836s,polyp_metabolites
+12,El Herrag,2017,The North African Journal of Food and Nutrition Research,10.51745/najfnr.1.2.30-45,polyp_metabolites
+13,Wu,2021,Clinics and Research in Hepatology and Gastroenterology,10.1016/j.clinre.2021.101749,polyp_metabolites
+14,Lu,2022,Colorectal Disease,10.1111/codi.16092,polyp_metabolites
+15,Tian,2015,Public Health Nutrition,10.1017/s1368980015000646,polyp_metabolites
+16,Yao,2014,Cancer Causes & Control,10.1007/s10552-014-0507-y,polyp_metabolites
+17,Julkunen,2023,Nature Communications,10.1038/s41467-023-36231-7,polyp_metabolites
+18,Soininen,2015,Circulation: Cardiovascular Genetics,10.1161/circgenetics.114.000216,polyp_metabolites
+19,Connelly,2017,Journal of Translational Medicine,10.1186/s12967-017-1321-6,polyp_metabolites
+20,Würtz,2015,Circulation,10.1161/circulationaha.114.013116,polyp_metabolites
+21,Buergel,2022,Nature Medicine,10.1038/s41591-022-01980-3,polyp_metabolites
+22,Yuan,2025,British Journal of Cancer,10.1038/s41416-025-02997-4,polyp_metabolites
+23,Seum,2025,BMC Medicine,10.1186/s12916-025-04107-w,polyp_metabolites
+24,Yang,2025,Frontiers in Nutrition,10.3389/fnut.2025.1501263,polyp_metabolites
+25,Sudlow,2015,PLOS Medicine,10.1371/journal.pmed.1001779,polyp_metabolites
+26,Ritchie,2023,Scientific Data,10.1038/s41597-023-01949-y,polyp_metabolites
+27,Beasley,2009,Behavior Genetics,10.1007/s10519-009-9281-0,polyp_metabolites
+28,Cox,1972,Journal of the Royal Statistical Society Series B: Statistical Methodology,10.1111/j.2517-6161.1972.tb00899.x,polyp_metabolites
+29,Li,2005,Heredity,10.1038/sj.hdy.6800717,polyp_metabolites
+30,"Harrell ,",2015,Springer Series in Statistics,10.1007/978-3-319-19425-7,polyp_metabolites
+31,Chen,2016,Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining,10.1145/2939672.2939785,polyp_metabolites
+32,Heagerty,2000,Biometrics,10.1111/j.0006-341x.2000.00337.x,polyp_metabolites
+33,Davidson-Pilon,2019,Journal of Open Source Software,10.21105/joss.01317,polyp_metabolites
+34,Nordestgaard,2016,Circulation Research,10.1161/circresaha.115.306249,polyp_metabolites
+35,Kettunen,2018,Circulation: Genomic and Precision Medicine,10.1161/circgen.118.002234,polyp_metabolites
+36,Chandler,2016,PLOS ONE,10.1371/journal.pone.0165615,polyp_metabolites
+37,Li,2025,The American Journal of Clinical Nutrition,10.1016/j.ajcnut.2025.09.039,polyp_metabolites
+38,Atashi,2025,Nutrition & Diabetes,10.1038/s41387-025-00367-w,polyp_metabolites
+39,Lu,2023,Nutrients,10.3390/nu15030730,polyp_metabolites
+40,Fry,2017,American Journal of Epidemiology,10.1093/aje/kwx246,polyp_metabolites
