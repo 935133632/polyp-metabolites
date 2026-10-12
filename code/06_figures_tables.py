@@ -7,7 +7,7 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "
                      "axes.spines.right": False, "pdf.fonttype": 42, "savefig.dpi": 300})
 UP, DN, GR = "#D55E00", "#0072B2", "#BBBBBB"   # Wong palette
 LAB = {"K63": "Colon polyp (K63.5)", "K31": "Stomach/duodenal polyp (K31.7)"}
-FIG.mkdir(exist_ok=True); TAB.mkdir(exist_ok=True); (FIG / "supplement").mkdir(exist_ok=True)
+FIG.mkdir(exist_ok=True); TAB.mkdir(exist_ok=True); (RES / "step15_summary").mkdir(exist_ok=True); (FIG / "supplement").mkdir(exist_ok=True)
 
 def load(k, kind="step01_primary/model1_{k}_cox_all_metabolites.csv"):
     r = pd.read_csv(RES / kind.format(k=k)); r = r[r.status == "ok"].copy(); r["cls"] = r.metabolite.map(metab_class); return r
@@ -33,7 +33,7 @@ rows = []
 for k in LAB:
     for cls, g in P[k].groupby("cls"):
         s = g[g.p_bonf < .05]; rows.append({"outcome": k, "class": cls, "n": len(g), "n_sig_pos": int((s.coef > 0).sum()), "n_sig_neg": int((s.coef < 0).sum())})
-cs = pd.DataFrame(rows); cs.to_csv(TAB / "class_summary.csv", index=False)
+cs = pd.DataFrame(rows); cs.to_csv(RES / "step15_summary" / "class_summary.csv", index=False)
 order = cs.groupby("class").n.first().sort_values().index.tolist()
 fig, ax = plt.subplots(1, 2, figsize=(7.1, 3.4), sharey=True)
 for a, k in zip(ax, LAB):
@@ -60,7 +60,7 @@ pv = pd.read_csv(RES / "step03b_prevalent/K63_prevalent_logistic.csv").merge(P["
 ax[1].scatter(np.log(pv["or"]), pv.coef, c=GR, s=8, lw=0); ax[1].axhline(0, c="k", lw=.4); ax[1].axvline(0, c="k", lw=.4)
 ax[1].set_xlabel("ln(OR) prevalent, colon polyp"); ax[1].set_ylabel("ln(HR) incident, colon polyp")
 ax[1].set_title(f"Prevalent vs incident, r={np.log(pv['or']).corr(pv.coef):.2f}", fontsize=8)
-fig.tight_layout(); save(fig, "Fig4_cross_outcome"); j.to_csv(TAB / "cross_outcome_cox.csv", index=False)
+fig.tight_layout(); save(fig, "Fig4_cross_outcome"); j.to_csv(RES / "step15_summary" / "cross_outcome_cox.csv", index=False)
 # ---- Fig 5: (A,B) circular heat rings of all 251 metabolites by sex and age (60) stratum; (C) sensitivity analysis excluding events <2 y
 from circular_barplot import circular_heatmap
 for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
@@ -82,17 +82,4 @@ for i, v in enumerate(g2.n): ax.text(i, v, f"{v:,}", ha="center", va="bottom", f
 ax.set_ylabel("Participants with incident polyp"); ax.tick_params(axis="x", rotation=20); fig.tight_layout(); save(fig, "Fig6A_dual_site_counts")
 circular_barplot(dl, "Both polyps (n=1,110) vs one", str(FIG / "Fig6B_dual_site_circular"), lo=.70, hi=1.30, est="or", est_lo="or_lower95", est_hi="or_upper95",
                  unit="OR per 1 SD", ticks=(.7, .85, 1.0, 1.15, 1.3))
-# ---- tables
-T1 = []
-for k in LAB:
-    r = P[k]; T1.append(r.assign(outcome=k)[["outcome", "metabolite", "cls", "n_complete", "n_events", "hr", "hr_lower95", "hr_upper95", "p", "p_bonf"]])
-pd.concat(T1).to_csv(TAB / "TableS1_primary_cox_all_metabolites.csv", index=False)
-for k in LAB: P[k].nsmallest(20, "p")[["metabolite", "cls", "n_events", "hr", "hr_lower95", "hr_upper95", "p", "p_bonf"]].to_csv(TAB / f"Table2_top20_{k}.csv", index=False)
-cases = {k: build_cohort(k) for k in LAB}
-rows = []
-for k, c in cases.items():
-    for lab, g in (("All", c), ("Incident polyp", c[c.event == 1]), ("No polyp", c[c.event == 0])):
-        rows.append({"outcome": k, "group": lab, "N": len(g), "age_mean": g.AgeRecr.mean(), "male_pct": 100 * g.Sex.mean(), "BMI_mean": g.BMI.mean(), "TDI_mean": g.TDI.mean(),
-                     "SBP_mean": g.SBPmean.mean(), "current_smoker_pct": 100 * (g.SmokeStatus == "Current").mean(), "median_FU_years": g.follow_up_years.median()})
-pd.DataFrame(rows).round(2).to_csv(TAB / "Table1_cohort_characteristics.csv", index=False)
 print("done")

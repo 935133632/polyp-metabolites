@@ -25,6 +25,7 @@ Only code and aggregate results are tracked. UK Biobank individual-level data (`
 | `code/14_score_dose_response.py` | metabolite score (train/test) and spline dose-response |
 | `code/15_extended_figures.py` | figures and tables for steps 11-13 |
 | `code/16_lipid_audit.py`, `code/17_proxy_adjustment.py`, `code/18_audit_figures.py` | audit of the lipoprotein results: NMR vs clinical chemistry, prior-diagnosis proxies, definition checks, Fig S9 and Table S6 |
+| `code/19_main_tables.py`, `code/docx_helpers.py`, `code/20_build_publication_package.py` | main Tables 1-2 (Word/Excel) and the publication package |
 | `code/run_queue.ps1` | throttled launcher for the extended analyses (Windows) |
 
 `code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation; `code/circular_barplot.py` the circular bar and heat-ring plots.
@@ -47,3 +48,6 @@ Age, sex, Townsend deprivation index, BMI, systolic and diastolic blood pressure
 - Pathway enrichment, druggability and protein-network steps are not applicable to metabolites and are not repeated.
 - scikit-survival and PyTorch were unavailable, so random survival forest and DeepSurv are replaced by a penalised Cox model and XGBoost survival.
 - The metabolome and the Olink project use different participant-ID spaces; all inputs here come from the `WH-*` files.
+
+## Publication package
+`publication_package/` holds the submission-ready manuscript (Word), tables, figures, supplementary information, references (RIS/CSV) and a checklist of items to complete; see `publication_package/README.md`.

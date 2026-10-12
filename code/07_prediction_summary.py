@@ -5,7 +5,6 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "
 d = RES / "step11_13_prediction"
 b = pd.concat([pd.read_csv(d / f"binary_performance_{k}.csv") for k in ("K63", "K31")]); s = pd.concat([pd.read_csv(d / f"survival_performance_{k}.csv") for k in ("K63", "K31")]); t = pd.concat([pd.read_csv(d / f"survival_coxnet_tuned_{k}.csv") for k in ("K63", "K31")])
 s = pd.concat([s[s.model != "CoxElasticNet"], t])          # drop the untuned (penalty too strong) Cox fit
-b.round(4).to_csv(TAB / "Table_binary_prediction.csv", index=False); s.round(4).to_csv(TAB / "Table_survival_prediction.csv", index=False)
 cols = {"covariates": "#999999", "cov+Bonf-selected": "#0072B2", "cov+all251": "#D55E00"}; LAB = {"K63": "Colon polyp (K63.5)", "K31": "Stomach/duodenal polyp (K31.7)"}
 auc_ = lambda d: float(np.trapz(d.tpr, d.fpr))
 # ---- Fig 7: ROC curves. Binary = out-of-fold predictions of the best cov+all251 model; survival = time-dependent ROC (cases: event by h; controls: follow-up > h), tuned penalised Cox
@@ -26,4 +25,4 @@ for k in LAB:
     for nm, df, met in (("binary", b, "auc_mean"), ("survival", s, "c_index")):
         p = df[df.outcome == k].pivot_table(index="model", columns="feature_set", values=met)
         inc.append(pd.DataFrame({"outcome": k, "type": nm, "model": p.index, "covariates": p["covariates"].values, "cov+all251": p["cov+all251"].values, "gain": (p["cov+all251"] - p["covariates"]).values}))
-g = pd.concat(inc); g.round(4).to_csv(TAB / "Table_prediction_gain.csv", index=False); print(g.round(3).to_string(index=False))
+g = pd.concat(inc); g.round(4).to_csv(RES / "step11_13_prediction" / "prediction_gain.csv", index=False); print(g.round(3).to_string(index=False))

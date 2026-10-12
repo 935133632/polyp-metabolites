@@ -15,3 +15,6 @@ Metabolite definitions were verified from exact identities in the data (see ANAL
 
 ## 4. Lipoprotein results
 The audit changed the interpretation of LDL cholesterol (confounding by treatment and health-care contact) and of HDL cholesterol (stomach/duodenal polyp only). Prior hospital diagnoses are an incomplete proxy for medication use; if medication (lipid-lowering drugs, aspirin, proton-pump inhibitors) and endoscopy/screening records can be exported later, repeat M3/M4 with them.
+
+## 5. Publication package
+Author details, UK Biobank application number, funding, competing interests and author contributions are highlighted placeholders in `publication_package/01_Manuscript/Manuscript.docx`; see `publication_package/SUBMISSION_CHECKLIST.md`.
