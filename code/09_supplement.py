@@ -55,14 +55,14 @@ for k in LAB:
         W = W.merge(pick(g[g.subgroup == nm], ["n_events", "hr", "hr_lower95", "hr_upper95", "p_bonf"], f"sub_{lab}"), on="metabolite", how="left")
     sp_ = rd(f"step06_internal_validation/{k}_split_sample.csv"); W = W.merge(pick(sp_, ["coef_disc", "coef_valid", "p_bonf_disc", "p_bonf_valid", "same_direction"], "split"), on="metabolite", how="left")
     b = rd(f"step06_internal_validation/{k}_bootstrap_all_metabolites.csv"); W = W.merge(pick(b, ["freq_p05", "coef_p2_5", "coef_p97_5"], "boot"), on="metabolite", how="left")
-    for m in ("M1", "M2a", "M2b", "M2c"):
+    for m in ("M1", "M2a", "M2b", "M2c", "M3", "M4"):
         a = rd(f"step12_model_adjustment/{k}_{m}.csv"); W = W.merge(pick(a, ["hr", "hr_lower95", "hr_upper95", "p_bonf"], f"adj_{m}"), on="metabolite", how="left")
     o = rd(f"step01_primary/model1_{k}any_cox_all_metabolites.csv"); W = W.merge(pick(o, ["n_events", "hr", "hr_lower95", "hr_upper95", "p_bonf"], "orig3char"), on="metabolite", how="left")
     sw = rd(f"step14_score_dose_response/{k}_score_weights.csv"); W = W.merge(sw.rename(columns={"weight": "score_weight"}), on="metabolite", how="left")
     dl = rd("step07_dual_site/dual_vs_single_logistic.csv"); W = W.merge(pick(dl, ["or", "or_lower95", "or_upper95", "p_bonf"], "dual_site"), on="metabolite", how="left")
     W.insert(0, "outcome", LAB[k]); wide.append(W)
 add("TableS1_metabolite_results", pd.concat(wide).sort_values(["outcome", "primary_p"]),
-    "One row per outcome and metabolite: primary Cox (Model 1; HR per 1 SD), sensitivity excluding events <2 y, prevalent-disease odds ratio, sex and age-60 subgroups, split-sample (ln HR, 70% discovery / 30% validation), bootstrap (30 resamples; ln HR interval), extended adjustment in the same complete-case sample (M1; M2a +waist, body fat %; M2b +HbA1c, log CRP; M2c all four), original 3-character code definition, metabolite-score weight, and dual-site vs single-site OR (identical in both outcome blocks). p_bonf = Bonferroni-adjusted P")
+    "One row per outcome and metabolite: primary Cox (Model 1; HR per 1 SD), sensitivity excluding events <2 y, prevalent-disease odds ratio, sex and age-60 subgroups, split-sample (ln HR, 70% discovery / 30% validation), bootstrap (30 resamples; ln HR interval), extended adjustment in the same complete-case sample (M1; M2a +waist, body fat %; M2b +HbA1c, log CRP; M2c +waist, body fat %, HbA1c, log CRP; M3 +prior-diagnosis proxies; M4 all), original 3-character code definition, metabolite-score weight, and dual-site vs single-site OR (identical in both outcome blocks). p_bonf = Bonferroni-adjusted P")
 
 M = load_metabolome(False); names = [c for c in M.columns if c != "eid"]
 ann = pd.DataFrame({"metabolite": names, "lipoprotein_family": [lipo_family(n) for n in names], "n_nonmissing": [int(M[n].notna().sum()) for n in names]})
@@ -80,6 +80,8 @@ def cat(pattern, names, label):
 codes = ["K57", "K21", "K29", "K44", "K59", "K62", "K64", "K92", "K80", "K40", "K22", "K52", "K76", "K58", "K20", "K30", "K56", "K66", "K25", "K42", "K83", "K43", "K26", "CRC"]
 add("TableS4_specificity_correlations", rd("step15_summary/specificity_profile_correlation.csv"), "Correlation of each outcome's 251 ln(HR) values with the colon and stomach/duodenal polyp profiles (events and number of Bonferroni-significant metabolites)")
 add("TableS5_specificity_effects", cat("step13_specificity/{n}.csv", codes, "outcome_code"), "Model 1 Cox of all 251 metabolites for 23 other digestive outcomes (3-character ICD-10 codes) and colorectal cancer (CRC = C18-C20)")
+
+add("TableS6_lipid_audit", rd("step16_lipid_audit/TableS6_lipid_audit.csv"), "Audit of the lipoprotein results: NMR vs clinical chemistry (alignment and independent hazard ratios), stepwise adjustment for prior-diagnosis proxies, mutual adjustment, crude incidence by HDL tertile")
 
 with pd.ExcelWriter(ST / "Supplementary_Tables.xlsx", engine="xlsxwriter") as xw:
     idx = pd.DataFrame({"sheet": list(sheets), "description": [v[0] for v in sheets.values()]}); idx.to_excel(xw, "Index", index=False)

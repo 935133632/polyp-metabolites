@@ -24,6 +24,7 @@ Only code and aggregate results are tracked. UK Biobank individual-level data (`
 | `code/13_specificity.py` | Model 1 scan for 23 other digestive outcomes and colorectal cancer |
 | `code/14_score_dose_response.py` | metabolite score (train/test) and spline dose-response |
 | `code/15_extended_figures.py` | figures and tables for steps 11-13 |
+| `code/16_lipid_audit.py`, `code/17_proxy_adjustment.py`, `code/18_audit_figures.py` | audit of the lipoprotein results: NMR vs clinical chemistry, prior-diagnosis proxies, definition checks, Fig S9 and Table S6 |
 | `code/run_queue.ps1` | throttled launcher for the extended analyses (Windows) |
 
 `code/common.py` holds paths, outcome definitions and the Cox scan; `code/metab_annot.py` the metabolite class annotation; `code/circular_barplot.py` the circular bar and heat-ring plots.
@@ -32,8 +33,8 @@ Multiple testing uses Bonferroni (P < 0.05/251) throughout.
 
 ## Outputs
 - `figures/`: Fig1 volcano; Fig2 class summary; Fig3A/B circular bar plots of all 251 metabolites; Fig4 cross-outcome and prevalent-vs-incident; Fig5A/B circular heat rings by sex/age stratum, Fig5C sensitivity scatter; Fig6A dual-site counts, Fig6B circular OR plot; Fig7 ROC curves; Fig8A/B circular heat rings after extended adjustment; Fig9 specificity against other digestive diseases; Fig10 metabolite score (cumulative incidence and quartile HRs).
-- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 prevalent vs incident, S6 prediction bars, S7 dual-site timing, S8 dose-response curves.
-- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 5 tables, also as CSV: S1 metabolite-level results, S2 annotation, S3 prediction, S4-S5 specificity).
+- `figures/supplement/`: S1 sensitivity (circular), S2 correlation structure and effective tests, S3 original vs polyp-specific definition, S4 internal validation, S5 prevalent vs incident, S6 prediction bars, S7 dual-site timing, S8 dose-response curves, S9 lipid audit.
+- `tables/`: main tables; `tables/supplement/Supplementary_Tables.xlsx` (index + 6 tables, also as CSV: S1 metabolite-level results, S2 annotation, S3 prediction, S4-S5 specificity, S6 lipid audit).
 - `results/`: per-step aggregate results; `manuscript/`: manuscript draft (`polyp_metabolites_draft.md`) and the checklist of items to complete before submission (`TODO_before_submission.md`).
 
 ## Model 1 covariates

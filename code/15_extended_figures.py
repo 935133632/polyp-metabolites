@@ -21,12 +21,12 @@ def save(fig, stem): fig.savefig(f"{stem}.png", bbox_inches="tight"); fig.savefi
 # ---------------------------------------------------------------- 12: model adjustment
 adj_rows = []
 for k, tag in (("K63", "A_colon_polyp"), ("K31", "B_stomach_duodenal_polyp")):
-    R = {m: pd.read_csv(RES / f"step12_model_adjustment/{k}_{m}.csv").query("status == 'ok'") for m in ("M1", "M2a", "M2b", "M2c")}
+    R = {m: pd.read_csv(RES / f"step12_model_adjustment/{k}_{m}.csv").query("status == 'ok'") for m in ("M1", "M2a", "M2b", "M2c", "M3", "M4")}
     if not all(len(v) for v in R.values()): continue
-    rings = {"Model 1": R["M1"], "+adiposity": R["M2a"], "+HbA1c, CRP": R["M2b"], "+all four": R["M2c"]}
+    rings = {"Model 1": R["M1"], "+adiposity": R["M2a"], "+HbA1c, CRP": R["M2b"], "+prior diagnoses": R["M3"], "+all adjustments": R["M4"]}
     circular_heatmap(rings, LAB[k] + ", extended adjustment", str(FIG / f"Fig8{tag}_adjustment_circular_heatmap"), note="same participants in every ring", cbar_label="ln(HR) per 1 SD")
     m1 = R["M1"].set_index("metabolite"); hits = m1[m1.p_bonf < .05]
-    for m in ("M2a", "M2b", "M2c"):
+    for m in ("M2a", "M2b", "M2c", "M3", "M4"):
         x = R[m].set_index("metabolite").loc[hits.index]
         att = (1 - x.coef / hits.coef) * 100                      # % attenuation of ln(HR), positive = smaller after adjustment
         adj_rows.append({"outcome": k, "model": m, "n": int(x.n_complete.max()), "events": int(x.n_events.max()), "M1_hits": len(hits),

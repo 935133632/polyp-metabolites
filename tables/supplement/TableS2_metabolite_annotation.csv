@@ -1,8 +1,8 @@
 metabolite,class,lipoprotein_family,n_nonmissing
 GluLac,Glycolysis / ketone bodies,Other,273560
-SpeAla,Lipoprotein / lipid totals,Other,274151
+SpeAla,Amino acids,Other,274151
 MetaTC,Lipoprotein / lipid totals,Other,274258
-TC_HDL,Lipid content of subclass,HDL,274258
+TC_HDL,Lipoprotein / lipid totals,HDL,274258
 NonHDLnonLDL,Lipoprotein / lipid totals,LDL,274257
 VLDL,Lipoprotein / lipid totals,VLDL,274257
 CLDL,Lipoprotein / lipid totals,LDL,274258

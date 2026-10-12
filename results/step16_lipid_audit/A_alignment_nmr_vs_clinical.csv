@@ -1,0 +1,10 @@
+clinical,nmr,n,spearman_r
+HDL,HDLC,240345,0.919
+LDL,LDLC,261729,0.881
+ApoA,ApoA1,239047,0.859
+ApoB,ApoB,260924,0.911
+TG,MetaTG,262042,0.943
+Cholesterol,MetaTC,262254,0.881
+Glucose,Glucose,239786,0.642
+Albumin,Albumin,240388,0.58
+Creatinine,Creatinine,255686,0.83

@@ -1,0 +1,13 @@
+outcome,model,exposure,hr,lo,hi,p
+K63,"mutual, Model 1",HDLC,1.019,0.998,1.04,7.9e-02
+K63,"mutual, Model 1",LDLC,0.931,0.914,0.948,1.1e-14
+K63,"mutual, Model 1",MetaTG,1.09,1.068,1.111,8.5e-18
+K63,mutual + prior-diagnosis proxies,HDLC,1.027,1.006,1.048,1.0e-02
+K63,mutual + prior-diagnosis proxies,LDLC,0.965,0.947,0.983,1.7e-04
+K63,mutual + prior-diagnosis proxies,MetaTG,1.076,1.056,1.098,1.5e-13
+K31,"mutual, Model 1",HDLC,0.883,0.857,0.911,2.4e-15
+K31,"mutual, Model 1",LDLC,0.937,0.913,0.963,2.5e-06
+K31,"mutual, Model 1",MetaTG,1.095,1.063,1.128,1.5e-09
+K31,mutual + prior-diagnosis proxies,HDLC,0.903,0.876,0.931,4.1e-11
+K31,mutual + prior-diagnosis proxies,LDLC,0.989,0.962,1.016,4.1e-01
+K31,mutual + prior-diagnosis proxies,MetaTG,1.064,1.034,1.096,3.0e-05

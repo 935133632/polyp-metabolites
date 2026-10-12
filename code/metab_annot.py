@@ -1,6 +1,6 @@
 """Rule-based class annotation of the 251 Nightingale NMR metabolite abbreviations used in this dataset."""
 import re
-AA = {"Alanine", "Glutamine", "Glycine", "Histidine", "Isoleucine", "Leucine", "Valine", "Phenylalanine", "Tyrosine", "Concen_BCAA"}
+AA = {"Alanine", "Glutamine", "Glycine", "Histidine", "Isoleucine", "Leucine", "Valine", "Phenylalanine", "Tyrosine", "Concen_BCAA", "SpeAla"}
 FA = {"FattyAcids", "Unsaturation", "Omega3", "Omega6", "Polyunsaturated", "Monounsaturated", "Saturated", "Linoleic", "Docosahexaenoic",
       "O3pt", "O6pt", "Polypt", "Monopt", "Satupt", "Linopt", "Docopt", "PolyRatio", "O6Ratio"}
 GLY = {"Glucose", "Lactate", "Pyruvate", "Citrate", "3Hydroxybutyrate", "Acetate", "Acetoacetate", "Acetone", "GluLac"}
@@ -9,6 +9,7 @@ MISC = {"Creatinine": "Fluid balance", "Albumin": "Fluid balance", "GlycoAcet": 
 
 
 def metab_class(n: str) -> str:
+    if n == "TC_HDL": return "Lipoprotein / lipid totals"      # = total cholesterol minus HDL-C (non-HDL-C), not a subclass measure
     if n in MISC: return MISC[n]
     if n in AA: return "Amino acids"
     if n in FA: return "Fatty acids"

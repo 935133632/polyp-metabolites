@@ -14,20 +14,20 @@ PT_GROUP = {"Pho": "Phospholipids (%)", "Cho": "Cholesterol (%)", "CE": "Esterif
 TOTALS = {  # group -> measures shown after the subclass bars, with display names
     "Lipoprotein particles": {"Concen_Lipo": "Total particles", "Concen_VLDL": "VLDL particles", "Concen_LDL": "LDL particles", "Concen_HDL": "HDL particles"},
     "Total lipids": {"LipLIpo": "Total lipids", "LipVLDL": "Lipids in VLDL", "LipLDL": "Lipids in LDL", "LipHDL": "Lipids in HDL"},
-    "Phospholipids": {"Phospho": "Phospholipids", "PhoLipo": "Phospholipids in lipoproteins", "PhoVLDL": "Phospholipids in VLDL", "PhoLDL": "Phospholipids in LDL",
+    "Phospholipids": {"Phospho": "Phosphoglycerides", "PhoLipo": "Phospholipids in lipoproteins", "PhoVLDL": "Phospholipids in VLDL", "PhoLDL": "Phospholipids in LDL",
                       "PhoHDL": "Phospholipids in HDL", "Phospha": "Phosphatidylcholines", "Sphingomyelins": "Sphingomyelins", "Cholines": "Total cholines"},
-    "Cholesterol": {"MetaTC": "Total cholesterol", "LDLC": "LDL-C", "CLDL": "Clinical LDL-C", "HDLC": "HDL-C", "VLDL": "VLDL-C", "NonHDLnonLDL": "Remnant cholesterol", "TC_HDL": "TC in HDL"},
+    "Cholesterol": {"MetaTC": "Total cholesterol", "LDLC": "LDL-C", "CLDL": "Clinical LDL-C", "HDLC": "HDL-C", "VLDL": "VLDL-C", "NonHDLnonLDL": "Remnant cholesterol", "TC_HDL": "Non-HDL-C"},
     "Esterified cholesterol": {"TEC": "Total esterified chol.", "CE_VLDL": "CE in VLDL", "CE_LDL": "CE in LDL", "CE_HDL": "CE in HDL"},
     "Free cholesterol": {"TFC": "Total free chol.", "FC_VLDL": "FC in VLDL", "FC_LDL": "FC in LDL", "FC_HDL": "FC in HDL"},
     "Triglycerides": {"MetaTG": "Total triglycerides", "TG_VLDL": "TG in VLDL", "TG_LDL": "TG in LDL", "TG_HDL": "TG in HDL"},
 }
 OTHER = {"Diame_VLDL": "VLDL size", "Diame_LDL": "LDL size", "Diame_HDL": "HDL size", "ApoB": "Apo-B", "ApoA1": "Apo-A1", "ApoRatio": "Apo-B/Apo-A1",
-         "TPR": "TPR", "GluLac": "Glucose-lactate", "SpeAla": "Spectrometer Ala"}
+         "TPR": "TG/phosphoglycerides"}
 FA = {"FattyAcids": "Total FA", "Unsaturation": "Unsaturation", "Omega3": "FAw3", "Omega6": "FAw6", "Polyunsaturated": "PUFA", "Monounsaturated": "MUFA", "Saturated": "SFA",
       "Linoleic": "LA", "Docosahexaenoic": "DHA", "O3pt": "FAw3/FA", "O6pt": "FAw6/FA", "Polypt": "PUFA/FA", "Monopt": "MUFA/FA", "Satupt": "SFA/FA", "Linopt": "LA/FA",
       "Docopt": "DHA/FA", "PolyRatio": "PUFA/MUFA", "O6Ratio": "FAw6/FAw3"}
-SMALL = {"Alanine": "Alanine", "Glutamine": "Glutamine", "Glycine": "Glycine", "Histidine": "Histidine", "Concen_BCAA": "BCAA", "Isoleucine": "Isoleucine", "Leucine": "Leucine",
-         "Valine": "Valine", "Phenylalanine": "Phenylalanine", "Tyrosine": "Tyrosine", "Glucose": "Glucose", "Lactate": "Lactate", "Pyruvate": "Pyruvate", "Citrate": "Citrate",
+SMALL = {"Alanine": "Alanine", "SpeAla": "Alanine (corrected)", "Glutamine": "Glutamine", "Glycine": "Glycine", "Histidine": "Histidine", "Concen_BCAA": "BCAA", "Isoleucine": "Isoleucine", "Leucine": "Leucine",
+         "Valine": "Valine", "Phenylalanine": "Phenylalanine", "Tyrosine": "Tyrosine", "Glucose": "Glucose", "GluLac": "Glucose-lactate", "Lactate": "Lactate", "Pyruvate": "Pyruvate", "Citrate": "Citrate",
          "3Hydroxybutyrate": "3-Hydroxybutyrate", "Acetate": "Acetate", "Acetoacetate": "Acetoacetate", "Acetone": "Acetone", "Creatinine": "Creatinine", "Albumin": "Albumin",
          "GlycoAcet": "Glycoprotein acetyls"}
 GROUP_ORDER = ["Lipoprotein particles", "Total lipids", "Phospholipids", "Cholesterol", "Esterified cholesterol", "Free cholesterol", "Triglycerides",
